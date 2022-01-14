@@ -1,0 +1,97 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+
+
+```{r eval=FALSE, include=FALSE}
+library(tidyverse)
+load("tidy_data.RData")
+
+# set up the data for Task 3
+data %>% 
+  select(home_location, uk_salary) %>% 
+  write_csv("data_salary.csv")
+
+```
+
+# Week 11: Recap of the linear model and practising data-wrangling in R
+
+> Written by Margriet Groen (partly adapted from materials developed by the PsyTeachR team a the University of Glasgow)
+
+Before we start covering new material, we want to spent some time on recapping the basic concepts of the linear model (correlation, simple regression, multiple regression). You all come from different educational backgrounds and therefore have vastly different knowledge of, and experience with statistics. Therefore, please follow your own judgement as to whether you feel you want to/need to revisit material outlining the theoretical background to and the practical implementation in R for these topics. Below we provide some guidance as to materials that are relevant. **Just to be clear: We don’t expect you to watch and/or read and/or do everything, please have a look at what you feel you need and spend some time with those materials.**
+
+## Lectures
+**The linear model was discussed in weeks 6 to 9 of PSYC401, so that is a good place to start.**
+
+Alternatively, if you don't feel confident about the material, these recorded lectures might help.
+
+* [**The linear model: theory (~30 min)**](https://web.microsoftstream.com/video/5fecb3a3-3bfe-4a00-a2fe-d463baac4820) 
+An introduction to the linear model and linear regression. I follow material as discussed in Chapter 4 of Bodo Winter's book *Statistics for Linguists: An Introduction using R* (see below under 'Reading').
+
+* [**How to build a linear model in R (~30 min)**](https://web.microsoftstream.com/video/06d5c162-4985-45b4-a41a-33b661bd516e)
+In this video I demonstrate how to build a linear model in R by talking you through a simple linear regression script (you can download it here [stats_linearModel_howTo.R](files/week11/stats_linearModel_howTo.R)). If you are unclear on what different parts of the lm() function do, or how to read the output, this video might help clarify that.
+
+* [**Multiple regression: theory (~35 min)**](https://web.microsoftstream.com/video/c7fb276c-4d06-40d4-8553-ec775f9ecdc6)
+An introduction to multiple regression. I follow material as discussed in Chapter 5 of Bodo Winter's book *Statistics for Linguists: An Introduction using R* (see below under 'Reading').
+
+* [**Centering and standardising (~5 min)**](https://web.microsoftstream.com/video/16a2f84d-2a8c-4665-ae66-0192594c7406)
+Brief explanation of what centering and standardising are.
+
+## Reading
+
+### Miller & Haden (2013)
+[**Link**](https://drive.google.com/file/d/0B1fyuTuvj3YoaFdUR3FZaXNuNXc/view)
+
+**Chapter 10** gives you a brief overview of what correlation and regression are. **Chapter 11** introduces correlation in more detail. **Chapters 12 and 14** provide accessible overviews of simple and multiple regression, respectively. All these chapters are really short but provide a good basis to understanding. We consider this the minimum level of understanding you should acquire.
+
+### Winter (2020)
+[**Link**](https://eu.alma.exlibrisgroup.com/leganto/public/44LAN_INST/citation/83408786230001221?auth=SAML)
+
+**Chapter 4** provides and excellent conceptual introduction to the linear model and also explains how this is implemented in R (highly recommended).
+
+**Chapter 5** takes a slightly different approach to the one taken in Miller & Haden (2013) to introducing correlation. If you already understand the basic theory behind correlation, this will be an interesting read. Chapter 5 also clearly explains what centering and standardizing are and why you need to bother with these linear transformations.
+
+**Chapter 6** provides an excellent overview of multiple regression and also explains how this is implemented in R. 
+
+## Pre-lab activities
+After having watched the lectures and read the textbook chapters you’ll be in a good position to try these activities. Completing them before you attend your lab session will help you to consolidate your learning and help move through the lab activities more smoothly.
+
+### Pre-lab activity 1: Visualising the regression line
+Have a look at [**this visualisation of the regression line**](https://ryansafner.shinyapps.io/ols_estimation_by_min_sse/) by Ryan Safner.
+
+In this shiny app,  you see a randomly-generated set of data points (within specific parameters, to keep the graph scaled properly). You can choose a slope and intercept for the regression line by using the sliders. The graph also displays the residuals as dashed red lines. Moving the slope or the intercept too much causes the generated line to create much larger residuals. The shiny app also calculates the sum of squared errors (SSE) and the standard error of the regression (SER), which calculates the average size of the error (the red numbers). These numbers reflect how well the regression line fits the data, but you don’t need to worry about those for now.
+
+In the app he uses the equation Y = aX + b in which b is the intercept and a is the slope.
+
+This is slightly different from the equation you saw during the lecture. There we talked about Y = b0 + b1*X + e. Same equation, just different letters. So b0 in the lecture is equivalent to b in the app and b1 in the lecture is equivalent to a in the app.
+
+Pre-lab activity questions:
+
+1. Change the slider for the intercept. How does it change the regression line?
+2. Change the slider for the slope. How does it change the regression line?
+3. What happens to the residuals (the red dashed lines) when you change the slope and the intercept of the regression line?
+
+### Pre-lab activity 2: Data-wrangling in R
+In PSYC401, you've already learned how to read in data, how to select variables and how to compute summary statistics, so re-visiting the PSYC401 materials is a good place to start.
+
+RStudio also provides some useful interactive tutorials that take you through the basics:
+
+* [**The Basics**](https://rstudio.cloud/learn/primers/1) Start here to learn how to inspect, visualize, subset and transform your data, as well as how to run code.
+
+* [**Work with Data**](https://rstudio.cloud/learn/primers/2) Learn how to extract values form a table, subset tables, calculate summary statistics, and derive new variables.
+
+* [**Visualize Data**](https://rstudio.cloud/learn/primers/3) Learn how to use ggplot2 to make any type of plot with your data. The tutorials on [**Exploratory Data Analysis**](https://rstudio.cloud/learn/primers/3.1) and [**Scatterplots**](https://rstudio.cloud/learn/primers/3.5) are particularly relevant.
+
+Please note that there are often different ways to do the same or similar things in R. This means you might encounter slightly different functions or styles of coding in different materials. This is not something to worry about. Just make sure you're clear on what a bit of code achieves and choose the function/style that you feel most comfortable with.
+
+### Pre-lab activity 3: Getting ready for the lab class
+#### Remind yourself of how to access and work with the RStudio Server.
+
+* [**Video on how to access the RStudio Server by Padraic**](https://dtu-panopto.lancs.ac.uk/Panopto/Pages/Viewer.aspx?id=f4f414ff-dd5b-4301-9214-adbf009d10da)
+* I highly recommend using R Projects to structure your workflow. You could create an R project for each week of the module. Have a look at section [**8 Workflow: projects**](https://r4ds.had.co.nz/workflow-projects.html) of **R for Data Science** by Hadley Wickam and Gareth Grolemund for an introduction.
+
+#### Get your files ready
+Files to download for the lab activities as well as the lab activities themselves will be added later this week.
+

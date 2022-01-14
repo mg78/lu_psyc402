@@ -1,0 +1,6 @@
+book_filename: "bookdown-start"
+repo: 
+output_dir: docs
+rmd_files: 
+clean: [packages.bib, bookdown.bbl]
+new_session: yes

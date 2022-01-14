@@ -1,0 +1,13 @@
+intro
+analysis-labs-and-pre-lab-work
+week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r
+lectures
+reading
+miller-haden-2013
+winter-2020
+pre-lab-activities
+pre-lab-activity-1-visualising-the-regression-line
+pre-lab-activity-2-data-wrangling-in-r
+pre-lab-activity-3-getting-ready-for-the-lab-class
+remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.
+get-your-files-ready
