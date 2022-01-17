@@ -85,6 +85,10 @@ joined_wide <- joined %>%
     names_from = measures, # name of the categorical column to spread
     values_from = value) # name of the data to spread
 
+# QUESTION 2: Why do we not need to specify within the `pivot_wider()` function which data to use?
+
+# ANSWER: Because we use the function in a pipe. The data to be used is specified before the %>% sign.
+# For more info on pipes see here: https://r4ds.had.co.nz/pipes.html?q=pipes#pipes
 
 # Step 6: Visualising the data --------------------------------------------
 
@@ -108,7 +112,7 @@ ggplot(joined_wide, aes(x = Pitch, y = mean_rating)) +
   theme_bw() +
   labs (y = "Mean Trustworthiness Rating")
 
-# QUESTION 2: According to the scatterplot, how would you decribe the relationships between trustworthiness
+# QUESTION 3: According to the scatterplot, how would you decribe the relationships between trustworthiness
 # and dispersion and trustworthiness and pitch in terms of direction and strength? Which one of the two 
 # seems stronger?
 #
@@ -128,7 +132,7 @@ ggplot(joined_wide, aes(x = Pitch, y = mean_rating)) +
 #
 # HINT: lm(dv ~ iv, data = my_data)
 #
-# QUESTION 3: What do you conclude from the output of these models? Which model is significant? Which predictors
+# QUESTION 4: What do you conclude from the output of these models? Which model is significant? Which predictors
 # are significant? How much variance does each model describe?
 #
 # ANSWER: Overall, the Pitch only model is significant (F(1,30) = 14.83, p < .001) and describes 30.9% of the variance.
@@ -167,7 +171,7 @@ joined_wide <- mutate(joined_wide,
 mod_pitchdisp_z <- lm(mean_rating ~ Pitch_z + Dispersion_z, joined_wide)
 mod_pitchdisp_z_sum <- summary(mod_pitchdisp_z)
 
-# QUESTION 4: What do you conclude from the output of this model? Is the overall model significant? Which predictors
+# QUESTION 5: What do you conclude from the output of this model? Is the overall model significant? Which predictors
 # are significant? How much variance does the model describe? Which model would you say is best for predicting
 # ratings of trustworthiness, the Pitch only, the Dispersion only or the Pitch+Dispersion model?
 #
@@ -188,7 +192,7 @@ mod_pitchdisp_z_sum <- summary(mod_pitchdisp_z)
 #       qqPlot() and shapiro.test() to check normality of the residuals
 #       residualPlot() and nvcTest() to check homoscedasticity of the residuals
 #
-# QUESTION 5: What do you conclude from the graphs and output? Should we also check for collinearity?
+# QUESTION 6: What do you conclude from the graphs and output? Should we also check for collinearity?
 #
 # ANSWER: The component+residual plot suggest that the relationship is linear, while the qq-plot and the 
 # result from the Shapiro Wilk test (not significant) suggest that the residuals are normally distributed. The
@@ -215,6 +219,6 @@ ncvTest(mod_pitch)
 # variable. The predictor variables were pitch only, dispersion only, or both pitch and dispersion.
 # Using overall model significance and adjusted R-squared as a guide, it was concluded that the pitch only
 # model best fitted the data. The pitch only model significantly predicted trustworthiness (F(1, 30) = 14.83,
-# p < .001, Adjusted R2 = 0.31, f2 = 0.31), accounting for 31% of the variance. Pitch was a significant
+# p < .001, Adjusted R2 = 0.31), accounting for 31% of the variance. Pitch was a significant
 # positive predictor (β = 0.02, p < 0.001); when pitch increased, trustworthiness also increased (see also Figure X).
-# The results for the dispersion only and the pitch and dispersion models can be in Table X.
+# The results for the dispersion only and the pitch and dispersion models can be seen in Table X.

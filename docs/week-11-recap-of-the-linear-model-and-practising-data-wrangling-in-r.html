@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Week 11: Recap of the linear model and practising data-wrangling in R | Analysing and Interpreting Psychological Data II - PSYC402</title>
+  <meta name="description" content="Course content for PSYC402 at Lancaster University" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Week 11: Recap of the linear model and practising data-wrangling in R | Analysing and Interpreting Psychological Data II - PSYC402" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Course content for PSYC402 at Lancaster University" />
+  <meta name="github-repo" content="mg78/lu_psyc402" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Week 11: Recap of the linear model and practising data-wrangling in R | Analysing and Interpreting Psychological Data II - PSYC402" />
+  
+  <meta name="twitter:description" content="Course content for PSYC402 at Lancaster University" />
+  
+
+<meta name="author" content="Margriet Groen and Rob Davies" />
+
+
+<meta name="date" content="2022-01-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">PSYC402 - Analysing and Interpreting Psychological Data II</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Intro</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#analysis-labs-and-pre-lab-work"><i class="fa fa-check"></i><b>1.1</b> Analysis labs and ‘pre-lab work’</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><i class="fa fa-check"></i><b>2</b> Week 11: Recap of the linear model and practising data-wrangling in R</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lectures"><i class="fa fa-check"></i><b>2.1</b> Lectures</a></li>
+<li class="chapter" data-level="2.2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#reading"><i class="fa fa-check"></i><b>2.2</b> Reading</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#miller-haden-2013"><i class="fa fa-check"></i><b>2.2.1</b> Miller &amp; Haden (2013)</a></li>
+<li class="chapter" data-level="2.2.2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#winter-2020"><i class="fa fa-check"></i><b>2.2.2</b> Winter (2020)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#pre-lab-activities"><i class="fa fa-check"></i><b>2.3</b> Pre-lab activities</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#pre-lab-activity-1-visualising-the-regression-line"><i class="fa fa-check"></i><b>2.3.1</b> Pre-lab activity 1: Visualising the regression line</a></li>
+<li class="chapter" data-level="2.3.2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#pre-lab-activity-2-data-wrangling-in-r"><i class="fa fa-check"></i><b>2.3.2</b> Pre-lab activity 2: Data-wrangling in R</a></li>
+<li class="chapter" data-level="2.3.3" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#pre-lab-activity-3-getting-ready-for-the-lab-class"><i class="fa fa-check"></i><b>2.3.3</b> Pre-lab activity 3: Getting ready for the lab class</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activities"><i class="fa fa-check"></i><b>2.4</b> Lab activities</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activity-1-interpreting-and-reporting-results"><i class="fa fa-check"></i><b>2.4.1</b> Lab activity 1: Interpreting and reporting results</a></li>
+<li class="chapter" data-level="2.4.2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activity-2-conducting-simple-and-multiple-regression"><i class="fa fa-check"></i><b>2.4.2</b> Lab activity 2: Conducting simple and multiple regression</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#answers"><i class="fa fa-check"></i><b>2.5</b> Answers</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Analysing and Interpreting Psychological Data II - PSYC402</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Week 11: Recap of the linear model and practising data-wrangling in R</h1>
+<blockquote>
+<p>Written by Margriet Groen (partly adapted from materials developed by the PsyTeachR team a the University of Glasgow)</p>
+</blockquote>
+<p>Before we start covering new material, we want to spent some time on recapping the basic concepts of the linear model (correlation, simple regression, multiple regression). You all come from different educational backgrounds and therefore have vastly different knowledge of, and experience with statistics. Therefore, please follow your own judgement as to whether you feel you want to/need to revisit material outlining the theoretical background to and the practical implementation in R for these topics. Below we provide some guidance as to materials that are relevant. <strong>Just to be clear: We don’t expect you to watch and/or read and/or do everything, please have a look at what you feel you need and spend some time with those materials.</strong></p>
+<div id="lectures" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Lectures</h2>
+<p><strong>The linear model was discussed in weeks 6 to 9 of PSYC401, so that is a good place to start.</strong></p>
+<p>Alternatively, if you don’t feel confident about the material, these recorded lectures might help.</p>
+<ul>
+<li><p><a href="https://web.microsoftstream.com/video/5fecb3a3-3bfe-4a00-a2fe-d463baac4820"><strong>The linear model: theory (~30 min)</strong></a>
+An introduction to the linear model and linear regression. I follow material as discussed in Chapter 4 of Bodo Winter’s book <em>Statistics for Linguists: An Introduction using R</em> (see below under ‘Reading’).</p></li>
+<li><p><a href="https://web.microsoftstream.com/video/06d5c162-4985-45b4-a41a-33b661bd516e"><strong>How to build a linear model in R (~30 min)</strong></a>
+In this video I demonstrate how to build a linear model in R by talking you through a simple linear regression script (you can download it here <a href="files/week11/stats_linearModel_howTo.R">stats_linearModel_howTo.R</a>). If you are unclear on what different parts of the lm() function do, or how to read the output, this video might help clarify that.</p></li>
+<li><p><a href="https://web.microsoftstream.com/video/c7fb276c-4d06-40d4-8553-ec775f9ecdc6"><strong>Multiple regression: theory (~35 min)</strong></a>
+An introduction to multiple regression. I follow material as discussed in Chapter 5 of Bodo Winter’s book <em>Statistics for Linguists: An Introduction using R</em> (see below under ‘Reading’).</p></li>
+<li><p><a href="https://web.microsoftstream.com/video/16a2f84d-2a8c-4665-ae66-0192594c7406"><strong>Centering and standardising (~5 min)</strong></a>
+Brief explanation of what centering and standardising are.</p></li>
+</ul>
+</div>
+<div id="reading" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Reading</h2>
+<div id="miller-haden-2013" class="section level3" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Miller &amp; Haden (2013)</h3>
+<p><a href="https://drive.google.com/file/d/0B1fyuTuvj3YoaFdUR3FZaXNuNXc/view"><strong>Link</strong></a></p>
+<p><strong>Chapter 10</strong> gives you a brief overview of what correlation and regression are. <strong>Chapter 11</strong> introduces correlation in more detail. <strong>Chapters 12 and 14</strong> provide accessible overviews of simple and multiple regression, respectively. All these chapters are really short but provide a good basis to understanding. We consider this the minimum level of understanding you should acquire.</p>
+</div>
+<div id="winter-2020" class="section level3" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Winter (2020)</h3>
+<p><a href="https://eu.alma.exlibrisgroup.com/leganto/public/44LAN_INST/citation/83408786230001221?auth=SAML"><strong>Link</strong></a></p>
+<p><strong>Chapter 4</strong> provides and excellent conceptual introduction to the linear model and also explains how this is implemented in R (highly recommended).</p>
+<p><strong>Chapter 5</strong> takes a slightly different approach to the one taken in Miller &amp; Haden (2013) to introducing correlation. If you already understand the basic theory behind correlation, this will be an interesting read. Chapter 5 also clearly explains what centering and standardizing are and why you need to bother with these linear transformations.</p>
+<p><strong>Chapter 6</strong> provides an excellent overview of multiple regression and also explains how this is implemented in R.</p>
+</div>
+</div>
+<div id="pre-lab-activities" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Pre-lab activities</h2>
+<p>After having watched the lectures and read the textbook chapters you’ll be in a good position to try these activities. Completing them before you attend your lab session will help you to consolidate your learning and help move through the lab activities more smoothly.</p>
+<div id="pre-lab-activity-1-visualising-the-regression-line" class="section level3" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Pre-lab activity 1: Visualising the regression line</h3>
+<p>Have a look at <a href="https://ryansafner.shinyapps.io/ols_estimation_by_min_sse/"><strong>this visualisation of the regression line</strong></a> by Ryan Safner.</p>
+<p>In this shiny app, you see a randomly-generated set of data points (within specific parameters, to keep the graph scaled properly). You can choose a slope and intercept for the regression line by using the sliders. The graph also displays the residuals as dashed red lines. Moving the slope or the intercept too much causes the generated line to create much larger residuals. The shiny app also calculates the sum of squared errors (SSE) and the standard error of the regression (SER), which calculates the average size of the error (the red numbers). These numbers reflect how well the regression line fits the data, but you don’t need to worry about those for now.</p>
+<p>In the app he uses the equation Y = aX + b in which b is the intercept and a is the slope.</p>
+<p>This is slightly different from the equation you saw during the lecture. There we talked about Y = b0 + b1*X + e. Same equation, just different letters. So b0 in the lecture is equivalent to b in the app and b1 in the lecture is equivalent to a in the app.</p>
+<p>Pre-lab activity questions:</p>
+<ol style="list-style-type: decimal">
+<li>Change the slider for the intercept. How does it change the regression line?</li>
+<li>Change the slider for the slope. How does it change the regression line?</li>
+<li>What happens to the residuals (the red dashed lines) when you change the slope and the intercept of the regression line?</li>
+</ol>
+</div>
+<div id="pre-lab-activity-2-data-wrangling-in-r" class="section level3" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Pre-lab activity 2: Data-wrangling in R</h3>
+<p>In PSYC401, you’ve already learned how to read in data, how to select variables and how to compute summary statistics, so re-visiting the PSYC401 materials is a good place to start.</p>
+<p>RStudio also provides some useful interactive tutorials that take you through the basics:</p>
+<ul>
+<li><p><a href="https://rstudio.cloud/learn/primers/1"><strong>The Basics</strong></a> Start here to learn how to inspect, visualize, subset and transform your data, as well as how to run code.</p></li>
+<li><p><a href="https://rstudio.cloud/learn/primers/2"><strong>Work with Data</strong></a> Learn how to extract values form a table, subset tables, calculate summary statistics, and derive new variables.</p></li>
+<li><p><a href="https://rstudio.cloud/learn/primers/3"><strong>Visualize Data</strong></a> Learn how to use ggplot2 to make any type of plot with your data. The tutorials on <a href="https://rstudio.cloud/learn/primers/3.1"><strong>Exploratory Data Analysis</strong></a> and <a href="https://rstudio.cloud/learn/primers/3.5"><strong>Scatterplots</strong></a> are particularly relevant.</p></li>
+</ul>
+<p>Please note that there are often different ways to do the same or similar things in R. This means you might encounter slightly different functions or styles of coding in different materials. This is not something to worry about. Just make sure you’re clear on what a bit of code achieves and choose the function/style that you feel most comfortable with.</p>
+</div>
+<div id="pre-lab-activity-3-getting-ready-for-the-lab-class" class="section level3" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Pre-lab activity 3: Getting ready for the lab class</h3>
+<div id="remind-yourself-of-how-to-access-and-work-with-the-rstudio-server." class="section level4" number="2.3.3.1">
+<h4><span class="header-section-number">2.3.3.1</span> Remind yourself of how to access and work with the RStudio Server.</h4>
+<ul>
+<li><a href="https://dtu-panopto.lancs.ac.uk/Panopto/Pages/Viewer.aspx?id=f4f414ff-dd5b-4301-9214-adbf009d10da"><strong>Video on how to access the RStudio Server by Padraic</strong></a></li>
+<li>I highly recommend using R Projects to structure your workflow. You could create an R project for each week of the module. Have a look at section <a href="https://r4ds.had.co.nz/workflow-projects.html"><strong>8 Workflow: projects</strong></a> of <strong>R for Data Science</strong> by Hadley Wickam and Gareth Grolemund for an introduction.</li>
+</ul>
+</div>
+<div id="get-your-files-ready" class="section level4" number="2.3.3.2">
+<h4><span class="header-section-number">2.3.3.2</span> Get your files ready</h4>
+<p>Download the <a href="files/week11/402_week11_forStudents.zip">402_week11_forStudents.zip</a> file and upload it into a new folder in RStudio Server.</p>
+</div>
+</div>
+</div>
+<div id="lab-activities" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Lab activities</h2>
+<p>In this lab, you’ll gain understanding of and practice with:</p>
+<ul>
+<li>when and why to apply simple and multiple regression to answer questions in psychological science</li>
+<li>conducting multiple regression in R</li>
+<li>interpreting the R output of simple and multiple linear regression</li>
+<li>reporting results for simple and multiple linear regression following APA guidelines</li>
+</ul>
+<div id="lab-activity-1-interpreting-and-reporting-results" class="section level3" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Lab activity 1: Interpreting and reporting results</h3>
+<p>Have a look at the R output below.</p>
+<p><strong>R Output 1</strong></p>
+<p><img src="files/week11/w11_labAct1_output.png" /></p>
+<ol style="list-style-type: decimal">
+<li>What is the outcome or dependent variable?</li>
+<li>What is the predictor or independent variable?</li>
+<li>Is the overall model significant?</li>
+<li>How much variance does the model account for?</li>
+</ol>
+<p>Thinking about assumptions, what do you conlcude from the plots and output below?</p>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Does the relationship appear linear?</p></li>
+<li><p>Do the residuals show normality and homoscedasticity?</p></li>
+</ol>
+<p><strong>Scatterplot</strong></p>
+<p><img src="files/week11/w11_labAct1_scatterplot.png" /></p>
+<p><strong>QQ-plot</strong></p>
+<p><img src="files/week11/w11_labAct1_qqplot.png" /></p>
+<p><strong>R Output 2</strong></p>
+<p><img src="files/week11/w11_labAct1_output2.png" /></p>
+</div>
+<div id="lab-activity-2-conducting-simple-and-multiple-regression" class="section level3" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Lab activity 2: Conducting simple and multiple regression</h3>
+<div id="background" class="section level4" number="2.4.2.1">
+<h4><span class="header-section-number">2.4.2.1</span> Background</h4>
+<p>Today, to help get a practical understanding of regression, you will be working with real data and using regression to explore the question of whether there is a relationship between voice acoustics and ratings of perceived trustworthiness.</p>
+<div id="the-voice" class="section level5" number="2.4.2.1.1">
+<h5><span class="header-section-number">2.4.2.1.1</span> The Voice</h5>
+<p>The prominent theory of voice production is the source-filter theory (Fant, 1960) which suggests that vocalisation is a two-step process: air is pushed through the larynx (vocal chords) creating a vibration, i.e. the source, and this is then shaped and moulded into words and utterances as it passes through the neck, mouth and nose, and depending on the shape of those structures at any given time you produce different sounds, i.e. the filter. One common measure of the source is pitch (otherwise called Fundamental Frequency or F0 (F-zero)) (Titze, 1994), which is a measure of the vibration of the vocal chords, in Hertz (Hz); males have on average a lower pitch than females for example. Likewise, one measure of the filter is called formant dispersion (measured again in Hz), and is effectively a measure of the length of someone’s vocal tract (or neck). Height and neck length are suggested to be negatively correlated with formant dispersion, so tall people tend to have smaller formant dispersion. So all in, the sound of your voice is thought to give some indication of what you look like.</p>
+<p>More recently, work has focussed on what the sound of your voice suggests about your personality. McAleer, Todorov and Belin (2014) suggested that vocal acoustics give a perception of your trustworthiness and dominance to others, regardless of whether or not it is accurate. One extension of this is that trust may be driven by malleable aspects of your voice (e.g. your pitch) but not so much by static aspects of your voice (e.g. your formant dispersion). Pitch is considered malleable because you can control the air being pushed through your vocal chords (though you have no conscious control of your vocal chords), whereas dispersion may be controlled by the structure of your throat which is much more rigid due to muscle, bone, and other things that keep your head attached. This idea of certain traits being driven by malleable features and others by static features was previously suggested by Oosterhof and Todorov (2008) and has been tested with some validation by Rezlescu, Penton, Walsh, Tsujimura, Scott and Banissy (2015).</p>
+<p>So, the research question today is: Can vocal acoustics, namely pitch and formant dispersion, predict perceived trustworthiness from a person’s voice? We will only look at male voices today, but you have the data for female voices as well should you wish to practice (note that in the field, tendency is to analyse male and female voices separately as they are effectively sexually dimorphic). As such, we hypothesise that a linear combination of pitch and dispersion will predict perceived vocal trustworthiness in male voices. This is what we will analyse.</p>
+<p>To complete this lab activity, you can use the R-script (402_wk11_labAct2.R) that you downloaded as part of the ‘pre-lab activities’ as a template. Work through the activity below, adding relevant bits of code to your script as you go along.</p>
+</div>
+</div>
+<div id="step-1-background-and-set-up" class="section level4" number="2.4.2.2">
+<h4><span class="header-section-number">2.4.2.2</span> Step 1: Background and set up</h4>
+<p>Before you do anything else, when starting a new analysis, it is a good idea to empty the R environment. This prevents objects and variables from previous analyses interfering with the current one.</p>
+<blockquote>
+<p><strong>TASK</strong>: Use the code snippet below to clear the environment. <strong>TIP</strong>: If you hover your mouse over the box that includes the code snippet, a ‘copy to clipboard’ icon will appear in the top right corner of the box. Click that to copy the code. Now you can easily paste it into your script.
+<img src="files/week11/copy.png" /></p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())                            </span></code></pre></div>
+<p>Before we can get started we need to tell R which libraries to use. For this analysis we’ll need broom, car, pwr and tidyverse.</p>
+<blockquote>
+<p><strong>TASK</strong>: Load the relevant libraries. <strong>HINT</strong>: Use the <code>library()</code> function.</p>
+</blockquote>
+<p>In this lab, we are setting out to test whether a linear combination of pitch and dispersion will predict perceived vocal trustworthiness in male voices. We’ll be working with two data files:</p>
+<ul>
+<li>voice_acoustics.csv - shows the VoiceID, the sex of the voice, and the pitch and dispersion values</li>
+<li>voice_ratings.csv - shows the VoiceID and the ratings of each voice by 28 participants on a scale of 1 to 9 where 9 was extremely trustworthy and 1 was extremely untrustworthy.</li>
+</ul>
+<blockquote>
+<p><strong>TASK</strong>: Read in both files (using the <code>read_csv()</code> function), have a look at the layout of the data and familiarise yourself with it. The ratings data is rather messy and in a different layout to the acoustics but can you tell what is what?</p>
+</blockquote>
+<p><strong>QUESTION 1</strong>
+How are the acoustics data and the ratings data organised (wide or long)? Are both data files ‘tidy’? If you need more info on what that means, have a look <a href="https://r4ds.had.co.nz/tidy-data.html"><strong>here</strong></a>.</p>
+</div>
+<div id="step-2-restructuring-the-ratings-data" class="section level4" number="2.4.2.3">
+<h4><span class="header-section-number">2.4.2.3</span> Step 2: Restructuring the ratings data</h4>
+<p>We are going to need to do some data-wrangling before we do any analysis! Specifically, we need the change the ratings data to the long format.</p>
+<p>Here we’ll use the <code>pivot_longer()</code> function (see <a href="https://tidyr.tidyverse.org/reference/pivot_longer.html"><strong>here</strong></a> or type <code>?pivot_longer</code> in the Console for more info) to restructure the ratings data from wide to long and store the resulting table as ‘ratings_tidy’.</p>
+<blockquote>
+<p><strong>TASK</strong>: Use the code snippet below to restructure the data.</p>
+</blockquote>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb2-1" aria-hidden="true" tabindex="-1"></a>ratings_tidy <span class="ot">&lt;-</span> <span class="fu">pivot_longer</span>(</span>
+<span id="cb2-2"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> ratings,    <span class="co"># the data you want to restructure</span></span>
+<span id="cb2-3"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">cols =</span> P1<span class="sc">:</span>P28,     <span class="co"># columns you want to restructure</span></span>
+<span id="cb2-4"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">names_to =</span> <span class="st">&quot;participant&quot;</span>, <span class="co"># variable name that captures whatever is across the columns</span></span>
+<span id="cb2-5"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># (in this case P1 to P28 for the 28 different participants)</span></span>
+<span id="cb2-6"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">values_to =</span> <span class="st">&quot;rating&quot;</span>) <span class="co"># variable name that captures whatever is in the cells</span></span>
+<span id="cb2-7"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># (in this case numbers for ratings)</span></span></code></pre></div>
+</div>
+<div id="step-3-calculate-mean-trustworthiness-rating-for-each-voice" class="section level4" number="2.4.2.4">
+<h4><span class="header-section-number">2.4.2.4</span> Step 3: Calculate mean trustworthiness rating for each voice</h4>
+<p>Now that we have the ratings data into a tidy format, the next step is to calculate the mean rating for each voice. Remember that each voice is identified by the ‘VoiceID’ variable.</p>
+<blockquote>
+<p><strong>TASK</strong>: Calculate the mean rating for each voice and store the resulting table in a variable named ‘ratings_mean’. <strong>HINT</strong>: Use <code>group_by()</code> and <code>summarise()</code>. Are you using the tidy data? Also, remember that if there are any missing values (NAs) then na.rm = TRUE would help.</p>
+</blockquote>
+</div>
+<div id="step-4-join-the-data-together" class="section level4" number="2.4.2.5">
+<h4><span class="header-section-number">2.4.2.5</span> Step 4: Join the data together</h4>
+<p>Ok, before we get ahead of ourselves, in order to perform the regression analysis we need to combine the data from ‘ratings_mean’ (the mean ratings) with ‘acoustics’ (the pitch and dispersion ratings). Also, as we said, we only want to analyse male voices today.</p>
+<blockquote>
+<p><strong>TASK</strong>: Join the two tables and keep only the data for the male voices, call the resulting table ‘joined’. <strong>HINT</strong>: Use the <code>inner_join()</code> function (making use of the variable that is common across both tables) to join. See <a href="https://r4ds.had.co.nz/relational-data.html?q=inner#understanding-joins"><strong>here</strong></a> or type <code>?inner_join</code> in the Console for more info. Use the <code>filter()</code> function to only keep male voices. Remember that the Boolean operator for exactly equal is <code>==</code>.</p>
+</blockquote>
+</div>
+<div id="step-5-spreading-the-data" class="section level4" number="2.4.2.6">
+<h4><span class="header-section-number">2.4.2.6</span> Step 5: Spreading the data</h4>
+<p>Ok so we are starting to get an understanding of our data and we want to start thinking about the regression. However, the regression would be easier to work with if Pitch and Dispersion were in separate columns. This can be achieved using the <code>pivot_wider()</code> function (see <a href="https://tidyr.tidyverse.org/reference/pivot_wider.html"><strong>here</strong></a> or type <code>?pivot_wider</code> in the Console for more info). This is basically the inverse of <code>pivot_longer()</code>. It increases the number of columns and decreases the number of rows.</p>
+<blockquote>
+<p><strong>TASK</strong>: Use the code snippet below to spread the data.</p>
+</blockquote>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb3-1" aria-hidden="true" tabindex="-1"></a>joined_wide <span class="ot">&lt;-</span> joined <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb3-3"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_from =</span> measures, <span class="co"># name of the categorical column to spread</span></span>
+<span id="cb3-4"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_from =</span> value) <span class="co"># name of the data to spread</span></span></code></pre></div>
+<p><strong>QUESTION 2</strong>
+Why do we not need to specify within the <code>pivot_wider()</code> function which data to use?</p>
+</div>
+<div id="step-6-visualising-the-data" class="section level4" number="2.4.2.7">
+<h4><span class="header-section-number">2.4.2.7</span> Step 6: Visualising the data</h4>
+<p>As always, it is a good idea to visualise your data.</p>
+<blockquote>
+<p><strong>TASK</strong>: Now that we have all the variables in one place, make two scatterplots, one of mean trustworthiness rating with dispersion and one for mean trustworthiness rating and pitch. <strong>HINT</strong>: For this you’ll need the <code>ggplot()</code> function together with <code>geom_point()</code> and <code>geom_smooth()</code>. Make sure to give your axes some sensible labels.</p>
+</blockquote>
+<p><strong>QUESTION 3</strong>
+According to the scatterplots, how would you decribe the relationships between trustworthiness
+and dispersion and trustworthiness and pitch in terms of direction and strength? Which one of the two
+seems stronger?</p>
+</div>
+<div id="step-7-conducting-and-interpreting-simple-regression" class="section level4" number="2.4.2.8">
+<h4><span class="header-section-number">2.4.2.8</span> Step 7: Conducting and interpreting simple regression</h4>
+<p>With all the variables in place, we’re ready now to start building two simple linear regression models:</p>
+<ol style="list-style-type: decimal">
+<li><p>Predicting trustworthiness mean ratings from Pitch</p></li>
+<li><p>Predicting trustworthiness mean ratings from Dispersion</p></li>
+</ol>
+<blockquote>
+<p><strong>TASK</strong>: Use the <code>lm()</code> function to run the following two regression models and use the <code>summary()</code> function to look at the output of each model. Store the first model in a table called ‘mod_pitch’ and store the second model in ‘mod_disp’. <strong>HINT</strong>: <code>lm(dv ~ iv, data = my_data)</code></p>
+</blockquote>
+<p><strong>QUESTION 4</strong>
+What do you conclude from the output of these models? Which model is significant? Which predictors
+are significant? How much variance does each model describe?</p>
+</div>
+<div id="step-8-conducting-and-interpreting-multiple-regression" class="section level4" number="2.4.2.9">
+<h4><span class="header-section-number">2.4.2.9</span> Step 8: Conducting and interpreting multiple regression</h4>
+<p>Now let’s look at both predictors in the same model. Before we do this, it is sensible to center and standardise the predictors.</p>
+<p>Look at the code below. Can you follow how the predictors are first centered (_c) and then standardised (_z)?</p>
+<p>Here I do this by hand because I think it makes it clearer, even though there are functions that do this in one step (<code>scale()</code>).</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb4-1" aria-hidden="true" tabindex="-1"></a>joined_wide <span class="ot">&lt;-</span> <span class="fu">mutate</span>(joined_wide,</span>
+<span id="cb4-2"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb4-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">Dispersion_c =</span> Dispersion <span class="sc">-</span> <span class="fu">mean</span>(Dispersion),</span>
+<span id="cb4-3"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb4-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">Dispersion_z =</span> Dispersion_c <span class="sc">/</span> <span class="fu">sd</span>(Dispersion_c),</span>
+<span id="cb4-4"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb4-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">Pitch_c =</span> Pitch <span class="sc">-</span> <span class="fu">mean</span>(Pitch),</span>
+<span id="cb4-5"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#cb4-5" aria-hidden="true" tabindex="-1"></a>                      <span class="at">Pitch_z =</span> Pitch_c <span class="sc">/</span> <span class="fu">sd</span>(Pitch_c))</span></code></pre></div>
+<blockquote>
+<p><strong>TASK</strong>: Now use the centered and standardised data for the multiple regression. Use the <code>lm()</code> function to run a model for predicting trustworthiness mean ratings from Pitch and Dispersion, and store the model in ‘mod_pitchdisp_z’. Use the ‘summary()’ function to look at the output. <strong>HINT</strong>: <code>lm(dv ~ iv1 + iv2, data = my_data)</code></p>
+</blockquote>
+<p><strong>QUESTION 5</strong>
+What do you conclude from the output of this model? Is the overall model significant? Which predictors
+are significant? How much variance does the model describe? Which model would you say is best for predicting ratings of trustworthiness, the Pitch only, the Dispersion only or the Pitch+Dispersion model?</p>
+</div>
+<div id="step-9-checking-assumptions" class="section level4" number="2.4.2.10">
+<h4><span class="header-section-number">2.4.2.10</span> Step 9: Checking assumptions</h4>
+<p>Now that we’ve established which model best fits the data, let’s check whether it meets the assumptions of linearity, normality and homoscedasticity.</p>
+<blockquote>
+<p><strong>TASK</strong>: Check the assumptions of linearity, normality and homoscedasticity.
+<strong>HINT</strong>: <code>crPlots()</code> to check linearity
+<code>qqPlot()</code> and <code>shapiro.test()</code> to check normality of the residuals
+<code>residualPlot()</code> and <code>nvcTest()</code> to check homoscedasticity of the residuals</p>
+</blockquote>
+<p><strong>QUESTION 6</strong>
+What do you conclude from the graphs and output? Should we also check for collinearity?</p>
+</div>
+<div id="step-10-writing-up-the-results" class="section level4" number="2.4.2.11">
+<h4><span class="header-section-number">2.4.2.11</span> Step 10: Writing up the results</h4>
+<blockquote>
+<p><strong>TASK</strong>: Write up the results following APA guidelines. <strong>HINT</strong>: <a href="https://owl.purdue.edu/owl/research_and_citation/apa6_style/apa_formatting_and_style_guide/statistics_in_apa.html"><strong>The Purdue writing lab website</strong></a> is helpful for guidance on punctuating statistics. The <a href="https://apastyle.apa.org/instructional-aids/numbers-statistics-guide.pdf"><strong>APA Style 7th Edition Numbers and Statistics Guide</strong></a> is also useful.</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="answers" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Answers</h2>
+<p>When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week. <strong>Remember</strong>, looking at this script (studying/revising it) does not replace the process of working through the lab activities, trying them out for yourself, getting stuck, asking questions, finding solutions, adding your own comments, etc. <strong>Actively engaging</strong> with the material is the way to learn these analysis skills, not by looking at someone else’s completed code…</p>
+<p>The answers to the questions and the script containing the code will be available after lab session has taken place.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
