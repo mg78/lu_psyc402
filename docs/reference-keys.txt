@@ -27,3 +27,5 @@ step-8-conducting-and-interpreting-multiple-regression
 step-9-checking-assumptions
 step-10-writing-up-the-results
 answers
+lab-activity-1-interpreting-and-reporting-results-1
+lab-activity-2-conducting-simple-and-multiple-regression-1
