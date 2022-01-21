@@ -1,0 +1,77 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+
+# Week 12: Categorical predictors
+
+> Written by Margriet Groen (partly adapted from materials developed by the PsyTeachR team a the University of Glasgow)
+
+So far, all the predictors in the models we’ve looked at were continuous variables. What if you wanted to know whether a response differed between two or more discrete groups? Hang on, you might say, that sounds like doing an ANOVA. True, you might have used ANOVA to assess whether group means differed in previous stats courses. ANOVAs—to some degree—are just a special type of regression where you have categorical predictors. This week we’ll look at how to model responses as a function of categorical predictors and we’ll combine categorical predictors to model how a predictor might affect the outcome variable differently across two different groups. For example, we might be interested in whether the amount of time adolescents use digital devices (screen-time) predicts their well-being. Additionally, we might want to know whether well-being is different for adolescent boys and girls and whether the relationship between screen-time and well-being differs for these two groups. By fitting a regression model in which we combine a continuous (screen-time) and a categorical (sex) predictor, we can do exactly that. We’ll be working on that in the lab.
+
+## Lectures
+The lecture material for this week follows the recommended chapters in Winter (2020) -- see under 'Reading' below -- and is presented in two parts:
+
+* [**Categorical predictors (~17 min)**](https://web.microsoftstream.com/video/5c263506-1ebc-4c54-b4aa-2cab8de826d6)
+
+* [**Interactions (~18 min)**](https://web.microsoftstream.com/video/9c3b7a03-dc41-47d9-b8c5-0835ea1da9d4) 
+
+## Reading
+
+### Blogpost by Professor Dorothy Bishop
+In this [**very short blogpost**](https://deevybee.blogspot.com/2017/11/anova-t-tests-and-regression-different.html?m=1) Professor Dorothy Bishop explains the links between ANOVA and Regression.
+
+### Winter (2020)
+[**Link**](https://eu.alma.exlibrisgroup.com/leganto/public/44LAN_INST/citation/83408786230001221?auth=SAML)
+
+**Chapter 7** provides an excellent overview of using categorical predictors in regression models and explains how this is implemented in R.
+
+**Chapter 8** explains what interactions are and how to model and interpret them.
+
+## Pre-lab activities
+After having watched the lectures and read the textbook chapters you’ll be in a good position to try these activities. Completing them before you attend your lab session will help you to consolidate your learning and help move through the lab activities more smoothly.
+
+### Pre-lab activity 1: Data-wrangling in R
+The more you practise coding in R, the easier it will become. The RStudio interactive tutorials I mentioned last week are an excellent place to start if you haven't engaged with those yet. 
+
+* [**The Basics**](https://rstudio.cloud/learn/primers/1) Start here to learn how to inspect, visualize, subset and transform your data, as well as how to run code.
+
+* [**Work with Data**](https://rstudio.cloud/learn/primers/2) Learn how to extract values form a table, subset tables, calculate summary statistics, and derive new variables.
+
+* [**Visualize Data**](https://rstudio.cloud/learn/primers/3) Learn how to use ggplot2 to make any type of plot with your data. The tutorials on [**Exploratory Data Analysis**](https://rstudio.cloud/learn/primers/3.1) and [**Scatterplots**](https://rstudio.cloud/learn/primers/3.5) are particularly relevant.
+
+If you feel confident with the material covered in those tutorials the following are useful to try:
+
+* [**Separating and Uniting Columns**](https://rstudio.cloud/learn/primers/4.2) Here you will learn to separate a column into multiple columns and to reverse the process by uniting multiple columns into a single column. Then you'll practise your data wrangling skills on messy real world data.
+
+* [**Join Data Sets**](https://rstudio.cloud/learn/primers/4.3) Learn how to work with relational data. Here you will learn how to augment data sets with information from related data sets, as well as how to filter one data set against another.
+
+Please note that there are often different ways to do the same or similar things in R. This means you might encounter slightly different functions or styles of coding in different materials. This is not something to worry about. Just make sure you're clear on what a bit of code achieves and choose the function/style that you feel most comfortable with.
+
+### Pre-lab activity 2: Getting ready for the lab class
+#### Remind yourself of how to access and work with the RStudio Server.
+
+* [**Video on how to access the RStudio Server by Padraic**](https://dtu-panopto.lancs.ac.uk/Panopto/Pages/Viewer.aspx?id=f4f414ff-dd5b-4301-9214-adbf009d10da)
+* I highly recommend using R Projects to structure your workflow. You could create an R project for each week of the module. Have a look at section [**8 Workflow: projects**](https://r4ds.had.co.nz/workflow-projects.html) of **R for Data Science** by Hadley Wickam and Gareth Grolemund for an introduction.
+
+#### Get your files ready
+Download the [402_week12_forStudents.zip](files/week12/402_week12_forStudents.zip) file and upload it into a new folder in RStudio Server. 
+
+## Lab activities
+In this lab, you’ll gain understanding of and practice with:
+
+* when and why to apply multiple regression to answer questions in psychological science
+* conducting multiple regression in R when combining continuous and categorical predictors
+* interpreting the R output of multiple linear regression (when combining continuous and categorical predictors)
+* reporting results for multiple linear regression (when combining continuous and categorical predictors), following APA guidelines
+
+### Lab activity 1:
+WILL BE ADDED EARLY NEXT WEEK
+
+## Answers
+
+When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week. **Remember**, looking at this script (studying/revising it) does not replace the process of working through the lab activities, trying them out for yourself, getting stuck, asking questions, finding solutions, adding your own comments, etc. **Actively engaging** with the material is the way to learn these analysis skills, not by looking at someone else's completed code...
+
+The answers to the questions and the script containing the code will be available after lab session has taken place.
+

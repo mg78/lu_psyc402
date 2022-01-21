@@ -29,3 +29,16 @@ step-10-writing-up-the-results
 answers
 lab-activity-1-interpreting-and-reporting-results-1
 lab-activity-2-conducting-simple-and-multiple-regression-1
+week-12-categorical-predictors
+lectures-1
+reading-1
+blogpost-by-professor-dorothy-bishop
+winter-2020-1
+pre-lab-activities-1
+pre-lab-activity-1-data-wrangling-in-r
+pre-lab-activity-2-getting-ready-for-the-lab-class
+remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.-1
+get-your-files-ready-1
+lab-activities-1
+lab-activity-1
+answers-1
