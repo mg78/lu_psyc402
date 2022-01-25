@@ -40,5 +40,15 @@ pre-lab-activity-2-getting-ready-for-the-lab-class
 remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.-1
 get-your-files-ready-1
 lab-activities-1
-lab-activity-1
+lab-activity-1-combining-a-continuous-and-a-categorical-predictor-in-a-resssion-model
+background-smartphone-screen-time-and-well-being
+step-1-background-and-set-up-1
+step-2-checking-the-formatting
+step-3-data-preparation---aggregating-the-total-well-being-scores
+step-4-data-preparation---transforming-screen-time-data
+step-5-calculating-mean-hours-per-day-for-smartphone-use-for-each-participant
+step-6-more-visualisation
+step-7-the-regression-model
+step-8-checking-assumptions
+step-9-write-up
 answers-1
