@@ -39,8 +39,8 @@ ratings
 ratings_tidy <- pivot_longer(
   data = ratings, # the data you want to restructure
   cols = P1:P28, # columns you want to apply th above to
-  names_to = participant, # variable name that captures whatever is across the columns you are restructuring, in this case P1 to P28 for the 28 different participants)
-  values_to = rating) # variable name that captures whatever is in the cells (in this case numbers for ratings)
+  names_to = "participant", # variable name that captures whatever is across the columns you are restructuring, in this case P1 to P28 for the 28 different participants)
+  values_to = "rating") # variable name that captures whatever is in the cells (in this case numbers for ratings)
 
 
 # Step 3: Calculate mean trustworthiness rating for each voice ------------

@@ -52,3 +52,4 @@ step-7-the-regression-model
 step-8-checking-assumptions
 step-9-write-up
 answers-1
+lab-activity-1-combining-a-continuous-and-a-categorical-predictor-in-a-resssion-model-1
