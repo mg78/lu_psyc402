@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Analysing and Interpreting Psychological Data II - PSYC402</title>
+  <title>4 Week 13: More on interactions | Analysing and Interpreting Psychological Data II - PSYC402</title>
   <meta name="description" content="Course content for PSYC402 at Lancaster University" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Analysing and Interpreting Psychological Data II - PSYC402" />
+  <meta property="og:title" content="4 Week 13: More on interactions | Analysing and Interpreting Psychological Data II - PSYC402" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mg78/lu_psyc402" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Analysing and Interpreting Psychological Data II - PSYC402" />
+  <meta name="twitter:title" content="4 Week 13: More on interactions | Analysing and Interpreting Psychological Data II - PSYC402" />
   
   <meta name="twitter:description" content="Course content for PSYC402 at Lancaster University" />
   
@@ -31,7 +31,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="week-12-categorical-predictors.html"/>
 
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -221,18 +221,69 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="week-13-more-on-interactions" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Week 13: More on interactions</h1>
+<blockquote>
+<p>Written by Margriet Groen (partly adapted from materials developed by the PsyTeachR team a the University of Glasgow)</p>
+</blockquote>
+<p>Interactions are ubiquitous in psychological science, which is why we’ll spend some more time building models that include interaction terms. Last week we modelled well-being as a function of screen-time (a continuous predictor) and biological sex (a categorical predictor) and their interaction. This week we’ll look at interactions between continuous predictors.</p>
+<div id="lectures-2" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Lectures</h2>
+<p>The lecture material for this week follows the recommended chapters in Winter (2020) – see under ‘Reading’ below – and is presented below:</p>
+<ul>
+<li><a href="https://web.microsoftstream.com/video/9e2a9e1e-548f-492e-a529-58dc1c8490f3"><strong>More on interactions (~18 min)</strong></a></li>
+</ul>
+</div>
+<div id="reading-2" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Reading</h2>
+<div id="winter-2020-2" class="section level3" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Winter (2020)</h3>
+<p><a href="https://eu.alma.exlibrisgroup.com/leganto/public/44LAN_INST/citation/83408786230001221?auth=SAML"><strong>Link</strong></a></p>
+<p><strong>Chapter 8</strong> explains what interactions are and how to model and interpret them.</p>
+</div>
+</div>
+<div id="pre-lab-activities-2" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Pre-lab activities</h2>
+<p>After having watched the lectures and read the textbook chapters you’ll be in a good position to try these activities. Completing them before you attend your lab session will help you to consolidate your learning and help move through the lab activities more smoothly.</p>
+<div id="pre-lab-activity-1-data-wrangling-in-r-1" class="section level3" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Pre-lab activity 1: Data-wrangling in R</h3>
+<p>The more you practise coding in R, the easier it will become. The RStudio interactive tutorials I mentioned in weeks 11 and 12 are an excellent place to start if you haven’t engaged with those yet.</p>
+<ul>
+<li><p><a href="https://rstudio.cloud/learn/primers/1"><strong>The Basics</strong></a> Start here to learn how to inspect, visualize, subset and transform your data, as well as how to run code.</p></li>
+<li><p><a href="https://rstudio.cloud/learn/primers/2"><strong>Work with Data</strong></a> Learn how to extract values form a table, subset tables, calculate summary statistics, and derive new variables.</p></li>
+<li><p><a href="https://rstudio.cloud/learn/primers/3"><strong>Visualize Data</strong></a> Learn how to use ggplot2 to make any type of plot with your data. The tutorials on <a href="https://rstudio.cloud/learn/primers/3.1"><strong>Exploratory Data Analysis</strong></a> and <a href="https://rstudio.cloud/learn/primers/3.5"><strong>Scatterplots</strong></a> are particularly relevant.</p></li>
+<li><p><a href="https://rstudio.cloud/learn/primers/4.2"><strong>Separating and Uniting Columns</strong></a> Here you will learn to separate a column into multiple columns and to reverse the process by uniting multiple columns into a single column. Then you’ll practise your data wrangling skills on messy real world data.</p></li>
+<li><p><a href="https://rstudio.cloud/learn/primers/4.3"><strong>Join Data Sets</strong></a> Learn how to work with relational data. Here you will learn how to augment data sets with information from related data sets, as well as how to filter one data set against another.</p></li>
+</ul>
+<p>If you feel confident with the material covered in those tutorials the following is useful to try:</p>
+<ul>
+<li><a href="https://rstudio.cloud/learn/primers/1.2"><strong>Programming Basics</strong></a> R is easiest to use when you know how the R language works. This tutorial will teach you the implicit background knowledge that informs every piece of R code.</li>
+</ul>
+<p>Please note that there are often different ways to do the same or similar things in R. This means you might encounter slightly different functions or styles of coding in different materials. This is not something to worry about. Just make sure you’re clear on what a bit of code achieves and choose the function/style that you feel most comfortable with.</p>
+</div>
+<div id="pre-lab-activity-2-getting-ready-for-the-lab-class-1" class="section level3" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Pre-lab activity 2: Getting ready for the lab class</h3>
+<div id="remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.-2" class="section level4" number="4.3.2.1">
+<h4><span class="header-section-number">4.3.2.1</span> Remind yourself of how to access and work with the RStudio Server.</h4>
+<ul>
+<li><a href="https://dtu-panopto.lancs.ac.uk/Panopto/Pages/Viewer.aspx?id=f4f414ff-dd5b-4301-9214-adbf009d10da"><strong>Video on how to access the RStudio Server by Padraic</strong></a></li>
+<li>I highly recommend using R Projects to structure your workflow. You could create an R project for each week of the module. Have a look at section <a href="https://r4ds.had.co.nz/workflow-projects.html"><strong>8 Workflow: projects</strong></a> of <strong>R for Data Science</strong> by Hadley Wickam and Gareth Grolemund for an introduction.</li>
+</ul>
+</div>
+<div id="get-your-files-ready-2" class="section level4" number="4.3.2.2">
+<h4><span class="header-section-number">4.3.2.2</span> Get your files ready</h4>
+<p>Download the <a href="files/week13/402_week13_forStudents.zip">402_week13_forStudents.zip</a> file and upload it into a new folder in RStudio Server.</p>
+
+</div>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
+<a href="week-12-categorical-predictors.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

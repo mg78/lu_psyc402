@@ -53,3 +53,12 @@ step-8-checking-assumptions
 step-9-write-up
 answers-1
 lab-activity-1-combining-a-continuous-and-a-categorical-predictor-in-a-resssion-model-1
+week-13-more-on-interactions
+lectures-2
+reading-2
+winter-2020-2
+pre-lab-activities-2
+pre-lab-activity-1-data-wrangling-in-r-1
+pre-lab-activity-2-getting-ready-for-the-lab-class-1
+remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.-2
+get-your-files-ready-2
