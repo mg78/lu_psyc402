@@ -62,3 +62,11 @@ pre-lab-activity-1-data-wrangling-in-r-1
 pre-lab-activity-2-getting-ready-for-the-lab-class-1
 remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.-2
 get-your-files-ready-2
+lab-activities-2
+step-1-background-and-set-up-2
+step-2-descriptive-statistics-and-distributions
+step-3-center-and-standardise
+step-4-scatterplots
+step-5-the-regression-model
+step-6-checking-assumptions
+answers-2

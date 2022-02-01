@@ -1,4 +1,4 @@
-# PSYC402: Week 13 - Lab activity 1
+# PSYC402: Week 13 - Lab activity
 
 # Our research question: Do professors' beauty score and age predict how
 # students evaluate their teaching?
