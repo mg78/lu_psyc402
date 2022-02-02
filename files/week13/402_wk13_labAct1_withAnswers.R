@@ -88,7 +88,7 @@ pairs(beauty_matrix) # create a matrix of scatterplots
 # correlation matrix:
 intercor_results <- correlate(x = beauty_matrix, # our data
                               test = TRUE, # compute p-values
-                              corr.method = "pearson", # run a spearman test 
+                              corr.method = "pearson", # run a pearson test 
                               p.adjust.method = "bonferroni") # use the bonferroni correction
 intercor_results
 
