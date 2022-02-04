@@ -63,7 +63,8 @@ pre-lab-activity-2-getting-ready-for-the-lab-class-1
 remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.-2
 get-your-files-ready-2
 lab-activities-2
-step-1-background-and-set-up-2
+background-1
+step-1-set-up
 step-2-descriptive-statistics-and-distributions
 step-3-center-and-standardise
 step-4-scatterplots
