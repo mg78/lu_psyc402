@@ -71,3 +71,16 @@ step-4-scatterplots
 step-5-the-regression-model
 step-6-checking-assumptions
 answers-2
+week-14-logistic-regression
+lectures-3
+reading-3
+barr-2020
+winter-2020-3
+pre-lab-activities-3
+pre-lab-activity-1-getting-ready
+remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.-3
+get-your-files-ready-3
+pre-lab-activity-2-rainy-days
+pre-lab-activity-3gesture-perception
+lab-activities-3
+answers-3

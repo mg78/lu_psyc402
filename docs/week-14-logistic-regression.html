@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Analysing and Interpreting Psychological Data II - PSYC402</title>
+  <title>5 Week 14: Logistic regression | Analysing and Interpreting Psychological Data II - PSYC402</title>
   <meta name="description" content="Course content for PSYC402 at Lancaster University" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Analysing and Interpreting Psychological Data II - PSYC402" />
+  <meta property="og:title" content="5 Week 14: Logistic regression | Analysing and Interpreting Psychological Data II - PSYC402" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mg78/lu_psyc402" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Analysing and Interpreting Psychological Data II - PSYC402" />
+  <meta name="twitter:title" content="5 Week 14: Logistic regression | Analysing and Interpreting Psychological Data II - PSYC402" />
   
   <meta name="twitter:description" content="Course content for PSYC402 at Lancaster University" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="week-13-more-on-interactions.html"/>
 
-<link rel="next" href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -240,17 +240,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Analysing and Interpreting Psychological Data II - PSYC402</h1>
-<p class="author"><em>Margriet Groen and Rob Davies</em></p>
-<p class="date"><em>2022-02-06</em></p>
+<div id="week-14-logistic-regression" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Week 14: Logistic regression</h1>
+<blockquote>
+<p>Written by Margriet Groen (partly adapted from materials developed by the PsyTeachR team a the University of Glasgow)</p>
+</blockquote>
+<p>All of the models considered up to this point dealt with continuous response variables. Previously we looked at categorical predictors, but what if the response itself is categorical? For instance, whether the participant has made an accurate or inaccurate selection or whether a job candidate gets hired or not. Another common type of data is count data, where values are also discrete. Often with count data, the number of opportunities for something to occur is not well-defined. For instance, the number of speech error in a corpus, the number of turn shifts between speakers in a conversation or the number of visits to the doctor. Logistic regression allows us to model a categorical response variable.</p>
+<div id="lectures-3" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Lectures</h2>
+<p>The lecture material for this week follows the recommended chapters in Winter (2020) – see under ‘Reading’ below – and is presented below:</p>
+<ul>
+<li><a href="https://web.microsoftstream.com/video/4ad76798-998f-4415-b3a0-4b7d85cdb6da"><strong>Logistic regression (~38 min)</strong></a></li>
+</ul>
 </div>
-<div id="intro" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Intro</h1>
-<p>This is a collection of tuition material written for Psychology postgraduates at Lancaster University. At the moment the content represents the “lab materials” for the PSYC402 module. They feature tuition of programming with R, building on the skills you developed last term.</p>
-<div id="analysis-labs-and-pre-lab-work" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Analysis labs and ‘pre-lab work’</h2>
-<p>Some parts should be completed before you attend the lab session (watching lectures, reading chapters, pre-lab activities). All the links to the different materials and activities are also in the ‘to-do list’ for the relevant week on Moodle.</p>
+<div id="reading-3" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Reading</h2>
+<div id="barr-2020" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Barr (2020)</h3>
+<p><a href="https://psyteachr.github.io/stat-models-v1/generalized-linear-mixed-effects-models.html"><strong>Link</strong></a></p>
+<p>This online textbook provides a useful overview of logistic regression. Towards the end it talks about modelling multi-level data and random effects. Don’t worry about that for now, those will be covered in the second half of 402. This week we’ll focus on ‘single-level’ data.</p>
+</div>
+<div id="winter-2020-3" class="section level3" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Winter (2020)</h3>
+<p><a href="https://eu.alma.exlibrisgroup.com/leganto/public/44LAN_INST/citation/83408786230001221?auth=SAML"><strong>Link</strong></a></p>
+<p><strong>Chapter 12</strong> provides a comprehensive introduction to logistic regression and its implementation in R.</p>
+</div>
+</div>
+<div id="pre-lab-activities-3" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Pre-lab activities</h2>
+<p>After having watched the lectures and read the textbook chapters you’ll be in a good position to try these activities. Completing them before you attend your lab session will help you to consolidate your learning and help move through the lab activities more smoothly.</p>
+<div id="pre-lab-activity-1-getting-ready" class="section level3" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Pre-lab activity 1: Getting ready</h3>
+<div id="remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.-3" class="section level4" number="5.3.1.1">
+<h4><span class="header-section-number">5.3.1.1</span> Remind yourself of how to access and work with the RStudio Server.</h4>
+<ul>
+<li><a href="https://dtu-panopto.lancs.ac.uk/Panopto/Pages/Viewer.aspx?id=f4f414ff-dd5b-4301-9214-adbf009d10da"><strong>Video on how to access the RStudio Server by Padraic</strong></a></li>
+<li>I highly recommend using R Projects to structure your workflow. You could create an R project for each week of the module. Have a look at section <a href="https://r4ds.had.co.nz/workflow-projects.html"><strong>8 Workflow: projects</strong></a> of <strong>R for Data Science</strong> by Hadley Wickam and Gareth Grolemund for an introduction.</li>
+</ul>
+</div>
+<div id="get-your-files-ready-3" class="section level4" number="5.3.1.2">
+<h4><span class="header-section-number">5.3.1.2</span> Get your files ready</h4>
+<p>Download the <a href="files/week14/402_week14_forStudents.zip">402_week14_forStudents.zip</a> file and upload it into a new folder in RStudio Server.</p>
+</div>
+</div>
+<div id="pre-lab-activity-2-rainy-days" class="section level3" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Pre-lab activity 2: Rainy days</h3>
+<p>Try running the code mentioned in the online textbook by Barr. If you find it easier, use the <strong><code>rainy_days.R</code> script</strong> (in the ‘402_week14_forStudents folder you were asked to download in ’Pre-lab activity 1’). It illustrates the point that for discrete data, the variance is often not independent from the mean. In addition, it introduces some very useful R functions: What do the <code>rep()</code> function, the <code>c()</code> function and the <code>facet_wrap()</code> function do? Remember, you can type <code>?function name()</code> (e.g., <code>?rep()</code>) in the Console to get more information about a function.
+Finally, can you add a graph for rainy days in Lancaster?</p>
+</div>
+<div id="pre-lab-activity-3gesture-perception" class="section level3" number="5.3.3">
+<h3><span class="header-section-number">5.3.3</span> Pre-lab activity 3:Gesture perception</h3>
+<p>Please go through the example described in section 12.6 of the chapter on logistic regression in Bodo Winter’s book (link under ‘Reading’). Read the section and (simultaneously) work through the script (<code>chapter12_6.R</code>; in the ‘402_week14_forStudents folder you were asked to download in ’Pre-lab activity 1’). We’ll be working more with this dataset during the lab, so it is helpful if you get a feel for it now.</p>
+</div>
+</div>
+<div id="lab-activities-3" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Lab activities</h2>
+<p>In this lab, you’ll gain understanding of and practice with:</p>
+<ul>
+<li>when and why to apply logistic regression to answer questions in psychological science</li>
+<li>conducting logistic regression in R</li>
+<li>interpreting the R output of logistic regression</li>
+<li>reporting results for logistic regression following APA guidelines</li>
+</ul>
+</div>
+<div id="answers-3" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Answers</h2>
+<p>When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week. <strong>Remember</strong>, looking at this script (studying/revising it) does not replace the process of working through the lab activities, trying them out for yourself, getting stuck, asking questions, finding solutions, adding your own comments, etc. <strong>Actively engaging</strong> with the material is the way to learn these analysis skills, not by looking at someone else’s completed code…</p>
+<p>The answers to the questions and the script containing the code will be available after the lab session has taken place.</p>
+<!-- You can download the R-script that includes the relevant code here: [402_wk13_labAct1_withAnswers.R](files/week13/402_wk13_labAct1_withAnswers.R). -->
 
 </div>
 </div>
@@ -259,8 +316,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
+<a href="week-13-more-on-interactions.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
