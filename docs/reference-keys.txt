@@ -83,4 +83,5 @@ get-your-files-ready-3
 pre-lab-activity-2-rainy-days
 pre-lab-activity-3gesture-perception
 lab-activities-3
+lab-activity-1-more-work-on-gesture-perception
 answers-3
