@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Analysing and Interpreting Psychological Data II - PSYC402</title>
+  <title>6 Week 15: Poisson regression | Analysing and Interpreting Psychological Data II - PSYC402</title>
   <meta name="description" content="Course content for PSYC402 at Lancaster University" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Analysing and Interpreting Psychological Data II - PSYC402" />
+  <meta property="og:title" content="6 Week 15: Poisson regression | Analysing and Interpreting Psychological Data II - PSYC402" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mg78/lu_psyc402" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Analysing and Interpreting Psychological Data II - PSYC402" />
+  <meta name="twitter:title" content="6 Week 15: Poisson regression | Analysing and Interpreting Psychological Data II - PSYC402" />
   
   <meta name="twitter:description" content="Course content for PSYC402 at Lancaster University" />
   
@@ -31,7 +31,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="week-14-logistic-regression.html"/>
 
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -261,18 +261,98 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="week-15-poisson-regression" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Week 15: Poisson regression</h1>
+<blockquote>
+<p>Written by Margriet Groen</p>
+</blockquote>
+<p>Last week, we looked at logistic regression in the context of a binomial outcome variable, that is, a two-level variable such as correct vs. incorrect, or looking to the left vs. the right. Poisson regression is another type of generalized linear model that is particularly useful for count data.</p>
+<div id="lectures-4" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Lectures</h2>
+<p>The lecture material for this week follows the recommended chapters in Winter (2020) – see under ‘Reading’ below – and is presented below:</p>
+<ul>
+<li><a href="https://web.microsoftstream.com/video/62a8baeb-c951-4cf0-ace4-65916331b891"><strong>Poisson regression (~28 min)</strong></a></li>
+</ul>
+</div>
+<div id="reading-4" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Reading</h2>
+<div id="winter-2020-4" class="section level3" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Winter (2020)</h3>
+<p><a href="https://eu.alma.exlibrisgroup.com/leganto/public/44LAN_INST/citation/83408786230001221?auth=SAML"><strong>Link</strong></a></p>
+<p><strong>Chapter 13</strong> provides a clear introduction to Poisson regression and its implementation in R.</p>
+</div>
+</div>
+<div id="pre-lab-activities-4" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Pre-lab activities</h2>
+<p>After having watched the lectures and read the textbook chapters you’ll be in a good position to try these activities. Completing them before you attend your lab session will help you to consolidate your learning and help move through the lab activities more smoothly.</p>
+<div id="pre-lab-activity-1-getting-a-feel-for-poisson-data" class="section level3" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Pre-lab activity 1: Getting a feel for Poisson data</h3>
+<p>To get a feel for Poisson data, we’ll use the <code>rpois()</code> function to generate random data that is Poisson-distributed. <code>rpois()</code> needs two bits of information: lambda, and how many numbers you want to generate.</p>
+<p>As usual, before we get stuck in we need to set up a few things.</p>
+<blockquote>
+<p><strong>TASK</strong>: Add code to clear the environment. <strong>HINT</strong>: <code>rm(list=ls())</code></p>
+</blockquote>
+<p>Next we need to tell R which libraries to use. For this pre-lab activity, we just need the <code>tidyverse</code> library.</p>
+<blockquote>
+<p><strong>TASK</strong>: Add code to load relevant libraries. <strong>HINT</strong>: <code>library()</code></p>
+</blockquote>
+<p>Ok, now let’s play around with different lambdas to get a feel for the Poisson distribution.</p>
+<blockquote>
+<p><strong>TASK</strong>: Copy the code below to your script and run it. Then change the value of <code>lambda</code> in the <code>rpois()</code> function and see how the distribution changes.</p>
+</blockquote>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="week-15-poisson-regression.html#cb25-1" aria-hidden="true" tabindex="-1"></a>lambda2 <span class="ot">&lt;-</span> <span class="fu">rpois</span>(<span class="at">n =</span> <span class="dv">1000</span>, <span class="at">lambda =</span> <span class="dv">2</span>)</span>
+<span id="cb25-2"><a href="week-15-poisson-regression.html#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="week-15-poisson-regression.html#cb25-3" aria-hidden="true" tabindex="-1"></a>lambda2 <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(lambda2)</span>
+<span id="cb25-4"><a href="week-15-poisson-regression.html#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="week-15-poisson-regression.html#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> lambda2, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lambda2)) <span class="sc">+</span></span>
+<span id="cb25-6"><a href="week-15-poisson-regression.html#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
+<p><strong>QUESTION</strong>: What do you notice about the Poisson distribution if you choose a high value for lambda?</p>
+</div>
+<div id="pre-lab-activity-2-getting-ready" class="section level3" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Pre-lab activity 2: Getting ready</h3>
+<div id="remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.-4" class="section level4" number="6.3.2.1">
+<h4><span class="header-section-number">6.3.2.1</span> Remind yourself of how to access and work with the RStudio Server.</h4>
+<ul>
+<li><a href="https://dtu-panopto.lancs.ac.uk/Panopto/Pages/Viewer.aspx?id=f4f414ff-dd5b-4301-9214-adbf009d10da"><strong>Video on how to access the RStudio Server by Padraic</strong></a></li>
+<li>I highly recommend using R Projects to structure your workflow. You could create an R project for each week of the module. Have a look at section <a href="https://r4ds.had.co.nz/workflow-projects.html"><strong>8 Workflow: projects</strong></a> of <strong>R for Data Science</strong> by Hadley Wickam and Gareth Grolemund for an introduction.</li>
+</ul>
+</div>
+<div id="get-your-files-ready-4" class="section level4" number="6.3.2.2">
+<h4><span class="header-section-number">6.3.2.2</span> Get your files ready</h4>
+<p>Files needed for the lab activity will be posted early next week.
+<!-- Download the [402_week15_forStudents.zip](files/week14/402_week15_forStudents.zip) file and upload it into a new folder in RStudio Server.  --></p>
+</div>
+</div>
+</div>
+<div id="lab-activities-4" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Lab activities</h2>
+<p>In this lab, you’ll gain understanding of and practice with:</p>
+<ul>
+<li>when and why to apply Poisson regression to answer questions in psychological science</li>
+<li>conducting Poisson regression in R</li>
+<li>interpreting the R output of Poisson regression</li>
+<li>reporting results for Poisson regression following APA guidelines</li>
+</ul>
+<div id="lab-activity-1" class="section level3" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Lab activity 1:</h3>
+<!-- To complete this lab activity, please open the R-script [`402_wk15_labAct1.R`](files/week15/402_wk15_labAct1.R) in R Studio and work your way through it. -->
+<!-- All instructions, hints and questions are contained in the script. -->
+</div>
+</div>
+<div id="answers-4" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> Answers</h2>
+<p>When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week. <strong>Remember</strong>, looking at this script (studying/revising it) does not replace the process of working through the lab activities, trying them out for yourself, getting stuck, asking questions, finding solutions, adding your own comments, etc. <strong>Actively engaging</strong> with the material is the way to learn these analysis skills, not by looking at someone else’s completed code…</p>
+<p>The answers to the questions and the script containing the code will be available after the lab session has taken place.</p>
+<!-- You can download the R-script that includes the relevant code here: [402_wk15_labAct1_withAnswers.R](files/week15/402_wk15_labAct1_withAnswers.R). -->
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
+<a href="week-14-logistic-regression.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

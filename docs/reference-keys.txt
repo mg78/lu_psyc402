@@ -85,3 +85,15 @@ pre-lab-activity-3gesture-perception
 lab-activities-3
 lab-activity-1-more-work-on-gesture-perception
 answers-3
+week-15-poisson-regression
+lectures-4
+reading-4
+winter-2020-4
+pre-lab-activities-4
+pre-lab-activity-1-getting-a-feel-for-poisson-data
+pre-lab-activity-2-getting-ready
+remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.-4
+get-your-files-ready-4
+lab-activities-4
+lab-activity-1
+answers-4
