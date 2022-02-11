@@ -12,7 +12,7 @@ rm(list=ls())
 library(tidyverse)
 library(broom)
 
-# TASK: Read in the data file beauty.csv; call it "ges". Have
+# TASK: Read in the data file; call it "ges". Have
 # a look at the data file.
 # HINT: Use the read_csv() and head() functions.
 
