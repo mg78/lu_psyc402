@@ -24,7 +24,7 @@
 <meta name="author" content="Margriet Groen and Rob Davies" />
 
 
-<meta name="date" content="2022-02-11" />
+<meta name="date" content="2022-02-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -237,7 +237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="week-15-poisson-regression.html"><a href="week-15-poisson-regression.html#lab-activities-4"><i class="fa fa-check"></i><b>6.4</b> Lab activities</a>
 <ul>
-<li class="chapter" data-level="6.4.1" data-path="week-15-poisson-regression.html"><a href="week-15-poisson-regression.html#lab-activity-1"><i class="fa fa-check"></i><b>6.4.1</b> Lab activity 1:</a></li>
+<li class="chapter" data-level="6.4.1" data-path="week-15-poisson-regression.html"><a href="week-15-poisson-regression.html#lab-activity-1-visual-dominance"><i class="fa fa-check"></i><b>6.4.1</b> Lab activity 1: Visual dominance</a></li>
 </ul></li>
 <li class="chapter" data-level="6.5" data-path="week-15-poisson-regression.html"><a href="week-15-poisson-regression.html#answers-4"><i class="fa fa-check"></i><b>6.5</b> Answers</a></li>
 </ul></li>
@@ -334,21 +334,6 @@ Hamermesh, D. S. and Parker, A. (2005). Beauty in the classroom: instructors’ 
 Adjusted for many other determinants, beauty affects earnings; but does it lead directly to the differences in productivity that we believe generate earnings differences? We take a large sample of student instructional ratings for a group of university teachers and acquire six independent measures of their beauty, and a number of other descriptors of them and their classes. Instructors who are viewed as better looking receive higher instructional ratings, with the impact of a move from the 10th to the 90th percentile of beauty being substantial. This impact exists within university departments and even within particular courses, and is larger for male than for female instructors. Disentangling whether this outcome represents productivity or discrimination is, as with the issue generally, probably impossible.</p>
 <p>Our <strong>research question</strong>: Do professors’ beauty score and age predict how students evaluate their teaching?</p>
 <p>To complete this lab activity, you can use the R-script (<code>402_wk13_labAct1_template.R</code>) that you downloaded as part of the ‘Pre-lab activities’ as a template. Work through the activity below, adding relevant bits of code to your script as you go along.</p>
-</div>
-<div id="step-1-set-up" class="section level4" number="4.4.0.2">
-<h4><span class="header-section-number">4.4.0.2</span> Step 1: Set up</h4>
-<p>Before we get stuck in we need to set up a few things.</p>
-<blockquote>
-<p><strong>TASK</strong>: Add code to clear the environment. <strong>HINT</strong>: <code>rm(list=ls())</code></p>
-</blockquote>
-<p>Next we need to tell R which libraries to use. We need <code>broom</code>, <code>car</code>, <code>tidyverse</code> and <code>lsr</code>.</p>
-<blockquote>
-<p><strong>TASK</strong>: Add code to load relevant libraries. <strong>HINT</strong>: <code>library()</code></p>
-</blockquote>
-<p>Finally, read in the data file (<code>beauty.csv</code>) and have a look at it.</p>
-<blockquote>
-<p>**TASK*: Add code to read in the three data files. <strong>HINT</strong>: Use the <code>read_csv()</code> and <code>head()</code> functions.</p>
-</blockquote>
 <p><strong>QUESTION 1</strong>: Do you notice anything about the name of one of the variables and the name of the data table?</p>
 <p>The table contains, amongst other things, the following characteristics of the professors</p>
 <ul>
@@ -358,8 +343,8 @@ Adjusted for many other determinants, beauty affects earnings; but does it lead 
 </ul>
 <p><strong>QUESTION 2</strong>: Go back to the research question (see under ‘Background’ above), which of these three variables is the outcome variable? Which ones are the predictors?</p>
 </div>
-<div id="step-2-descriptive-statistics-and-distributions" class="section level4" number="4.4.0.3">
-<h4><span class="header-section-number">4.4.0.3</span> Step 2: Descriptive statistics and distributions</h4>
+<div id="step-2-descriptive-statistics-and-distributions" class="section level4" number="4.4.0.2">
+<h4><span class="header-section-number">4.4.0.2</span> Step 2: Descriptive statistics and distributions</h4>
 <blockquote>
 <p><strong>TASK</strong>: Calculate some descriptive statistics for the variables of interest (eval, beauty and age). <strong>HINT</strong>: You can use <code>summarise()</code> to calculate the mean, sd, min and max values.</p>
 </blockquote>
@@ -368,15 +353,15 @@ Adjusted for many other determinants, beauty affects earnings; but does it lead 
 <p><strong>TASK</strong>: Visualise the distributions of the variables of interest in histograms. <strong>HINT</strong>: Use <code>ggplot()</code> and <code>geom_historgram()</code></p>
 </blockquote>
 </div>
-<div id="step-3-center-and-standardise" class="section level4" number="4.4.0.4">
-<h4><span class="header-section-number">4.4.0.4</span> Step 3: Center and standardise</h4>
+<div id="step-3-center-and-standardise" class="section level4" number="4.4.0.3">
+<h4><span class="header-section-number">4.4.0.3</span> Step 3: Center and standardise</h4>
 <p>As mentioned before, it will make it easier to interpret regression models with multiple predictors if we center and standardise our predictors. Before we go any further, we’ll do that.</p>
 <blockquote>
 <p><strong>TASK</strong>: Center and standardise the predictor variables. <strong>HINT</strong>: Centering involves subtracting the mean; standardising involves dividing by the standard deviation.</p>
 </blockquote>
 </div>
-<div id="step-4-scatterplots" class="section level4" number="4.4.0.5">
-<h4><span class="header-section-number">4.4.0.5</span> Step 4: Scatterplots</h4>
+<div id="step-4-scatterplots" class="section level4" number="4.4.0.4">
+<h4><span class="header-section-number">4.4.0.4</span> Step 4: Scatterplots</h4>
 <p>Now let’s have a look at the relationships between variables using scatterplots. To remind yourself of what centering and standardising does, do this for both the raw data and the centered and standardised data.</p>
 <blockquote>
 <p><strong>TASK</strong>: Visualise the relationships between the variables of interest in scatterplots. <strong>HINT</strong>: Create six different scatterplots using <code>ggplot()</code> with <code>geom_point()</code> and <code>geom_smooth()</code>.</p>
@@ -404,8 +389,8 @@ Adjusted for many other determinants, beauty affects earnings; but does it lead 
 <span id="cb20-5"><a href="week-13-more-on-interactions.html#cb20-5" aria-hidden="true" tabindex="-1"></a>intercor_results</span></code></pre></div>
 <p>After you’ve run this code, look at the output in the console. It creates three tables, one with correlation coefficients, one with p-values for these coefficients and one with sample sizes.</p>
 </div>
-<div id="step-5-the-regression-model" class="section level4" number="4.4.0.6">
-<h4><span class="header-section-number">4.4.0.6</span> Step 5: The regression model</h4>
+<div id="step-5-the-regression-model" class="section level4" number="4.4.0.5">
+<h4><span class="header-section-number">4.4.0.5</span> Step 5: The regression model</h4>
 <p>We’ve looked at descriptive statistics and distributions of variables and also at relations between variables. This has given us a good idea of what the data look like. Now we’ll construct the regression model to predict ‘evaluation score’ as a function of ‘age’ and ‘beauty score’. We’ll do this in two stages. First we’ll construct a model without an interaction term. Then we’ll construct a model that includes an interaction term betweeen the two predictor variables. Don’t forget to use the standardised data for all this.</p>
 <blockquote>
 <p><strong>TASK</strong>: Construct a regression model without an interaction term. <strong>HINT</strong>: Use the following formula, lm(y ~ x1 + x2, data); go back to the research question for your outcome and predictor variables.</p>
@@ -466,8 +451,8 @@ Adjusted for many other determinants, beauty affects earnings; but does it lead 
 <span id="cb23-9"><a href="week-13-more-on-interactions.html#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Beauty score&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Teaching evaluation score&quot;</span>)</span></code></pre></div>
 <p>The line for the oldest participants seems much steeper than for the other two groups, suggesting that the interaction between age and beauty is mostly driven by older participants who have received more extreme beauty scores.</p>
 </div>
-<div id="step-6-checking-assumptions" class="section level4" number="4.4.0.7">
-<h4><span class="header-section-number">4.4.0.7</span> Step 6: Checking assumptions</h4>
+<div id="step-6-checking-assumptions" class="section level4" number="4.4.0.6">
+<h4><span class="header-section-number">4.4.0.6</span> Step 6: Checking assumptions</h4>
 <p>Now that we’ve fitted a model, let’s check whether it meets the assumptions of linearity, normality and homoscedasticity.</p>
 <p><strong>Linearity</strong>
 Unlike when we did simple regression we can’t use <code>crPlots()</code> to test for linearity when there is an interaction, but we know from looking at the grouped scatterplot that this assumption has been met.</p>

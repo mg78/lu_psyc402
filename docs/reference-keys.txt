@@ -64,7 +64,6 @@ remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.-2
 get-your-files-ready-2
 lab-activities-2
 background-1
-step-1-set-up
 step-2-descriptive-statistics-and-distributions
 step-3-center-and-standardise
 step-4-scatterplots
@@ -95,5 +94,10 @@ pre-lab-activity-2-getting-ready
 remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.-4
 get-your-files-ready-4
 lab-activities-4
-lab-activity-1
+lab-activity-1-visual-dominance
+step-1-set-up
+step-2-a-bit-of-data-wrangling
+step-3-visualise-the-data
+step-3-the-regression-model
+step-4-overdispersion
 answers-4

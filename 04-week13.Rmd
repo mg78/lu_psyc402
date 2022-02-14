@@ -74,20 +74,6 @@ Our **research question**: Do professors' beauty score and age predict how stude
 
 To complete this lab activity, you can use the R-script (`402_wk13_labAct1_template.R`) that you downloaded as part of the 'Pre-lab activities' as a template. Work through the activity below, adding relevant bits of code to your script as you go along.
 
-#### Step 1: Set up
-
-Before we get stuck in we need to set up a few things. 
-
-> **TASK**: Add code to clear the environment. **HINT**: `rm(list=ls())`
-
-Next we need to tell R which libraries to use. We need `broom`, `car`, `tidyverse` and `lsr`.
-
-> **TASK**: Add code to load relevant libraries. **HINT**: `library()`
-
-Finally, read in the data file (`beauty.csv`) and have a look at it.
-
-> **TASK*: Add code to read in the three data files. **HINT**: Use the `read_csv()` and `head()` functions.
-
 **QUESTION 1**: Do you notice anything about the name of one of the variables and the name of the data table?
 
 The table contains, amongst other things, the following characteristics of the professors
