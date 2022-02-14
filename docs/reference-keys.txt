@@ -98,6 +98,6 @@ lab-activity-1-visual-dominance
 step-1-set-up
 step-2-a-bit-of-data-wrangling
 step-3-visualise-the-data
-step-3-the-regression-model
-step-4-overdispersion
+step-4-the-regression-model
+step-5-overdispersion
 answers-4

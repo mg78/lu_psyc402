@@ -319,8 +319,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="get-your-files-ready-4" class="section level4" number="6.3.2.2">
 <h4><span class="header-section-number">6.3.2.2</span> Get your files ready</h4>
-<p>Files needed for the lab activity will be posted early next week.
-<!-- Download the [402_week15_forStudents.zip](files/week14/402_week15_forStudents.zip) file and upload it into a new folder in RStudio Server.  --></p>
+<!-- Files needed for the lab activity will be posted early next week. -->
+<p>Download the <a href="files/week15/402_week15_forStudents.zip">402_week15_forStudents.zip</a> file and upload it into a new folder in RStudio Server.</p>
 </div>
 </div>
 </div>
@@ -379,16 +379,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </blockquote>
 <p><strong>QUESTION 4</strong>: What do you conclude from the scatterplots?</p>
 </div>
-<div id="step-3-the-regression-model" class="section level4" number="6.4.1.4">
-<h4><span class="header-section-number">6.4.1.4</span> Step 3: The regression model</h4>
+<div id="step-4-the-regression-model" class="section level4" number="6.4.1.4">
+<h4><span class="header-section-number">6.4.1.4</span> Step 4: The regression model</h4>
 <p>We are going to fit a Poisson regression model with <code>Taste</code>, <code>Smell</code>, <code>Touch</code>, <code>Sight</code> and <code>Sound</code> as predictors (all of these are continuous rating scales).</p>
 <blockquote>
 <p><strong>TASK</strong>: Fit a Poisson regression model for ‘Freq’ as a function of ‘Taste’, ‘Smell’, ‘Touch’, ‘Sight’ and ‘Sound’. <strong>HINT</strong>: Use the <code>glm()</code> function with <code>family = poisson</code>.</p>
 </blockquote>
 <p><strong>QUESTION 5</strong>: How do you interpret the output of the Poisson regression?</p>
 </div>
-<div id="step-4-overdispersion" class="section level4" number="6.4.1.5">
-<h4><span class="header-section-number">6.4.1.5</span> Step 4: Overdispersion</h4>
+<div id="step-5-overdispersion" class="section level4" number="6.4.1.5">
+<h4><span class="header-section-number">6.4.1.5</span> Step 5: Overdispersion</h4>
 <p>In the lecture we saw that it is possible that the variance is larger than theoretically expected for a given lambda. If this happens, we are dealing with what’s called ‘overdispersion’. You can compensate for this by using a variant of Poisson regression that is called ‘negative binomial regression’. In negative binomial regression the variance is uncouples from the mean.</p>
 <blockquote>
 <p><strong>TASK</strong>: Fit a negative binomial regression model for ‘Freq’ as a function of ‘Taste’, ‘Smell’, ‘Touch’, ‘Sight’ and ‘Sound’. <strong>HINT</strong>: Use the <code>glm.nb()</code> function.</p>
