@@ -1,7 +1,7 @@
 ---
 title: "Analysing and Interpreting Psychological Data II - PSYC402"
 author: "Margriet Groen and Rob Davies"
-date: "2022-02-16"
+date: "2022-03-07"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
