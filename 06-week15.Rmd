@@ -8,7 +8,7 @@ output:
 
 > Written by Margriet Groen (partly adapted from Winter (2020))
 
-Last week, we looked at logistic regression in the context of a binomial outcome variable, that is, a two-level variable such as correct vs. incorrect, or looking to the left vs. the right. Poisson regression is another type of generalized linear model that is particularly useful for count data.
+Previously, we looked at logistic regression in the context of a binomial outcome variable, that is, a two-level variable such as correct vs. incorrect, or looking to the left vs. the right. Poisson regression is another type of generalized linear model that is particularly useful for count data.
  
 ## Lectures
 The lecture material for this week follows the recommended chapters in Winter (2020) -- see under 'Reading' below -- and is presented below:
