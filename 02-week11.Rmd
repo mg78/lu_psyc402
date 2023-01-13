@@ -27,16 +27,16 @@ Before we start covering new material, we want to spent some time on recapping t
 
 Alternatively, if you don't feel confident about the material, these recorded lectures might help.
 
-* [**The linear model: theory (~30 min)**](https://web.microsoftstream.com/video/5fecb3a3-3bfe-4a00-a2fe-d463baac4820) 
+* [**The linear model: theory (~30 min)**](https://estream.lancaster.ac.uk/View.aspx?id=60909~5l~EskRm8Serj) 
 An introduction to the linear model and linear regression. I follow material as discussed in Chapter 4 of Bodo Winter's book *Statistics for Linguists: An Introduction using R* (see below under 'Reading').
 
-* [**How to build a linear model in R (~30 min)**](https://web.microsoftstream.com/video/06d5c162-4985-45b4-a41a-33b661bd516e)
+* [**How to build a linear model in R (~30 min)**](https://estream.lancaster.ac.uk/View.aspx?id=60910~5d~uUTzHPgBLN)
 In this video I demonstrate how to build a linear model in R by talking you through a simple linear regression script (you can download it here [stats_linearModel_howTo.R](files/week11/stats_linearModel_howTo.R)). If you are unclear on what different parts of the lm() function do, or how to read the output, this video might help clarify that.
 
-* [**Multiple regression: theory (~35 min)**](https://web.microsoftstream.com/video/c7fb276c-4d06-40d4-8553-ec775f9ecdc6)
+* [**Multiple regression: theory (~35 min)**](https://estream.lancaster.ac.uk/View.aspx?id=60911~5e~WIhZrOrXiD)
 An introduction to multiple regression. I follow material as discussed in Chapter 5 of Bodo Winter's book *Statistics for Linguists: An Introduction using R* (see below under 'Reading').
 
-* [**Centering and standardising (~5 min)**](https://web.microsoftstream.com/video/16a2f84d-2a8c-4665-ae66-0192594c7406)
+* [**Centering and standardising (~5 min)**](https://estream.lancaster.ac.uk/View.aspx?id=60912~5f~xjxBbNDjGF)
 Brief explanation of what centering and standardising are.
 
 ## Reading
@@ -89,7 +89,8 @@ Please note that there are often different ways to do the same or similar things
 ### Pre-lab activity 3: Getting ready for the lab class
 #### Remind yourself of how to access and work with the RStudio Server.
 
-* [**Video on how to access the RStudio Server by Padraic**](https://dtu-panopto.lancs.ac.uk/Panopto/Pages/Viewer.aspx?id=f4f414ff-dd5b-4301-9214-adbf009d10da)
+* Revisit [**PSYC401**](https://modules.lancaster.ac.uk/course/view.php?id=37245) to remind yourself of how to access the RStudio Server.
+
 * I highly recommend using R Projects to structure your workflow. You could create an R project for each week of the module. Have a look at section [**8 Workflow: projects**](https://r4ds.had.co.nz/workflow-projects.html) of **R for Data Science** by Hadley Wickam and Gareth Grolemund for an introduction.
 
 #### Get your files ready
@@ -282,9 +283,9 @@ What do you conclude from the graphs and output? Should we also check for collin
 
 When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week. **Remember**, looking at this script (studying/revising it) does not replace the process of working through the lab activities, trying them out for yourself, getting stuck, asking questions, finding solutions, adding your own comments, etc. **Actively engaging** with the material is the way to learn these analysis skills, not by looking at someone else's completed code...
 
-<!-- The answers to the questions and the script containing the code will be available after lab session has taken place. -->
+The answers to the questions and the script containing the code will be available after lab session has taken place.
 
-### Lab activity 1: Interpreting and reporting results
+<!--### Lab activity 1: Interpreting and reporting results
 1. What is the outcome or dependent variable? **Word reading**
 2. What is the predictor or independent variable? **Non-word reading**
 3. Is the overall model significant? **Yes, *F*(1,50) = 69.03, *p* < .001**
@@ -293,4 +294,4 @@ When you have completed all of the lab content, you may want to check your answe
 6. Do the residuals show normality and homoscedasticity? **The qq-plot suggest that the residuals are normally distributed as the dots fall close to the solid blue line and within the range of the dashed blue lines. The Shapiro-Wilk test of normality confirms this (it is not significant). Similarly, the output of the non-constant variance score tests is not significant suggesting that the residuals are homoscedastic.**
 
 ### Lab activity 2: Conducting simple and multiple regression
-You can download the R-script that includes the relevant code and answers to the questions here: [402_wk11_labAct2_withAnswers.R](files/week11/402_wk11_labAct2_withAnswers.R).
+You can download the R-script that includes the relevant code and answers to the questions here: [402_wk11_labAct2_withAnswers.R](files/week11/402_wk11_labAct2_withAnswers.R).-->
