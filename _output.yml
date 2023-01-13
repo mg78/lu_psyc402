@@ -5,7 +5,7 @@ bookdown::gitbook:
     toc:
       collapse: subsection
       before: |
-        <li><a href="./">PSYC402 - Analysing and Interpreting Psychological Data II</a></li>
+        <li><a href="./">PSYC122 - Statistics for Psychologists I</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 bookdown::pdf_book:

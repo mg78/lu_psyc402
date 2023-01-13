@@ -1,5 +1,5 @@
 book_filename: "bookdown-start"
-repo: 
+repo: https://github.lancs.ac.uk/psyc-stats/PSYC121_2020_21/
 output_dir: docs
 rmd_files: 
 clean: [packages.bib, bookdown.bbl]
