@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Analysing and Interpreting Psychological Data II - PSYC402</title>
+  <title>5 Week 14: Logistic regression | Analysing and Interpreting Psychological Data II - PSYC402</title>
   <meta name="description" content="Course content for PSYC402 at Lancaster University" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Analysing and Interpreting Psychological Data II - PSYC402" />
+  <meta property="og:title" content="5 Week 14: Logistic regression | Analysing and Interpreting Psychological Data II - PSYC402" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="mg78/lu_psyc402" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Analysing and Interpreting Psychological Data II - PSYC402" />
+  <meta name="twitter:title" content="5 Week 14: Logistic regression | Analysing and Interpreting Psychological Data II - PSYC402" />
   
   <meta name="twitter:description" content="Course content for PSYC402 at Lancaster University" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="week-13-more-on-interactions.html"/>
+<link rel="next" href="week-15-more-regression.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -139,27 +139,25 @@
 <li><a href="week-13-more-on-interactions.html#lab-activities-2" id="toc-lab-activities-2"><span class="toc-section-number">4.4</span> Lab activities</a></li>
 <li><a href="week-13-more-on-interactions.html#answers-2" id="toc-answers-2"><span class="toc-section-number">4.5</span> Answers</a></li>
 </ul></li>
-<li><a href="week-14-logistic-regression.html#week-14-logistic-regression" id="toc-week-14-logistic-regression"><span class="toc-section-number">5</span> Week 14: Logistic regression</a>
+<li><a href="week-14-logistic-regression.html#week-14-logistic-regression" id="toc-week-14-logistic-regression"><span class="toc-section-number">5</span> Week 14: Logistic regression</a></li>
+<li><a href="week-15-more-regression.html#week-15-more-regression" id="toc-week-15-more-regression"><span class="toc-section-number">6</span> Week 15: More regression</a>
 <ul>
-<li><a href="week-14-logistic-regression.html#lectures-3" id="toc-lectures-3"><span class="toc-section-number">5.1</span> Lectures</a></li>
-<li><a href="week-14-logistic-regression.html#reading-3" id="toc-reading-3"><span class="toc-section-number">5.2</span> Reading</a>
+<li><a href="week-15-more-regression.html#lectures-3" id="toc-lectures-3"><span class="toc-section-number">6.1</span> Lectures</a></li>
+<li><a href="week-15-more-regression.html#reading-3" id="toc-reading-3"><span class="toc-section-number">6.2</span> Reading</a>
 <ul>
-<li><a href="week-14-logistic-regression.html#barr-2020" id="toc-barr-2020"><span class="toc-section-number">5.2.1</span> Barr (2020)</a></li>
-<li><a href="week-14-logistic-regression.html#winter-2020-3" id="toc-winter-2020-3"><span class="toc-section-number">5.2.2</span> Winter (2020)</a></li>
+<li><a href="week-15-more-regression.html#winter-2020-3" id="toc-winter-2020-3"><span class="toc-section-number">6.2.1</span> Winter (2020)</a></li>
 </ul></li>
-<li><a href="week-14-logistic-regression.html#pre-lab-activities-3" id="toc-pre-lab-activities-3"><span class="toc-section-number">5.3</span> Pre-lab activities</a>
+<li><a href="week-15-more-regression.html#pre-lab-activities-3" id="toc-pre-lab-activities-3"><span class="toc-section-number">6.3</span> Pre-lab activities</a>
 <ul>
-<li><a href="week-14-logistic-regression.html#pre-lab-activity-1-getting-ready" id="toc-pre-lab-activity-1-getting-ready"><span class="toc-section-number">5.3.1</span> Pre-lab activity 1: Getting ready</a></li>
-<li><a href="week-14-logistic-regression.html#pre-lab-activity-2-rainy-days" id="toc-pre-lab-activity-2-rainy-days"><span class="toc-section-number">5.3.2</span> Pre-lab activity 2: Rainy days</a></li>
-<li><a href="week-14-logistic-regression.html#pre-lab-activity-3gesture-perception" id="toc-pre-lab-activity-3gesture-perception"><span class="toc-section-number">5.3.3</span> Pre-lab activity 3:Gesture perception</a></li>
+<li><a href="week-15-more-regression.html#pre-lab-activity-1-getting-a-feel-for-poisson-data" id="toc-pre-lab-activity-1-getting-a-feel-for-poisson-data"><span class="toc-section-number">6.3.1</span> Pre-lab activity 1: Getting a feel for Poisson data</a></li>
+<li><a href="week-15-more-regression.html#pre-lab-activity-2-getting-ready" id="toc-pre-lab-activity-2-getting-ready"><span class="toc-section-number">6.3.2</span> Pre-lab activity 2: Getting ready</a></li>
 </ul></li>
-<li><a href="week-14-logistic-regression.html#lab-activities-3" id="toc-lab-activities-3"><span class="toc-section-number">5.4</span> Lab activities</a>
+<li><a href="week-15-more-regression.html#lab-activities-3" id="toc-lab-activities-3"><span class="toc-section-number">6.4</span> Lab activities</a>
 <ul>
-<li><a href="week-14-logistic-regression.html#lab-activity-1-more-work-on-gesture-perception" id="toc-lab-activity-1-more-work-on-gesture-perception"><span class="toc-section-number">5.4.1</span> Lab activity 1: More work on gesture perception</a></li>
+<li><a href="week-15-more-regression.html#lab-activity-1-visual-dominance" id="toc-lab-activity-1-visual-dominance"><span class="toc-section-number">6.4.1</span> Lab activity 1: Visual dominance</a></li>
 </ul></li>
-<li><a href="week-14-logistic-regression.html#answers-3" id="toc-answers-3"><span class="toc-section-number">5.5</span> Answers</a></li>
+<li><a href="week-15-more-regression.html#answers-3" id="toc-answers-3"><span class="toc-section-number">6.5</span> Answers</a></li>
 </ul></li>
-<li><a href="week-15-more-regression.html#week-15-more-regression" id="toc-week-15-more-regression"><span class="toc-section-number">6</span> Week 15: More regression</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -180,19 +178,80 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="week-14-logistic-regression" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Week 14: Logistic regression</h1>
+<blockquote>
+<p>Written by Margriet Groen (partly adapted from materials developed by the PsyTeachR team a the University of Glasgow)</p>
+</blockquote>
+<p>All of the models considered up to this point dealt with continuous response variables. Previously we looked at categorical predictors, but what if the response itself is categorical? For instance, whether the participant has made an accurate or inaccurate selection or whether a job candidate gets hired or not. Another common type of data is count data, where values are also discrete. Often with count data, the number of opportunities for something to occur is not well-defined. For instance, the number of speech error in a corpus, the number of turn shifts between speakers in a conversation or the number of visits to the doctor. Logistic regression allows us to model a categorical response variable.</p>
+<!--
+## Lectures
+The lecture material for this week follows the recommended chapters in Winter (2020) -- see under 'Reading' below -- and is presented below:
+
+* [**Logistic regression (~38 min)**](https://web.microsoftstream.com/video/4ad76798-998f-4415-b3a0-4b7d85cdb6da) 
+
+## Reading
+
+### Barr (2020)
+[**Link**](https://psyteachr.github.io/stat-models-v1/generalized-linear-mixed-effects-models.html)
+
+This online textbook provides a useful overview of logistic regression. Towards the end it talks about modelling multi-level data and random effects. Don't worry about that for now, those will be covered in the second half of 402. This week we'll focus on 'single-level' data.
+
+### Winter (2020)
+[**Link**](https://eu.alma.exlibrisgroup.com/leganto/public/44LAN_INST/citation/83408786230001221?auth=SAML)
+
+**Chapter 12** provides a comprehensive introduction to logistic regression and its implementation in R.
+
+## Pre-lab activities
+After having watched the lectures and read the textbook chapters you’ll be in a good position to try these activities. Completing them before you attend your lab session will help you to consolidate your learning and help move through the lab activities more smoothly.
+
+### Pre-lab activity 1: Getting ready
+#### Remind yourself of how to access and work with the RStudio Server.
+
+* [**Video on how to access the RStudio Server by Padraic**](https://dtu-panopto.lancs.ac.uk/Panopto/Pages/Viewer.aspx?id=f4f414ff-dd5b-4301-9214-adbf009d10da)
+* I highly recommend using R Projects to structure your workflow. You could create an R project for each week of the module. Have a look at section [**8 Workflow: projects**](https://r4ds.had.co.nz/workflow-projects.html) of **R for Data Science** by Hadley Wickam and Gareth Grolemund for an introduction.
+
+#### Get your files ready
+Download the [402_week14_forStudents.zip](files/week14/402_week14_forStudents.zip) file and upload it into a new folder in RStudio Server. 
+
+### Pre-lab activity 2: Rainy days
+Try running the code mentioned in the online textbook by Barr. If you find it easier, use the **`rainy_days.R` script** (in the '402_week14_forStudents folder you were asked to download in 'Pre-lab activity 1'). It illustrates the point that for discrete data, the variance is often not independent from the mean. In addition, it introduces some very useful R functions: What do the `rep()` function, the `c()` function and the `facet_wrap()` function do? Remember, you can type `?function name()` (e.g., `?rep()`) in the Console to get more information about a function.
+Finally, can you add a graph for rainy days in Lancaster?
+
+### Pre-lab activity 3:Gesture perception
+Please go through the example described in section 12.6 of the chapter on logistic regression in Bodo Winter’s book (link under ‘Reading’). Read the section and (simultaneously) work through the script (`chapter12_6.R`; in the '402_week14_forStudents folder you were asked to download in 'Pre-lab activity 1'). We’ll be working more with this dataset during the lab, so it is helpful if you get a feel for it now.
+
+## Lab activities
+In this lab, you’ll gain understanding of and practice with:
+
+* when and why to apply logistic regression to answer questions in psychological science
+* conducting logistic regression in R 
+* interpreting the R output of logistic regression 
+* reporting results for logistic regression following APA guidelines
+
+### Lab activity 1: More work on gesture perception
+The dataset we’ll be working with is described in section 12.6 of the chapter on logistic regression in Bodo Winter’s book (link under ‘Reading’). In the pre-lab activity, we explored the dataset and fitted a first logistic regression model assessing whether participants’ perception of a gesture (expressed as a categorical decision between a ‘shape’ vs. a ‘height’ interpretation of the gesture) was affected by the extent of ‘pinkie curl’. In this lab activity, we’ll be building on that analysis by: 1) Repeating the analysis with a centered pinkie curl variable, and 2) by adding a second predictor: index_curve.
+
+To complete this lab activity, please open the R-script [`402_wk14_labAct1.R`](files/week14/402_wk14_labAct1.R) in R Studio and work your way through it.
+All instructions, hints and questions are contained in the script.
+
+## Answers
+
+When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week. **Remember**, looking at this script (studying/revising it) does not replace the process of working through the lab activities, trying them out for yourself, getting stuck, asking questions, finding solutions, adding your own comments, etc. **Actively engaging** with the material is the way to learn these analysis skills, not by looking at someone else's completed code...
+
+The answers to the questions and the script containing the code will be available after the lab session has taken place.
+
+You can download the R-script that includes the relevant code here: [402_wk14_labAct1_withAnswers.R](files/week14/402_wk14_labAct1_withAnswers.R).
+
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="week-13-more-on-interactions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="week-15-more-regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

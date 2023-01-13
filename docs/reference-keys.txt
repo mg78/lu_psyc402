@@ -101,3 +101,5 @@ step-3-visualise-the-data
 step-4-the-regression-model
 step-5-overdispersion
 answers-4
+answer-yes-male-and-the-interaction-do.-well-talk-about-that-more-later-in-the-module.
+week-15-more-regression
