@@ -506,6 +506,8 @@ save it in an object called ‘smarttot’</p>
 <div id="step-7-the-regression-model" class="section level4 hasAnchor" number="3.4.1.8">
 <h4><span class="header-section-number">3.4.1.8</span> Step 7: The regression model<a href="week-12-categorical-predictors.html#step-7-the-regression-model" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>In the steps 2 to 6 we’ve covered some pretty heavy-lifting data-wrangling. As it is so often the case that something like this is needed when working with real data, ti is really important to practise this. However, to ensure you also spend time on fitting the regression model and interpreting the output, you can choose to use the data-file <a href="files/week12/smart_wb.csv">smart_wb.csv</a> to get started with that. It contains the data in a format that is the result of all the data-wrangling we did in steps 2 to 6. So, download the smart_sb.csv data-file, put it in the folder that is your working directory and you’re all set for running the regression model.</p>
+<p>If the smart_wb.csv file that you can download above does not want to upload to the server, try using the code below to read it directly from the web:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="week-12-categorical-predictors.html#cb10-1" aria-hidden="true" tabindex="-1"></a>smart_wb <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://github.com/mg78/lu_psyc402/blob/main/files/week12/smart_wb.csv&quot;</span>)</span></code></pre></div>
 <blockquote>
 <p><strong>TASK</strong>: Let’s run the regression. Write code in your script in which you call your output ‘mod’, and use the data ‘smart_wb’ using the following formula, <code>lm(y ~ x1 + x2 + x1:x2, data)</code> to construct your regression model. Go back to the research question for your outcome and two predictor variables.</p>
 </blockquote>
@@ -524,24 +526,24 @@ save it in an object called ‘smarttot’</p>
 <blockquote>
 <p><strong>TASK</strong>: We can check that the sex variable is treatment or dummy coded with the following code:</p>
 </blockquote>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="week-12-categorical-predictors.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">contrasts</span>(smart_wb<span class="sc">$</span>sex)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="week-12-categorical-predictors.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">contrasts</span>(smart_wb<span class="sc">$</span>sex)</span></code></pre></div>
 <p>Because we have not explicitly told R about the labels for the sex variable, it has used level 0 as the reference level, hidden within the intercept term and level sex1 describes the difference (or slope) between level 0 and 1 or in this dataset from female to male.</p>
 <p><strong>QUESTION 15</strong>: Is being Male better for a person’s well-being in the context of smartphone use than being Female?</p>
 <p>Now let’s look at <strong>deviation coding</strong>. There are other ways to code your categorical variables. One of them is deviation coding (also sometimes called sum coding). This effectively divides the difference of the values between your categorical levels by the number of levels so that each level can be compared to one intercept that is central to them all rather than comparing levels to one reference level. It is like centering for a categorical level.</p>
 <blockquote>
 <p><strong>TASK</strong> Use the code chunk below to: 1) add a variable to the smart_wb data that is a deviation coding of sex; 2) set the deviation coding (we’ll labe it ‘Sum’ here for easy variable naming); and 3) look at the output for the sum-coded sex variable.</p>
 </blockquote>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="week-12-categorical-predictors.html#cb11-1" aria-hidden="true" tabindex="-1"></a>smart_wb <span class="ot">&lt;-</span> <span class="fu">mutate</span>(smart_wb, <span class="at">sexSum =</span> sex) <span class="co"># add a variable to the smart_wb data that is a deviation coding of sex</span></span>
-<span id="cb11-2"><a href="week-12-categorical-predictors.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">contrasts</span>(smart_wb<span class="sc">$</span>sexSum) <span class="ot">&lt;-</span> <span class="fu">contr.sum</span>(<span class="dv">2</span>) <span class="co"># wet the deviation coding</span></span>
-<span id="cb11-3"><a href="week-12-categorical-predictors.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">contrasts</span>(smart_wb<span class="sc">$</span>sexSum) <span class="co"># look at the output for the sum coded sex variable</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="week-12-categorical-predictors.html#cb12-1" aria-hidden="true" tabindex="-1"></a>smart_wb <span class="ot">&lt;-</span> <span class="fu">mutate</span>(smart_wb, <span class="at">sexSum =</span> sex) <span class="co"># add a variable to the smart_wb data that is a deviation coding of sex</span></span>
+<span id="cb12-2"><a href="week-12-categorical-predictors.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">contrasts</span>(smart_wb<span class="sc">$</span>sexSum) <span class="ot">&lt;-</span> <span class="fu">contr.sum</span>(<span class="dv">2</span>) <span class="co"># wet the deviation coding</span></span>
+<span id="cb12-3"><a href="week-12-categorical-predictors.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">contrasts</span>(smart_wb<span class="sc">$</span>sexSum) <span class="co"># look at the output for the sum coded sex variable</span></span></code></pre></div>
 <p>Next, we’ll run the regression again, using the sum-coded sex variable and we’ll compare the outputs.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="week-12-categorical-predictors.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the regression model again, using the sumcoded sex model and compare outputs</span></span>
-<span id="cb12-2"><a href="week-12-categorical-predictors.html#cb12-2" aria-hidden="true" tabindex="-1"></a>mod_S <span class="ot">&lt;-</span> <span class="fu">lm</span>(tot_wellbeing <span class="sc">~</span> hours_per_day <span class="sc">+</span> sexSum <span class="sc">+</span> hours_per_day<span class="sc">:</span>sexSum, smart_wb)</span>
-<span id="cb12-3"><a href="week-12-categorical-predictors.html#cb12-3" aria-hidden="true" tabindex="-1"></a>mod_S_summary <span class="ot">&lt;-</span> <span class="fu">summary</span>(mod_S)</span>
-<span id="cb12-4"><a href="week-12-categorical-predictors.html#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="week-12-categorical-predictors.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare the two model summary outputs</span></span>
-<span id="cb12-6"><a href="week-12-categorical-predictors.html#cb12-6" aria-hidden="true" tabindex="-1"></a>mod_summary</span>
-<span id="cb12-7"><a href="week-12-categorical-predictors.html#cb12-7" aria-hidden="true" tabindex="-1"></a>mod_S_summary</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="week-12-categorical-predictors.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the regression model again, using the sumcoded sex model and compare outputs</span></span>
+<span id="cb13-2"><a href="week-12-categorical-predictors.html#cb13-2" aria-hidden="true" tabindex="-1"></a>mod_S <span class="ot">&lt;-</span> <span class="fu">lm</span>(tot_wellbeing <span class="sc">~</span> hours_per_day <span class="sc">+</span> sexSum <span class="sc">+</span> hours_per_day<span class="sc">:</span>sexSum, smart_wb)</span>
+<span id="cb13-3"><a href="week-12-categorical-predictors.html#cb13-3" aria-hidden="true" tabindex="-1"></a>mod_S_summary <span class="ot">&lt;-</span> <span class="fu">summary</span>(mod_S)</span>
+<span id="cb13-4"><a href="week-12-categorical-predictors.html#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="week-12-categorical-predictors.html#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare the two model summary outputs</span></span>
+<span id="cb13-6"><a href="week-12-categorical-predictors.html#cb13-6" aria-hidden="true" tabindex="-1"></a>mod_summary</span>
+<span id="cb13-7"><a href="week-12-categorical-predictors.html#cb13-7" aria-hidden="true" tabindex="-1"></a>mod_S_summary</span></code></pre></div>
 <p>‘sexSum1’ is now the coefficient for sex and represents the change from the intercept value which now lies between the values for being Female and Male. Note how this coefficient is a negative.</p>
 <p>The earlier model had a positive coefficient because the intercept described the reference group of the Girls, who on average begin at a lower well-being level than Boys (refer back to the scatterplot to verify this). Because the sum-coding has moved the intercept to a point that is the center of the difference between Boys and Girls, sexSum1 now describes the distance between the centre and a level of Sex.</p>
 <p>Values for well-being in Girls are thus: Intercept + sexSum<em>+1
@@ -567,15 +569,15 @@ Here we have the same problem as with testing for normality: with such a large s
 <blockquote>
 <p><strong>TASK</strong>: Copy the code chunk below to your script and run it.</p>
 </blockquote>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="week-12-categorical-predictors.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))             <span class="co"># 4 charts in 1 panel</span></span>
-<span id="cb13-2"><a href="week-12-categorical-predictors.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mod)                     <span class="co"># this may take a few seconds to run</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="week-12-categorical-predictors.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))             <span class="co"># 4 charts in 1 panel</span></span>
+<span id="cb14-2"><a href="week-12-categorical-predictors.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mod)                     <span class="co"># this may take a few seconds to run</span></span></code></pre></div>
 <p>The residuals vs leverage plot shows a flat red line so, whilst it isn’t perfect, we can assume that with such a large sample size regression is still an appropriate analysis.</p>
 <p><strong>Multi-collinearity</strong>
 Finally, lets check for multicollinearity using the <code>vif()</code> function. Essentially, this function estimates how much the variance of a coefficient is “inflated” because of linear dependence with other predictors, i.e., that a predictor isn’t actually adding any unique variance to the model, it’s just really strongly related to other predictors. Thankfully, vif is not affected by large samples like the other tests. There are various rules of thumb, but most converge on a VIF of above 2 to 2.5 for any one predictor being problematic.</p>
 <blockquote>
 <p><strong>TASK</strong>: Copy the code chunk below to your script and run it.</p>
 </blockquote>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="week-12-categorical-predictors.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(mod)                      <span class="co"># Check for multi-collinearity</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="week-12-categorical-predictors.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(mod)                      <span class="co"># Check for multi-collinearity</span></span></code></pre></div>
 <p><strong>QUESTION 17</strong>: Do any of the predictors show evidence of multicollinearity?</p>
 </div>
 <div id="step-9-write-up" class="section level4 hasAnchor" number="3.4.1.10">
@@ -588,7 +590,7 @@ Finally, lets check for multicollinearity using the <code>vif()</code> function.
 <h2><span class="header-section-number">3.5</span> Answers<a href="week-12-categorical-predictors.html#answers-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week. <strong>Remember</strong>, looking at this script (studying/revising it) does not replace the process of working through the lab activities, trying them out for yourself, getting stuck, asking questions, finding solutions, adding your own comments, etc. <strong>Actively engaging</strong> with the material is the way to learn these analysis skills, not by looking at someone else’s completed code…</p>
 <p>The answers to the questions and the script containing the code will be available after the lab session has taken place.</p>
-<!-- You can download the R-script that includes the relevant code here: [402_wk12_labAct1_withAnswers.R](files/week12/402_wk12_labAct1_withAnswers.R).
+<!--You can download the R-script that includes the relevant code here: [402_wk12_labAct1_withAnswers.R](files/week12/402_wk12_labAct1_withAnswers.R).
 
 ### Lab activity 1: Combining a continuous and a categorical predictor in a resssion model
 
