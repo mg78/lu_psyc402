@@ -289,7 +289,7 @@ In the steps 2 to 6 we've covered some pretty heavy-lifting data-wrangling. As i
 If the smart_wb.csv file that you can download above does not want to upload to the server, try using the code below to read it directly from the web:
 
 ```{r eval=FALSE}
-smart_wb <- read_csv("https://github.com/mg78/lu_psyc402/blob/main/files/week12/smart_wb.csv")
+smart_wb <- read_csv("https://raw.githubusercontent.com/mg78/lu_psyc402/main/files/week12/smart_wb.csv")
 ```
 
 > **TASK**: Let's run the regression. Write code in your script in which you call your output 'mod', and use the data 'smart_wb' using the following formula, `lm(y ~ x1 + x2 + x1:x2, data)` to construct your regression model. Go back to the research question for your outcome and two predictor variables.
