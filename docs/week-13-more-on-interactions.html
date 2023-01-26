@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Week 13: More on interactions | Analysing and Interpreting Psychological Data II - PSYC402</title>
   <meta name="description" content="Course content for PSYC402 at Lancaster University" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Week 13: More on interactions | Analysing and Interpreting Psychological Data II - PSYC402" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Course content for PSYC402 at Lancaster University" />
   <meta name="github-repo" content="mg78/lu_psyc402" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="week-12-categorical-predictors.html"/>
 <link rel="next" href="week-14-logistic-regression.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,10 +49,75 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -73,95 +136,109 @@
 <li><a href="./">PSYC122 - Statistics for Psychologists I</a></li>
 
 <li class="divider"></li>
-<li><a href="index.html#intro" id="toc-intro"><span class="toc-section-number">1</span> Intro</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Intro</a>
 <ul>
-<li><a href="index.html#analysis-labs-and-pre-lab-work" id="toc-analysis-labs-and-pre-lab-work"><span class="toc-section-number">1.1</span> Analysis labs and ‘pre-lab work’</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#analysis-labs-and-pre-lab-work"><i class="fa fa-check"></i><b>1.1</b> Analysis labs and ‘pre-lab work’</a></li>
 </ul></li>
-<li><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r" id="toc-week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r"><span class="toc-section-number">2</span> Week 11: Recap of the linear model and practising data-wrangling in R</a>
+<li class="chapter" data-level="2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><i class="fa fa-check"></i><b>2</b> Week 11: Recap of the linear model and practising data-wrangling in R</a>
 <ul>
-<li><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lectures" id="toc-lectures"><span class="toc-section-number">2.1</span> Lectures</a></li>
-<li><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#reading" id="toc-reading"><span class="toc-section-number">2.2</span> Reading</a>
+<li class="chapter" data-level="2.1" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lectures"><i class="fa fa-check"></i><b>2.1</b> Lectures</a></li>
+<li class="chapter" data-level="2.2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#reading"><i class="fa fa-check"></i><b>2.2</b> Reading</a>
 <ul>
-<li><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#miller-haden-2013" id="toc-miller-haden-2013"><span class="toc-section-number">2.2.1</span> Miller &amp; Haden (2013)</a></li>
-<li><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#winter-2020" id="toc-winter-2020"><span class="toc-section-number">2.2.2</span> Winter (2020)</a></li>
+<li class="chapter" data-level="2.2.1" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#miller-haden-2013"><i class="fa fa-check"></i><b>2.2.1</b> Miller &amp; Haden (2013)</a></li>
+<li class="chapter" data-level="2.2.2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#winter-2020"><i class="fa fa-check"></i><b>2.2.2</b> Winter (2020)</a></li>
 </ul></li>
-<li><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#pre-lab-activities" id="toc-pre-lab-activities"><span class="toc-section-number">2.3</span> Pre-lab activities</a>
+<li class="chapter" data-level="2.3" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#pre-lab-activities"><i class="fa fa-check"></i><b>2.3</b> Pre-lab activities</a>
 <ul>
-<li><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#pre-lab-activity-1-visualising-the-regression-line" id="toc-pre-lab-activity-1-visualising-the-regression-line"><span class="toc-section-number">2.3.1</span> Pre-lab activity 1: Visualising the regression line</a></li>
-<li><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#pre-lab-activity-2-data-wrangling-in-r" id="toc-pre-lab-activity-2-data-wrangling-in-r"><span class="toc-section-number">2.3.2</span> Pre-lab activity 2: Data-wrangling in R</a></li>
-<li><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#pre-lab-activity-3-getting-ready-for-the-lab-class" id="toc-pre-lab-activity-3-getting-ready-for-the-lab-class"><span class="toc-section-number">2.3.3</span> Pre-lab activity 3: Getting ready for the lab class</a></li>
+<li class="chapter" data-level="2.3.1" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#pre-lab-activity-1-visualising-the-regression-line"><i class="fa fa-check"></i><b>2.3.1</b> Pre-lab activity 1: Visualising the regression line</a></li>
+<li class="chapter" data-level="2.3.2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#pre-lab-activity-2-data-wrangling-in-r"><i class="fa fa-check"></i><b>2.3.2</b> Pre-lab activity 2: Data-wrangling in R</a></li>
+<li class="chapter" data-level="2.3.3" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#pre-lab-activity-3-getting-ready-for-the-lab-class"><i class="fa fa-check"></i><b>2.3.3</b> Pre-lab activity 3: Getting ready for the lab class</a></li>
 </ul></li>
-<li><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activities" id="toc-lab-activities"><span class="toc-section-number">2.4</span> Lab activities</a>
+<li class="chapter" data-level="2.4" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activities"><i class="fa fa-check"></i><b>2.4</b> Lab activities</a>
 <ul>
-<li><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activity-1-interpreting-and-reporting-results" id="toc-lab-activity-1-interpreting-and-reporting-results"><span class="toc-section-number">2.4.1</span> Lab activity 1: Interpreting and reporting results</a></li>
-<li><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activity-2-conducting-simple-and-multiple-regression" id="toc-lab-activity-2-conducting-simple-and-multiple-regression"><span class="toc-section-number">2.4.2</span> Lab activity 2: Conducting simple and multiple regression</a></li>
+<li class="chapter" data-level="2.4.1" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activity-1-interpreting-and-reporting-results"><i class="fa fa-check"></i><b>2.4.1</b> Lab activity 1: Interpreting and reporting results</a></li>
+<li class="chapter" data-level="2.4.2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activity-2-conducting-simple-and-multiple-regression"><i class="fa fa-check"></i><b>2.4.2</b> Lab activity 2: Conducting simple and multiple regression</a></li>
 </ul></li>
-<li><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#answers" id="toc-answers"><span class="toc-section-number">2.5</span> Answers</a>
+<li class="chapter" data-level="2.5" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#answers"><i class="fa fa-check"></i><b>2.5</b> Answers</a>
 <ul>
-<li><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activity-2-conducting-simple-and-multiple-regression-1" id="toc-lab-activity-2-conducting-simple-and-multiple-regression-1"><span class="toc-section-number">2.5.1</span> Lab activity 2: Conducting simple and multiple regression</a></li>
-</ul></li>
-</ul></li>
-<li><a href="week-12-categorical-predictors.html#week-12-categorical-predictors" id="toc-week-12-categorical-predictors"><span class="toc-section-number">3</span> Week 12: Categorical predictors</a>
-<ul>
-<li><a href="week-12-categorical-predictors.html#lectures-1" id="toc-lectures-1"><span class="toc-section-number">3.1</span> Lectures</a></li>
-<li><a href="week-12-categorical-predictors.html#reading-1" id="toc-reading-1"><span class="toc-section-number">3.2</span> Reading</a>
-<ul>
-<li><a href="week-12-categorical-predictors.html#blogpost-by-professor-dorothy-bishop" id="toc-blogpost-by-professor-dorothy-bishop"><span class="toc-section-number">3.2.1</span> Blogpost by Professor Dorothy Bishop</a></li>
-<li><a href="week-12-categorical-predictors.html#winter-2020-1" id="toc-winter-2020-1"><span class="toc-section-number">3.2.2</span> Winter (2020)</a></li>
-</ul></li>
-<li><a href="week-12-categorical-predictors.html#pre-lab-activities-1" id="toc-pre-lab-activities-1"><span class="toc-section-number">3.3</span> Pre-lab activities</a>
-<ul>
-<li><a href="week-12-categorical-predictors.html#pre-lab-activity-1-data-wrangling-in-r" id="toc-pre-lab-activity-1-data-wrangling-in-r"><span class="toc-section-number">3.3.1</span> Pre-lab activity 1: Data-wrangling in R</a></li>
-<li><a href="week-12-categorical-predictors.html#pre-lab-activity-2-getting-ready-for-the-lab-class" id="toc-pre-lab-activity-2-getting-ready-for-the-lab-class"><span class="toc-section-number">3.3.2</span> Pre-lab activity 2: Getting ready for the lab class</a></li>
-</ul></li>
-<li><a href="week-12-categorical-predictors.html#lab-activities-1" id="toc-lab-activities-1"><span class="toc-section-number">3.4</span> Lab activities</a>
-<ul>
-<li><a href="week-12-categorical-predictors.html#lab-activity-1-combining-a-continuous-and-a-categorical-predictor-in-a-resssion-model" id="toc-lab-activity-1-combining-a-continuous-and-a-categorical-predictor-in-a-resssion-model"><span class="toc-section-number">3.4.1</span> Lab activity 1: Combining a continuous and a categorical predictor in a resssion model</a></li>
-</ul></li>
-<li><a href="week-12-categorical-predictors.html#answer-yes-male-and-the-interaction-do.-well-talk-about-that-more-later-in-the-module." id="toc-answer-yes-male-and-the-interaction-do.-well-talk-about-that-more-later-in-the-module."><span class="toc-section-number">3.5</span> ANSWER: Yes, male and the interaction do. We’ll talk about that more later in the module.</a></li>
-<li><a href="week-12-categorical-predictors.html#answers-1" id="toc-answers-1"><span class="toc-section-number">3.6</span> Answers</a>
-<ul>
-<li><a href="week-12-categorical-predictors.html#lab-activity-1-combining-a-continuous-and-a-categorical-predictor-in-a-resssion-model-1" id="toc-lab-activity-1-combining-a-continuous-and-a-categorical-predictor-in-a-resssion-model-1"><span class="toc-section-number">3.6.1</span> Lab activity 1: Combining a continuous and a categorical predictor in a resssion model</a></li>
+<li class="chapter" data-level="2.5.1" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activity-1-interpreting-and-reporting-results-1"><i class="fa fa-check"></i><b>2.5.1</b> Lab activity 1: Interpreting and reporting results</a></li>
+<li class="chapter" data-level="2.5.2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activity-2-conducting-simple-and-multiple-regression-1"><i class="fa fa-check"></i><b>2.5.2</b> Lab activity 2: Conducting simple and multiple regression</a></li>
 </ul></li>
 </ul></li>
-<li><a href="week-13-more-on-interactions.html#week-13-more-on-interactions" id="toc-week-13-more-on-interactions"><span class="toc-section-number">4</span> Week 13: More on interactions</a></li>
-<li><a href="week-14-logistic-regression.html#week-14-logistic-regression" id="toc-week-14-logistic-regression"><span class="toc-section-number">5</span> Week 14: Logistic regression</a>
+<li class="chapter" data-level="3" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html"><i class="fa fa-check"></i><b>3</b> Week 12: Categorical predictors</a>
 <ul>
-<li><a href="week-14-logistic-regression.html#lectures-2" id="toc-lectures-2"><span class="toc-section-number">5.1</span> Lectures</a></li>
-<li><a href="week-14-logistic-regression.html#reading-2" id="toc-reading-2"><span class="toc-section-number">5.2</span> Reading</a>
+<li class="chapter" data-level="3.1" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#lectures-1"><i class="fa fa-check"></i><b>3.1</b> Lectures</a></li>
+<li class="chapter" data-level="3.2" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#reading-1"><i class="fa fa-check"></i><b>3.2</b> Reading</a>
 <ul>
-<li><a href="week-14-logistic-regression.html#barr-2020" id="toc-barr-2020"><span class="toc-section-number">5.2.1</span> Barr (2020)</a></li>
-<li><a href="week-14-logistic-regression.html#winter-2020-2" id="toc-winter-2020-2"><span class="toc-section-number">5.2.2</span> Winter (2020)</a></li>
+<li class="chapter" data-level="3.2.1" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#blogpost-by-professor-dorothy-bishop"><i class="fa fa-check"></i><b>3.2.1</b> Blogpost by Professor Dorothy Bishop</a></li>
+<li class="chapter" data-level="3.2.2" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#winter-2020-1"><i class="fa fa-check"></i><b>3.2.2</b> Winter (2020)</a></li>
 </ul></li>
-<li><a href="week-14-logistic-regression.html#pre-lab-activities-2" id="toc-pre-lab-activities-2"><span class="toc-section-number">5.3</span> Pre-lab activities</a>
+<li class="chapter" data-level="3.3" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#pre-lab-activities-1"><i class="fa fa-check"></i><b>3.3</b> Pre-lab activities</a>
 <ul>
-<li><a href="week-14-logistic-regression.html#pre-lab-activity-1-getting-ready" id="toc-pre-lab-activity-1-getting-ready"><span class="toc-section-number">5.3.1</span> Pre-lab activity 1: Getting ready</a></li>
-<li><a href="week-14-logistic-regression.html#pre-lab-activity-2-rainy-days" id="toc-pre-lab-activity-2-rainy-days"><span class="toc-section-number">5.3.2</span> Pre-lab activity 2: Rainy days</a></li>
-<li><a href="week-14-logistic-regression.html#pre-lab-activity-3gesture-perception" id="toc-pre-lab-activity-3gesture-perception"><span class="toc-section-number">5.3.3</span> Pre-lab activity 3:Gesture perception</a></li>
+<li class="chapter" data-level="3.3.1" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#pre-lab-activity-1-data-wrangling-in-r"><i class="fa fa-check"></i><b>3.3.1</b> Pre-lab activity 1: Data-wrangling in R</a></li>
+<li class="chapter" data-level="3.3.2" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#pre-lab-activity-2-getting-ready-for-the-lab-class"><i class="fa fa-check"></i><b>3.3.2</b> Pre-lab activity 2: Getting ready for the lab class</a></li>
 </ul></li>
-<li><a href="week-14-logistic-regression.html#lab-activities-2" id="toc-lab-activities-2"><span class="toc-section-number">5.4</span> Lab activities</a>
+<li class="chapter" data-level="3.4" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#lab-activities-1"><i class="fa fa-check"></i><b>3.4</b> Lab activities</a>
 <ul>
-<li><a href="week-14-logistic-regression.html#lab-activity-1-more-work-on-gesture-perception" id="toc-lab-activity-1-more-work-on-gesture-perception"><span class="toc-section-number">5.4.1</span> Lab activity 1: More work on gesture perception</a></li>
+<li class="chapter" data-level="3.4.1" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#lab-activity-1-combining-a-continuous-and-a-categorical-predictor-in-a-resssion-model"><i class="fa fa-check"></i><b>3.4.1</b> Lab activity 1: Combining a continuous and a categorical predictor in a resssion model</a></li>
 </ul></li>
-<li><a href="week-14-logistic-regression.html#answers-2" id="toc-answers-2"><span class="toc-section-number">5.5</span> Answers</a></li>
-</ul></li>
-<li><a href="week-15-more-regression.html#week-15-more-regression" id="toc-week-15-more-regression"><span class="toc-section-number">6</span> Week 15: More regression</a>
+<li class="chapter" data-level="3.5" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#answers-1"><i class="fa fa-check"></i><b>3.5</b> Answers</a>
 <ul>
-<li><a href="week-15-more-regression.html#lectures-3" id="toc-lectures-3"><span class="toc-section-number">6.1</span> Lectures</a></li>
-<li><a href="week-15-more-regression.html#reading-3" id="toc-reading-3"><span class="toc-section-number">6.2</span> Reading</a>
-<ul>
-<li><a href="week-15-more-regression.html#winter-2020-3" id="toc-winter-2020-3"><span class="toc-section-number">6.2.1</span> Winter (2020)</a></li>
+<li class="chapter" data-level="3.5.1" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#lab-activity-1-combining-a-continuous-and-a-categorical-predictor-in-a-resssion-model-1"><i class="fa fa-check"></i><b>3.5.1</b> Lab activity 1: Combining a continuous and a categorical predictor in a resssion model</a></li>
 </ul></li>
-<li><a href="week-15-more-regression.html#pre-lab-activities-3" id="toc-pre-lab-activities-3"><span class="toc-section-number">6.3</span> Pre-lab activities</a>
-<ul>
-<li><a href="week-15-more-regression.html#pre-lab-activity-1-getting-a-feel-for-poisson-data" id="toc-pre-lab-activity-1-getting-a-feel-for-poisson-data"><span class="toc-section-number">6.3.1</span> Pre-lab activity 1: Getting a feel for Poisson data</a></li>
-<li><a href="week-15-more-regression.html#pre-lab-activity-2-getting-ready" id="toc-pre-lab-activity-2-getting-ready"><span class="toc-section-number">6.3.2</span> Pre-lab activity 2: Getting ready</a></li>
 </ul></li>
-<li><a href="week-15-more-regression.html#lab-activities-3" id="toc-lab-activities-3"><span class="toc-section-number">6.4</span> Lab activities</a>
+<li class="chapter" data-level="4" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html"><i class="fa fa-check"></i><b>4</b> Week 13: More on interactions</a>
 <ul>
-<li><a href="week-15-more-regression.html#lab-activity-1-visual-dominance" id="toc-lab-activity-1-visual-dominance"><span class="toc-section-number">6.4.1</span> Lab activity 1: Visual dominance</a></li>
+<li class="chapter" data-level="4.1" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html#lectures-2"><i class="fa fa-check"></i><b>4.1</b> Lectures</a></li>
+<li class="chapter" data-level="4.2" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html#reading-2"><i class="fa fa-check"></i><b>4.2</b> Reading</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html#winter-2020-2"><i class="fa fa-check"></i><b>4.2.1</b> Winter (2020)</a></li>
 </ul></li>
-<li><a href="week-15-more-regression.html#answers-3" id="toc-answers-3"><span class="toc-section-number">6.5</span> Answers</a></li>
+<li class="chapter" data-level="4.3" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html#pre-lab-activities-2"><i class="fa fa-check"></i><b>4.3</b> Pre-lab activities</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html#pre-lab-activity-1-data-wrangling-in-r-1"><i class="fa fa-check"></i><b>4.3.1</b> Pre-lab activity 1: Data-wrangling in R</a></li>
+<li class="chapter" data-level="4.3.2" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html#pre-lab-activity-2-getting-ready-for-the-lab-class-1"><i class="fa fa-check"></i><b>4.3.2</b> Pre-lab activity 2: Getting ready for the lab class</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html#lab-activities-2"><i class="fa fa-check"></i><b>4.4</b> Lab activities</a></li>
+<li class="chapter" data-level="4.5" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html#answers-2"><i class="fa fa-check"></i><b>4.5</b> Answers</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html"><i class="fa fa-check"></i><b>5</b> Week 14: Logistic regression</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#lectures-3"><i class="fa fa-check"></i><b>5.1</b> Lectures</a></li>
+<li class="chapter" data-level="5.2" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#reading-3"><i class="fa fa-check"></i><b>5.2</b> Reading</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#barr-2020"><i class="fa fa-check"></i><b>5.2.1</b> Barr (2020)</a></li>
+<li class="chapter" data-level="5.2.2" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#winter-2020-3"><i class="fa fa-check"></i><b>5.2.2</b> Winter (2020)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#pre-lab-activities-3"><i class="fa fa-check"></i><b>5.3</b> Pre-lab activities</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#pre-lab-activity-1-getting-ready"><i class="fa fa-check"></i><b>5.3.1</b> Pre-lab activity 1: Getting ready</a></li>
+<li class="chapter" data-level="5.3.2" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#pre-lab-activity-2-rainy-days"><i class="fa fa-check"></i><b>5.3.2</b> Pre-lab activity 2: Rainy days</a></li>
+<li class="chapter" data-level="5.3.3" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#pre-lab-activity-3gesture-perception"><i class="fa fa-check"></i><b>5.3.3</b> Pre-lab activity 3:Gesture perception</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#lab-activities-3"><i class="fa fa-check"></i><b>5.4</b> Lab activities</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#lab-activity-1-more-work-on-gesture-perception"><i class="fa fa-check"></i><b>5.4.1</b> Lab activity 1: More work on gesture perception</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#answers-3"><i class="fa fa-check"></i><b>5.5</b> Answers</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="week-15-more-regression.html"><a href="week-15-more-regression.html"><i class="fa fa-check"></i><b>6</b> Week 15: More regression</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="week-15-more-regression.html"><a href="week-15-more-regression.html#lectures-4"><i class="fa fa-check"></i><b>6.1</b> Lectures</a></li>
+<li class="chapter" data-level="6.2" data-path="week-15-more-regression.html"><a href="week-15-more-regression.html#reading-4"><i class="fa fa-check"></i><b>6.2</b> Reading</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="week-15-more-regression.html"><a href="week-15-more-regression.html#winter-2020-4"><i class="fa fa-check"></i><b>6.2.1</b> Winter (2020)</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="week-15-more-regression.html"><a href="week-15-more-regression.html#pre-lab-activities-4"><i class="fa fa-check"></i><b>6.3</b> Pre-lab activities</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="week-15-more-regression.html"><a href="week-15-more-regression.html#pre-lab-activity-1-getting-a-feel-for-poisson-data"><i class="fa fa-check"></i><b>6.3.1</b> Pre-lab activity 1: Getting a feel for Poisson data</a></li>
+<li class="chapter" data-level="6.3.2" data-path="week-15-more-regression.html"><a href="week-15-more-regression.html#pre-lab-activity-2-getting-ready"><i class="fa fa-check"></i><b>6.3.2</b> Pre-lab activity 2: Getting ready</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="week-15-more-regression.html"><a href="week-15-more-regression.html#lab-activities-4"><i class="fa fa-check"></i><b>6.4</b> Lab activities</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="week-15-more-regression.html"><a href="week-15-more-regression.html#lab-activity-1-visual-dominance"><i class="fa fa-check"></i><b>6.4.1</b> Lab activity 1: Visual dominance</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="week-15-more-regression.html"><a href="week-15-more-regression.html#answers-4"><i class="fa fa-check"></i><b>6.5</b> Answers</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -183,261 +260,233 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="week-13-more-on-interactions" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Week 13: More on interactions</h1>
+<div id="week-13-more-on-interactions" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Week 13: More on interactions<a href="week-13-more-on-interactions.html#week-13-more-on-interactions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <blockquote>
 <p>Written by Margriet Groen (partly adapted from materials developed by the PsyTeachR team a the University of Glasgow)</p>
 </blockquote>
 <p>Interactions are ubiquitous in psychological science, which is why we’ll spend some more time building models that include interaction terms. Last week we modelled well-being as a function of screen-time (a continuous predictor) and biological sex (a categorical predictor) and their interaction. This week we’ll look at interactions between continuous predictors.</p>
-<!--
-## Lectures
-The lecture material for this week follows the recommended chapters in Winter (2020) -- see under 'Reading' below -- and is presented below:
-
-* [**More on interactions (~18 min)**](https://web.microsoftstream.com/video/9e2a9e1e-548f-492e-a529-58dc1c8490f3) 
-
-## Reading
-
-### Winter (2020)
-[**Link**](https://eu.alma.exlibrisgroup.com/leganto/public/44LAN_INST/citation/83408786230001221?auth=SAML)
-
-**Chapter 8** explains what interactions are and how to model and interpret them.
-
-## Pre-lab activities
-After having watched the lectures and read the textbook chapters you’ll be in a good position to try these activities. Completing them before you attend your lab session will help you to consolidate your learning and help move through the lab activities more smoothly.
-
-### Pre-lab activity 1: Data-wrangling in R
-The more you practise coding in R, the easier it will become. The RStudio interactive tutorials I mentioned in weeks 11 and 12 are an excellent place to start if you haven't engaged with those yet. 
-
-* [**The Basics**](https://rstudio.cloud/learn/primers/1) Start here to learn how to inspect, visualize, subset and transform your data, as well as how to run code.
-
-* [**Work with Data**](https://rstudio.cloud/learn/primers/2) Learn how to extract values form a table, subset tables, calculate summary statistics, and derive new variables.
-
-* [**Visualize Data**](https://rstudio.cloud/learn/primers/3) Learn how to use ggplot2 to make any type of plot with your data. The tutorials on [**Exploratory Data Analysis**](https://rstudio.cloud/learn/primers/3.1) and [**Scatterplots**](https://rstudio.cloud/learn/primers/3.5) are particularly relevant.
-
-* [**Separating and Uniting Columns**](https://rstudio.cloud/learn/primers/4.2) Here you will learn to separate a column into multiple columns and to reverse the process by uniting multiple columns into a single column. Then you'll practise your data wrangling skills on messy real world data.
-
-* [**Join Data Sets**](https://rstudio.cloud/learn/primers/4.3) Learn how to work with relational data. Here you will learn how to augment data sets with information from related data sets, as well as how to filter one data set against another.
-
-If you feel confident with the material covered in those tutorials the following is useful to try:
-
-* [**Programming Basics**](https://rstudio.cloud/learn/primers/1.2) R is easiest to use when you know how the R language works. This tutorial will teach you the implicit background knowledge that informs every piece of R code.
-
-Please note that there are often different ways to do the same or similar things in R. This means you might encounter slightly different functions or styles of coding in different materials. This is not something to worry about. Just make sure you're clear on what a bit of code achieves and choose the function/style that you feel most comfortable with.
-
-### Pre-lab activity 2: Getting ready for the lab class
-#### Remind yourself of how to access and work with the RStudio Server.
-
-* [**Video on how to access the RStudio Server by Padraic**](https://dtu-panopto.lancs.ac.uk/Panopto/Pages/Viewer.aspx?id=f4f414ff-dd5b-4301-9214-adbf009d10da)
-* I highly recommend using R Projects to structure your workflow. You could create an R project for each week of the module. Have a look at section [**8 Workflow: projects**](https://r4ds.had.co.nz/workflow-projects.html) of **R for Data Science** by Hadley Wickam and Gareth Grolemund for an introduction.
-
-#### Get your files ready
-Download the [402_week13_forStudents.zip](files/week13/402_week13_forStudents.zip) file and upload it into a new folder in RStudio Server. 
-
-## Lab activities
-In this lab, you’ll gain understanding of and practice with:
-
-* when and why to apply multiple regression to answer questions in psychological science
-* conducting multiple regression in R including interaction between continuous predictors
-* interpreting the R output of multiple linear regression (when including an interaction between continuous predictors)
-* reporting results for multiple linear regression (when including an interaction between continuous predictors), following APA guidelines
-
-#### Background
-Today, we’ll be working with a dataset from the following paper:
-Hamermesh, D. S. and Parker, A. (2005). Beauty in the classroom: instructors’ pulchritude and putative pedagogical productivity. *Economics of Education Review, 24(4)*, 369 – 376.
-
-The abstract of their paper is below or see [**here**](https://www.sciencedirect.com/science/article/abs/pii/S0272775704001165?casa_token=DhfsUB6qNPYAAAAA:xXIG-UAD8vNlZCAzLCJLTFPuO8Zs_gNvOjSsxdHFC-R09q0CYzVogwovSVd8VeSG8XXXxOeV) for the paper itself.
-
-Abstract:
-Adjusted for many other determinants, beauty affects earnings; but does it lead directly to the differences in productivity that we believe generate earnings differences? We take a large sample of student instructional ratings for a group of university teachers and acquire six independent measures of their beauty, and a number of other descriptors of them and their classes. Instructors who are viewed as better looking receive higher instructional ratings, with the impact of a move from the 10th to the 90th percentile of beauty being substantial. This impact exists within university departments and even within particular courses, and is larger for male than for female instructors. Disentangling whether this outcome represents productivity or discrimination is, as with the issue generally, probably impossible. 
-
-Our **research question**: Do professors' beauty score and age predict how students evaluate their teaching?
-
-To complete this lab activity, you can use the R-script (`402_wk13_labAct1_template.R`) that you downloaded as part of the 'Pre-lab activities' as a template. Work through the activity below, adding relevant bits of code to your script as you go along.
-
-**QUESTION 1**: Do you notice anything about the name of one of the variables and the name of the data table?
-
-The table contains, amongst other things, the following characteristics of the professors
-
-* 'beauty' - beauty score per professor
-* 'eval' - teaching evaluation score per professor
-* 'age' - age of the professor
-
-**QUESTION 2**: Go back to the research question (see under 'Background' above), which of these three variables is the outcome variable? Which ones are the predictors?
-
-#### Step 2: Descriptive statistics and distributions
-
-> **TASK**: Calculate some descriptive statistics for the variables of interest (eval, beauty and age). **HINT**: You can use `summarise()` to calculate the mean, sd, min and max values.
-
-Now that we have the descriptive statistics, let's get further information about the distribution of the variables by plotting histograms.
-
-> **TASK**: Visualise the distributions of the variables of interest in histograms. **HINT**: Use `ggplot()` and `geom_historgram()`
-
-#### Step 3: Center and standardise
-
-As mentioned before, it will make it easier to interpret regression models with multiple predictors if we center and standardise our predictors. Before we go any further, we'll do that.
-
-> **TASK**: Center and standardise the predictor variables. **HINT**: Centering involves subtracting the mean; standardising involves dividing by the standard deviation.
-
-#### Step 4: Scatterplots
-Now let's have a look at the relationships between variables using scatterplots. To remind yourself of what centering and standardising does, do this for both the raw data and the centered and standardised data.
-
-> **TASK**: Visualise the relationships between the variables of interest in scatterplots. **HINT**: Create six different scatterplots using `ggplot()` with `geom_point()` and `geom_smooth()`.
-
-**QUESTION 3**: Can you write an interpretation of the above plots in plain English?
-
-**QUESTION 4**: What is the difference between the scatterplots plotting the raw data and the ones plotting the centered and standardised data?
-
-Nothing wrong with making the scatterplots individually, but R does have functions that let you make several in one go in what is called a 'scatterplot matrix'. To be able to do that, we first have to create an object that only includes the variables of interest. Then we need to tell R this is a 'data frame' (a specific type of data table). Finally, we use the `pairs()` function to create the matrix of scatterplots. The code below does these things:
-
-> **TASK**: Add the code below to your script and, in your script, also add comments to each line of code to summarise what that line does.
-
-
-```r
-beauty_matrix <- beauty_z %>%     
-  select(age_z, beauty_z, eval) %>%     
-  as.data.frame()
-
-pairs(beauty_matrix)
-```
-
-Although handy to get a quick overview, the scatterplots made using ggplot() are often clearer.
-
-It is useful to have a quick look at the bivariate correlations between the variables of interest, before you run a regression model. We can easily generate a correlation matrix for these variables.
-
-> **TASK**: Add the code below to your script and check you understand what each line does.
-
-
-```r
-intercor_results <- correlate(x = beauty_matrix, # our data
-                              test = TRUE, # compute p-values
-                              corr.method = "pearson", # run a spearman test 
-                              p.adjust.method = "bonferroni") # use the bonferroni correction
-intercor_results
-```
-
-After you've run this code, look at the output in the console. It creates three tables, one with correlation coefficients, one with p-values for these coefficients and one with sample sizes.
-
-#### Step 5: The regression model
-
-We've looked at descriptive statistics and distributions of variables and also at relations between variables. This has given us a good idea of what the data look like. Now we'll construct the regression model to predict 'evaluation score' as a function of 'age' and 'beauty score'. We'll do this in two stages. First we'll construct a model without an interaction term. Then we'll construct a model that includes an interaction term betweeen the two predictor variables. Don't forget to use the standardised data for all this. 
-
-> **TASK**: Construct a regression model without an interaction term. **HINT**: Use the following formula, lm(y ~ x1 + x2, data); go back to the research question for your outcome and predictor variables.
-
-> **TASK**: Call and save the summary of your model; then have a look at it.
-
-**QUESTION 5**: Is the overall model significant?
-
-**QUESTION 6**: Are the predictors significant? What does this mean?
-
-> **TASK**: Now create a model that includes an interaction term for the two predictors. Again, use the centered and standardised data. **HINT**: Use the following formula, lm(y ~ x1 + x2 + x1:x2, data); go back to the research question for your outcome and predictor variables.
-
-**QUESTION 7**: Is the overall model significant?
-
-**QUESTION 8**: Have a good look at the coefficients. Can you interpret each one of them in turn and then formulate an overall interpretation? **HINT**: Remember that after centering and standardising, the meaning of 0 has changed for both predictor variables.
-
-Interpretation of coefficients in a multiple regression can be facilitated by 'added variable' plots.
-
-> **TASK**: Use the function `avPlots()` to create 'added variable' plots.
-
-Creating a scatterplot with our outcome variable on the y-axis and the significant predictor on the x-axis and then plotting our third variable (age) using different colours gives some information. Do you see how high age scores (light blue + 2 SD) seem to be more frequent in the bottom left corner?
-
-> **TASK**: Use the code below to create the plot.
-
-
-```r
-ggplot(data = beauty_z, aes(x = beauty_z, y = eval, colour = age_z)) +
-  geom_point() +
-  geom_smooth(method = "lm", se = TRUE, colour = 'black') +
-  theme_bw() +
-  labs(x = "Beauty score", y = "Teaching evaluation score")
-```
-
-But it might be more useful to plot different regression lines for different values of age. We can do this be transforming age into a categorical variable for plotting purposes. The code below creates three categories, based on eye-balling the histogram for age:
-
-* youngest (40 and younger)
-* average (between 41 and 53)
-* oldest (54 and older).
-
-> **TASK**: Copy the code below to your script and make sure you understand what it does.
-
-
-```r
-oldest <- beauty_z %>%
-  filter(age >= 54)
-
-average <- beauty_z %>%
-  filter(age > 40) %>%
-  filter(age < 54)
-
-youngest <- beauty_z %>%
-  filter(age <= 40)
-```
-
-Now let's create a single plot with three different lines, one for each of the age groups created above.
-
-> **TASK**: Copy the code below to your script and make sure you understand what it does.
-
-
-```r
-ggplot() +
-  geom_point(data = oldest, aes(x = beauty_z, y = eval), colour = 'blue') +
-  geom_smooth(data = oldest, aes(x = beauty_z, y = eval), method = "lm", se = TRUE, colour = 'blue') +
-  geom_point(data = average, aes(x = beauty_z, y = eval), colour = 'black') +
-  geom_smooth(data = average, aes(x = beauty_z, y = eval), method = "lm", se = TRUE, colour = 'black') +
-  geom_point(data = youngest, aes(x = beauty_z, y = eval), colour = 'green') +
-  geom_smooth(data = youngest, aes(x = beauty_z, y = eval), method = "lm", se = TRUE, colour = 'green') +
-  theme_bw() +
-  labs(x = "Beauty score", y = "Teaching evaluation score")
-```
-
-The line for the oldest participants seems much steeper than for the other two groups, suggesting that the interaction between age and beauty is mostly driven by older participants who have received more extreme beauty scores. 
-
-#### Step 6: Checking assumptions
-Now that we've fitted a model, let's check whether it meets the assumptions of linearity, normality and homoscedasticity. 
-
-**Linearity**
-Unlike when we did simple regression we can’t use `crPlots()` to test for linearity when there is an interaction, but we know from looking at the grouped scatterplot that this assumption has been met.
-
-**Normality**
-Normally we would test for normality with a qq-plot and a Shapiro-Wilk test. However, because this dataset is so large, the Shapiro-Wilk is not appropriate (if you try to run the test it will produce a warning telling you that the sample size must be between 3 and 5000). This is because with extremely large sample sizes the Shapiro-Wilk test will find that any deviation from normality is significant. Therefore we should judge normality based upon the qq-plot.
-
-> **TASK**: Create a qq-plot to check the residuals are normally distributed. **HINT**: Use the `qqPlot()` function; mind the capital P.
-
-**QUESTION 9**: What do you conclude from the qq-plot?
-
-**Homoscedasticity**
-Here we have the same problem as with testing for normality: with such a large sample the `ncvTest()` will produce a significant result for any deviation from homoscedasticity. So we need to rely on plots again.
-
-To check for homoscedasticity we can use `plot()` from Base R that will produce a bunch of helpful plots (more information [**here**] (https://www.r-bloggers.com/2016/01/how-to-detect-heteroscedasticity-and-rectify-it/).
-
-> **TASK**: Copy the code below to your script and run it to create the plots
-
-
-```r
-par(mfrow=c(2,2))                 # 4 charts in 1 panel
-plot(mod_int)                     # this may take a few seconds to run
-```
-
-**QUESTION 10**: What do you conclude from the residuals vs leverage plot?
-
-**Multi-collinearity**
-Now let's check for multi-collinearity using the `vif()` function. Essentially, this function estimates how much the variance of a coefficient is “inflated” because of linear dependence with other predictors, i.e., that a predictor isn’t actually adding any unique variance to the model, it’s just really strongly related to other predictors. Thankfully, the `vif()` function is not affected by large samples like the other tests. There are various rules of thumb, but most converge on a VIF of above 2 - 2.5 for any one predictor being problematic.
-
-> **TASK**: Use the `vif()` function to test for multi-collinearity.
-
-**QUESTION 11**: Do any of the predictors show evidence of multi-collinearity?
-
-Finally, we need to write up the results.
-
-**QUESTION 12**: Can you write up the results of the regression analysis following APA guidelines? **HINT**: Don't forget to mention and interpret the interaction effect.
-
-## Answers
-
-When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week. **Remember**, looking at this script (studying/revising it) does not replace the process of working through the lab activities, trying them out for yourself, getting stuck, asking questions, finding solutions, adding your own comments, etc. **Actively engaging** with the material is the way to learn these analysis skills, not by looking at someone else's completed code...
-
-The answers to the questions and the script containing the code will be available after the lab session has taken place.
-
-You can download the R-script that includes the relevant code here: [402_wk13_labAct1_withAnswers.R](files/week13/402_wk13_labAct1_withAnswers.R).
+<div id="lectures-2" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Lectures<a href="week-13-more-on-interactions.html#lectures-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The lecture material for this week follows the recommended chapters in Winter (2020) – see under ‘Reading’ below – and is presented below:</p>
+<ul>
+<li><a href="https://estream.lancaster.ac.uk/View.aspx?id=61170~5c~UkDY6wWxnM"><strong>More on interactions (~18 min)</strong></a></li>
+</ul>
+</div>
+<div id="reading-2" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Reading<a href="week-13-more-on-interactions.html#reading-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="winter-2020-2" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Winter (2020)<a href="week-13-more-on-interactions.html#winter-2020-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><a href="https://eu.alma.exlibrisgroup.com/leganto/public/44LAN_INST/citation/83408786230001221?auth=SAML"><strong>Link</strong></a></p>
+<p><strong>Chapter 8</strong> explains what interactions are and how to model and interpret them.</p>
+</div>
+</div>
+<div id="pre-lab-activities-2" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Pre-lab activities<a href="week-13-more-on-interactions.html#pre-lab-activities-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>After having watched the lectures and read the textbook chapters you’ll be in a good position to try these activities. Completing them before you attend your lab session will help you to consolidate your learning and help move through the lab activities more smoothly.</p>
+<div id="pre-lab-activity-1-data-wrangling-in-r-1" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Pre-lab activity 1: Data-wrangling in R<a href="week-13-more-on-interactions.html#pre-lab-activity-1-data-wrangling-in-r-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The more you practise coding in R, the easier it will become. The RStudio interactive tutorials I mentioned in weeks 11 and 12 are an excellent place to start if you haven’t engaged with those yet.</p>
+<ul>
+<li><p><a href="https://rstudio.cloud/learn/primers/1"><strong>The Basics</strong></a> Start here to learn how to inspect, visualize, subset and transform your data, as well as how to run code.</p></li>
+<li><p><a href="https://rstudio.cloud/learn/primers/2"><strong>Work with Data</strong></a> Learn how to extract values form a table, subset tables, calculate summary statistics, and derive new variables.</p></li>
+<li><p><a href="https://rstudio.cloud/learn/primers/3"><strong>Visualize Data</strong></a> Learn how to use ggplot2 to make any type of plot with your data. The tutorials on <a href="https://rstudio.cloud/learn/primers/3.1"><strong>Exploratory Data Analysis</strong></a> and <a href="https://rstudio.cloud/learn/primers/3.5"><strong>Scatterplots</strong></a> are particularly relevant.</p></li>
+<li><p><a href="https://rstudio.cloud/learn/primers/4.2"><strong>Separating and Uniting Columns</strong></a> Here you will learn to separate a column into multiple columns and to reverse the process by uniting multiple columns into a single column. Then you’ll practise your data wrangling skills on messy real world data.</p></li>
+<li><p><a href="https://rstudio.cloud/learn/primers/4.3"><strong>Join Data Sets</strong></a> Learn how to work with relational data. Here you will learn how to augment data sets with information from related data sets, as well as how to filter one data set against another.</p></li>
+</ul>
+<p>If you feel confident with the material covered in those tutorials the following is useful to try:</p>
+<ul>
+<li><a href="https://rstudio.cloud/learn/primers/1.2"><strong>Programming Basics</strong></a> R is easiest to use when you know how the R language works. This tutorial will teach you the implicit background knowledge that informs every piece of R code.</li>
+</ul>
+<p>Please note that there are often different ways to do the same or similar things in R. This means you might encounter slightly different functions or styles of coding in different materials. This is not something to worry about. Just make sure you’re clear on what a bit of code achieves and choose the function/style that you feel most comfortable with.</p>
+</div>
+<div id="pre-lab-activity-2-getting-ready-for-the-lab-class-1" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Pre-lab activity 2: Getting ready for the lab class<a href="week-13-more-on-interactions.html#pre-lab-activity-2-getting-ready-for-the-lab-class-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="get-your-files-ready-2" class="section level4 hasAnchor" number="4.3.2.1">
+<h4><span class="header-section-number">4.3.2.1</span> Get your files ready<a href="week-13-more-on-interactions.html#get-your-files-ready-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Download the <a href="files/week13/402_week13_forStudents.zip">402_week13_forStudents.zip</a> file and upload it into a new folder in RStudio Server.</p>
+</div>
+<div id="remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.-2" class="section level4 hasAnchor" number="4.3.2.2">
+<h4><span class="header-section-number">4.3.2.2</span> Remind yourself of how to access and work with the RStudio Server.<a href="week-13-more-on-interactions.html#remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.-2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Sign in to the <a href="http://psy-rstudio.lancaster.ac.uk/"><strong>RStudio Server</strong></a>, using the login details provided to you via email. Note that when you are not on campus you need to log into the VPN first (look on <a href="https://portal.lancaster.ac.uk/ask/vpn/"><strong>the portal</strong></a> if you need more information about that).</li>
+<li>Create a new folder for this week’s work.</li>
+<li>Upload the zip-file to the folder you have created on the RStudio server. Note you can either upload a single file or a zip-file, not a folder with multiple files.</li>
+<li>I highly recommend using R Projects to structure your workflow. You could create an R project for each week of the module. Have a look at section <a href="https://r4ds.had.co.nz/workflow-projects.html"><strong>8 Workflow: projects</strong></a> of <strong>R for Data Science</strong> by Hadley Wickam and Gareth Grolemund for an introduction.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="lab-activities-2" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Lab activities<a href="week-13-more-on-interactions.html#lab-activities-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this lab, you’ll gain understanding of and practice with:</p>
+<ul>
+<li>when and why to apply multiple regression to answer questions in psychological science</li>
+<li>conducting multiple regression in R including interaction between continuous predictors</li>
+<li>interpreting the R output of multiple linear regression (when including an interaction between continuous predictors)</li>
+<li>reporting results for multiple linear regression (when including an interaction between continuous predictors), following APA guidelines</li>
+</ul>
+<div id="background-1" class="section level4 hasAnchor" number="4.4.0.1">
+<h4><span class="header-section-number">4.4.0.1</span> Background<a href="week-13-more-on-interactions.html#background-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Today, we’ll be working with a dataset from the following paper:
+Hamermesh, D. S. and Parker, A. (2005). Beauty in the classroom: instructors’ pulchritude and putative pedagogical productivity. <em>Economics of Education Review, 24(4)</em>, 369 – 376.</p>
+<p>The abstract of their paper is below or see <a href="https://www.sciencedirect.com/science/article/abs/pii/S0272775704001165?casa_token=DhfsUB6qNPYAAAAA:xXIG-UAD8vNlZCAzLCJLTFPuO8Zs_gNvOjSsxdHFC-R09q0CYzVogwovSVd8VeSG8XXXxOeV"><strong>here</strong></a> for the paper itself.</p>
+<p>Abstract:
+Adjusted for many other determinants, beauty affects earnings; but does it lead directly to the differences in productivity that we believe generate earnings differences? We take a large sample of student instructional ratings for a group of university teachers and acquire six independent measures of their beauty, and a number of other descriptors of them and their classes. Instructors who are viewed as better looking receive higher instructional ratings, with the impact of a move from the 10th to the 90th percentile of beauty being substantial. This impact exists within university departments and even within particular courses, and is larger for male than for female instructors. Disentangling whether this outcome represents productivity or discrimination is, as with the issue generally, probably impossible.</p>
+<p>Our <strong>research question</strong>: Do professors’ beauty score and age predict how students evaluate their teaching?</p>
+<p>To complete this lab activity, you can use the R-script (<code>402_wk13_labAct1_template.R</code>) that you downloaded as part of the ‘Pre-lab activities’ as a template. Work through the activity below, adding relevant bits of code to your script as you go along.</p>
+<p><strong>QUESTION 1</strong>: Do you notice anything about the name of one of the variables and the name of the data table?</p>
+<p>The table contains, amongst other things, the following characteristics of the professors</p>
+<ul>
+<li>‘beauty’ - beauty score per professor</li>
+<li>‘eval’ - teaching evaluation score per professor</li>
+<li>‘age’ - age of the professor</li>
+</ul>
+<p><strong>QUESTION 2</strong>: Go back to the research question (see under ‘Background’ above), which of these three variables is the outcome variable? Which ones are the predictors?</p>
+</div>
+<div id="step-2-descriptive-statistics-and-distributions" class="section level4 hasAnchor" number="4.4.0.2">
+<h4><span class="header-section-number">4.4.0.2</span> Step 2: Descriptive statistics and distributions<a href="week-13-more-on-interactions.html#step-2-descriptive-statistics-and-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<blockquote>
+<p><strong>TASK</strong>: Calculate some descriptive statistics for the variables of interest (eval, beauty and age). <strong>HINT</strong>: You can use <code>summarise()</code> to calculate the mean, sd, min and max values.</p>
+</blockquote>
+<p>Now that we have the descriptive statistics, let’s get further information about the distribution of the variables by plotting histograms.</p>
+<blockquote>
+<p><strong>TASK</strong>: Visualise the distributions of the variables of interest in histograms. <strong>HINT</strong>: Use <code>ggplot()</code> and <code>geom_historgram()</code></p>
+</blockquote>
+</div>
+<div id="step-3-center-and-standardise" class="section level4 hasAnchor" number="4.4.0.3">
+<h4><span class="header-section-number">4.4.0.3</span> Step 3: Center and standardise<a href="week-13-more-on-interactions.html#step-3-center-and-standardise" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>As mentioned before, it will make it easier to interpret regression models with multiple predictors if we center and standardise our predictors. Before we go any further, we’ll do that.</p>
+<blockquote>
+<p><strong>TASK</strong>: Center and standardise the predictor variables. <strong>HINT</strong>: Centering involves subtracting the mean; standardising involves dividing by the standard deviation.</p>
+</blockquote>
+</div>
+<div id="step-4-scatterplots" class="section level4 hasAnchor" number="4.4.0.4">
+<h4><span class="header-section-number">4.4.0.4</span> Step 4: Scatterplots<a href="week-13-more-on-interactions.html#step-4-scatterplots" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Now let’s have a look at the relationships between variables using scatterplots. To remind yourself of what centering and standardising does, do this for both the raw data and the centered and standardised data.</p>
+<blockquote>
+<p><strong>TASK</strong>: Visualise the relationships between the variables of interest in scatterplots. <strong>HINT</strong>: Create six different scatterplots using <code>ggplot()</code> with <code>geom_point()</code> and <code>geom_smooth()</code>.</p>
+</blockquote>
+<p><strong>QUESTION 3</strong>: Can you write an interpretation of the above plots in plain English?</p>
+<p><strong>QUESTION 4</strong>: What is the difference between the scatterplots plotting the raw data and the ones plotting the centered and standardised data?</p>
+<p>Nothing wrong with making the scatterplots individually, but R does have functions that let you make several in one go in what is called a ‘scatterplot matrix’. To be able to do that, we first have to create an object that only includes the variables of interest. Then we need to tell R this is a ‘data frame’ (a specific type of data table). Finally, we use the <code>pairs()</code> function to create the matrix of scatterplots. The code below does these things:</p>
+<blockquote>
+<p><strong>TASK</strong>: Add the code below to your script and, in your script, also add comments to each line of code to summarise what that line does.</p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="week-13-more-on-interactions.html#cb1-1" aria-hidden="true" tabindex="-1"></a>beauty_matrix <span class="ot">&lt;-</span> beauty_z <span class="sc">%&gt;%</span>     </span>
+<span id="cb1-2"><a href="week-13-more-on-interactions.html#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(age_z, beauty_z, eval) <span class="sc">%&gt;%</span>     </span>
+<span id="cb1-3"><a href="week-13-more-on-interactions.html#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as.data.frame</span>()</span>
+<span id="cb1-4"><a href="week-13-more-on-interactions.html#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="week-13-more-on-interactions.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(beauty_matrix)</span></code></pre></div>
+<p>Although handy to get a quick overview, the scatterplots made using ggplot() are often clearer.</p>
+<p>It is useful to have a quick look at the bivariate correlations between the variables of interest, before you run a regression model. We can easily generate a correlation matrix for these variables.</p>
+<blockquote>
+<p><strong>TASK</strong>: Add the code below to your script and check you understand what each line does.</p>
+</blockquote>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="week-13-more-on-interactions.html#cb2-1" aria-hidden="true" tabindex="-1"></a>intercor_results <span class="ot">&lt;-</span> <span class="fu">correlate</span>(<span class="at">x =</span> beauty_matrix, <span class="co"># our data</span></span>
+<span id="cb2-2"><a href="week-13-more-on-interactions.html#cb2-2" aria-hidden="true" tabindex="-1"></a>                              <span class="at">test =</span> <span class="cn">TRUE</span>, <span class="co"># compute p-values</span></span>
+<span id="cb2-3"><a href="week-13-more-on-interactions.html#cb2-3" aria-hidden="true" tabindex="-1"></a>                              <span class="at">corr.method =</span> <span class="st">&quot;pearson&quot;</span>, <span class="co"># run a spearman test </span></span>
+<span id="cb2-4"><a href="week-13-more-on-interactions.html#cb2-4" aria-hidden="true" tabindex="-1"></a>                              <span class="at">p.adjust.method =</span> <span class="st">&quot;bonferroni&quot;</span>) <span class="co"># use the bonferroni correction</span></span>
+<span id="cb2-5"><a href="week-13-more-on-interactions.html#cb2-5" aria-hidden="true" tabindex="-1"></a>intercor_results</span></code></pre></div>
+<p>After you’ve run this code, look at the output in the console. It creates three tables, one with correlation coefficients, one with p-values for these coefficients and one with sample sizes.</p>
+</div>
+<div id="step-5-the-regression-model" class="section level4 hasAnchor" number="4.4.0.5">
+<h4><span class="header-section-number">4.4.0.5</span> Step 5: The regression model<a href="week-13-more-on-interactions.html#step-5-the-regression-model" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We’ve looked at descriptive statistics and distributions of variables and also at relations between variables. This has given us a good idea of what the data look like. Now we’ll construct the regression model to predict ‘evaluation score’ as a function of ‘age’ and ‘beauty score’. We’ll do this in two stages. First we’ll construct a model without an interaction term. Then we’ll construct a model that includes an interaction term betweeen the two predictor variables. Don’t forget to use the standardised data for all this.</p>
+<blockquote>
+<p><strong>TASK</strong>: Construct a regression model without an interaction term. <strong>HINT</strong>: Use the following formula, lm(y ~ x1 + x2, data); go back to the research question for your outcome and predictor variables.</p>
+</blockquote>
+<blockquote>
+<p><strong>TASK</strong>: Call and save the summary of your model; then have a look at it.</p>
+</blockquote>
+<p><strong>QUESTION 5</strong>: Is the overall model significant?</p>
+<p><strong>QUESTION 6</strong>: Are the predictors significant? What does this mean?</p>
+<blockquote>
+<p><strong>TASK</strong>: Now create a model that includes an interaction term for the two predictors. Again, use the centered and standardised data. <strong>HINT</strong>: Use the following formula, lm(y ~ x1 + x2 + x1:x2, data); go back to the research question for your outcome and predictor variables.</p>
+</blockquote>
+<p><strong>QUESTION 7</strong>: Is the overall model significant?</p>
+<p><strong>QUESTION 8</strong>: Have a good look at the coefficients. Can you interpret each one of them in turn and then formulate an overall interpretation? <strong>HINT</strong>: Remember that after centering and standardising, the meaning of 0 has changed for both predictor variables.</p>
+<p>Interpretation of coefficients in a multiple regression can be facilitated by ‘added variable’ plots.</p>
+<blockquote>
+<p><strong>TASK</strong>: Use the function <code>avPlots()</code> to create ‘added variable’ plots.</p>
+</blockquote>
+<p>Creating a scatterplot with our outcome variable on the y-axis and the significant predictor on the x-axis and then plotting our third variable (age) using different colours gives some information. Do you see how high age scores (light blue + 2 SD) seem to be more frequent in the bottom left corner?</p>
+<blockquote>
+<p><strong>TASK</strong>: Use the code below to create the plot.</p>
+</blockquote>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="week-13-more-on-interactions.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> beauty_z, <span class="fu">aes</span>(<span class="at">x =</span> beauty_z, <span class="at">y =</span> eval, <span class="at">colour =</span> age_z)) <span class="sc">+</span></span>
+<span id="cb3-2"><a href="week-13-more-on-interactions.html#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb3-3"><a href="week-13-more-on-interactions.html#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">colour =</span> <span class="st">&#39;black&#39;</span>) <span class="sc">+</span></span>
+<span id="cb3-4"><a href="week-13-more-on-interactions.html#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb3-5"><a href="week-13-more-on-interactions.html#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Beauty score&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Teaching evaluation score&quot;</span>)</span></code></pre></div>
+<p>But it might be more useful to plot different regression lines for different values of age. We can do this be transforming age into a categorical variable for plotting purposes. The code below creates three categories, based on eye-balling the histogram for age:</p>
+<ul>
+<li>youngest (40 and younger)</li>
+<li>average (between 41 and 53)</li>
+<li>oldest (54 and older).</li>
+</ul>
+<blockquote>
+<p><strong>TASK</strong>: Copy the code below to your script and make sure you understand what it does.</p>
+</blockquote>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="week-13-more-on-interactions.html#cb4-1" aria-hidden="true" tabindex="-1"></a>oldest <span class="ot">&lt;-</span> beauty_z <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="week-13-more-on-interactions.html#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(age <span class="sc">&gt;=</span> <span class="dv">54</span>)</span>
+<span id="cb4-3"><a href="week-13-more-on-interactions.html#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="week-13-more-on-interactions.html#cb4-4" aria-hidden="true" tabindex="-1"></a>average <span class="ot">&lt;-</span> beauty_z <span class="sc">%&gt;%</span></span>
+<span id="cb4-5"><a href="week-13-more-on-interactions.html#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(age <span class="sc">&gt;</span> <span class="dv">40</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-6"><a href="week-13-more-on-interactions.html#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(age <span class="sc">&lt;</span> <span class="dv">54</span>)</span>
+<span id="cb4-7"><a href="week-13-more-on-interactions.html#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="week-13-more-on-interactions.html#cb4-8" aria-hidden="true" tabindex="-1"></a>youngest <span class="ot">&lt;-</span> beauty_z <span class="sc">%&gt;%</span></span>
+<span id="cb4-9"><a href="week-13-more-on-interactions.html#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(age <span class="sc">&lt;=</span> <span class="dv">40</span>)</span></code></pre></div>
+<p>Now let’s create a single plot with three different lines, one for each of the age groups created above.</p>
+<blockquote>
+<p><strong>TASK</strong>: Copy the code below to your script and make sure you understand what it does.</p>
+</blockquote>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="week-13-more-on-interactions.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb5-2"><a href="week-13-more-on-interactions.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> oldest, <span class="fu">aes</span>(<span class="at">x =</span> beauty_z, <span class="at">y =</span> eval), <span class="at">colour =</span> <span class="st">&#39;blue&#39;</span>) <span class="sc">+</span></span>
+<span id="cb5-3"><a href="week-13-more-on-interactions.html#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">data =</span> oldest, <span class="fu">aes</span>(<span class="at">x =</span> beauty_z, <span class="at">y =</span> eval), <span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">colour =</span> <span class="st">&#39;blue&#39;</span>) <span class="sc">+</span></span>
+<span id="cb5-4"><a href="week-13-more-on-interactions.html#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> average, <span class="fu">aes</span>(<span class="at">x =</span> beauty_z, <span class="at">y =</span> eval), <span class="at">colour =</span> <span class="st">&#39;black&#39;</span>) <span class="sc">+</span></span>
+<span id="cb5-5"><a href="week-13-more-on-interactions.html#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">data =</span> average, <span class="fu">aes</span>(<span class="at">x =</span> beauty_z, <span class="at">y =</span> eval), <span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">colour =</span> <span class="st">&#39;black&#39;</span>) <span class="sc">+</span></span>
+<span id="cb5-6"><a href="week-13-more-on-interactions.html#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> youngest, <span class="fu">aes</span>(<span class="at">x =</span> beauty_z, <span class="at">y =</span> eval), <span class="at">colour =</span> <span class="st">&#39;green&#39;</span>) <span class="sc">+</span></span>
+<span id="cb5-7"><a href="week-13-more-on-interactions.html#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">data =</span> youngest, <span class="fu">aes</span>(<span class="at">x =</span> beauty_z, <span class="at">y =</span> eval), <span class="at">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">colour =</span> <span class="st">&#39;green&#39;</span>) <span class="sc">+</span></span>
+<span id="cb5-8"><a href="week-13-more-on-interactions.html#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb5-9"><a href="week-13-more-on-interactions.html#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Beauty score&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Teaching evaluation score&quot;</span>)</span></code></pre></div>
+<p>The line for the oldest participants seems much steeper than for the other two groups, suggesting that the interaction between age and beauty is mostly driven by older participants who have received more extreme beauty scores.</p>
+</div>
+<div id="step-6-checking-assumptions" class="section level4 hasAnchor" number="4.4.0.6">
+<h4><span class="header-section-number">4.4.0.6</span> Step 6: Checking assumptions<a href="week-13-more-on-interactions.html#step-6-checking-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Now that we’ve fitted a model, let’s check whether it meets the assumptions of linearity, normality and homoscedasticity.</p>
+<p><strong>Linearity</strong>
+Unlike when we did simple regression we can’t use <code>crPlots()</code> to test for linearity when there is an interaction, but we know from looking at the grouped scatterplot that this assumption has been met.</p>
+<p><strong>Normality</strong>
+Normally we would test for normality with a qq-plot and a Shapiro-Wilk test. However, because this dataset is so large, the Shapiro-Wilk is not appropriate (if you try to run the test it will produce a warning telling you that the sample size must be between 3 and 5000). This is because with extremely large sample sizes the Shapiro-Wilk test will find that any deviation from normality is significant. Therefore we should judge normality based upon the qq-plot.</p>
+<blockquote>
+<p><strong>TASK</strong>: Create a qq-plot to check the residuals are normally distributed. <strong>HINT</strong>: Use the <code>qqPlot()</code> function; mind the capital P.</p>
+</blockquote>
+<p><strong>QUESTION 9</strong>: What do you conclude from the qq-plot?</p>
+<p><strong>Homoscedasticity</strong>
+Here we have the same problem as with testing for normality: with such a large sample the <code>ncvTest()</code> will produce a significant result for any deviation from homoscedasticity. So we need to rely on plots again.</p>
+<p>To check for homoscedasticity we can use <code>plot()</code> from Base R that will produce a bunch of helpful plots (more information [<strong>here</strong>] (<a href="https://www.r-bloggers.com/2016/01/how-to-detect-heteroscedasticity-and-rectify-it/" class="uri">https://www.r-bloggers.com/2016/01/how-to-detect-heteroscedasticity-and-rectify-it/</a>).</p>
+<blockquote>
+<p><strong>TASK</strong>: Copy the code below to your script and run it to create the plots</p>
+</blockquote>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="week-13-more-on-interactions.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))                 <span class="co"># 4 charts in 1 panel</span></span>
+<span id="cb6-2"><a href="week-13-more-on-interactions.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mod_int)                     <span class="co"># this may take a few seconds to run</span></span></code></pre></div>
+<p><strong>QUESTION 10</strong>: What do you conclude from the residuals vs leverage plot?</p>
+<p><strong>Multi-collinearity</strong>
+Now let’s check for multi-collinearity using the <code>vif()</code> function. Essentially, this function estimates how much the variance of a coefficient is “inflated” because of linear dependence with other predictors, i.e., that a predictor isn’t actually adding any unique variance to the model, it’s just really strongly related to other predictors. Thankfully, the <code>vif()</code> function is not affected by large samples like the other tests. There are various rules of thumb, but most converge on a VIF of above 2 - 2.5 for any one predictor being problematic.</p>
+<blockquote>
+<p><strong>TASK</strong>: Use the <code>vif()</code> function to test for multi-collinearity.</p>
+</blockquote>
+<p><strong>QUESTION 11</strong>: Do any of the predictors show evidence of multi-collinearity?</p>
+<p>Finally, we need to write up the results.</p>
+<p><strong>QUESTION 12</strong>: Can you write up the results of the regression analysis following APA guidelines? <strong>HINT</strong>: Don’t forget to mention and interpret the interaction effect.</p>
+</div>
+</div>
+<div id="answers-2" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Answers<a href="week-13-more-on-interactions.html#answers-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week. <strong>Remember</strong>, looking at this script (studying/revising it) does not replace the process of working through the lab activities, trying them out for yourself, getting stuck, asking questions, finding solutions, adding your own comments, etc. <strong>Actively engaging</strong> with the material is the way to learn these analysis skills, not by looking at someone else’s completed code…</p>
+<p>The answers to the questions and the script containing the code will be available after the lab session has taken place.</p>
+<!-- You can download the R-script that includes the relevant code here: [402_wk13_labAct1_withAnswers.R](files/week13/402_wk13_labAct1_withAnswers.R).
 
 1. Do you notice anything about the name of one of the variables and the name of the data table? **Both the data table and one of the variables are called 'beauty'. Not a problem, as such as long as you don't get confused.**
 
@@ -461,9 +510,9 @@ You can download the R-script that includes the relevant code here: [402_wk13_la
 
 11. Do any of the predictors show evidence of multi-collinearity? **No**
 
-12. Can you write up the results of the regression analysis following APA guidelines? **The results of the regression indicated that the model significantly predicted teaching evaluation scores (*F*(3, 459) = 9.316, *p* < .001, adjusted *R^2* = 0.05), accounting for 5% of the variance. A professor's beauty score was a significant positive predictor of teaching evaluation score ($\beta$ = 0.12, *p* < .001). This effect was moderated by a significant positive interaction between beauty score and age ($\beta$ = 0.08, *p* < .001), suggesting that when age and beauty score both increased, teaching evaluation score also increased.**
+12. Can you write up the results of the regression analysis following APA guidelines? **The results of the regression indicated that the model significantly predicted teaching evaluation scores (*F*(3, 459) = 9.316, *p* < .001, adjusted *R^2* = 0.05), accounting for 5% of the variance. A professor's beauty score was a significant positive predictor of teaching evaluation score ($\beta$ = 0.12, *p* < .001). This effect was moderated by a significant positive interaction between beauty score and age ($\beta$ = 0.08, *p* < .001), suggesting that when age and beauty score both increased, teaching evaluation score also increased.** -->
 
-
+</div>
 </div>
             </section>
 

@@ -10,11 +10,10 @@ output:
 
 Interactions are ubiquitous in psychological science, which is why we’ll spend some more time building models that include interaction terms. Last week we modelled well-being as a function of screen-time (a continuous predictor) and biological sex (a categorical predictor) and their interaction. This week we’ll look at interactions between continuous predictors. 
 
-<!--
 ## Lectures
 The lecture material for this week follows the recommended chapters in Winter (2020) -- see under 'Reading' below -- and is presented below:
 
-* [**More on interactions (~18 min)**](https://web.microsoftstream.com/video/9e2a9e1e-548f-492e-a529-58dc1c8490f3) 
+* [**More on interactions (~18 min)**](https://estream.lancaster.ac.uk/View.aspx?id=61170~5c~UkDY6wWxnM) 
 
 ## Reading
 
@@ -46,13 +45,16 @@ If you feel confident with the material covered in those tutorials the following
 Please note that there are often different ways to do the same or similar things in R. This means you might encounter slightly different functions or styles of coding in different materials. This is not something to worry about. Just make sure you're clear on what a bit of code achieves and choose the function/style that you feel most comfortable with.
 
 ### Pre-lab activity 2: Getting ready for the lab class
-#### Remind yourself of how to access and work with the RStudio Server.
-
-* [**Video on how to access the RStudio Server by Padraic**](https://dtu-panopto.lancs.ac.uk/Panopto/Pages/Viewer.aspx?id=f4f414ff-dd5b-4301-9214-adbf009d10da)
-* I highly recommend using R Projects to structure your workflow. You could create an R project for each week of the module. Have a look at section [**8 Workflow: projects**](https://r4ds.had.co.nz/workflow-projects.html) of **R for Data Science** by Hadley Wickam and Gareth Grolemund for an introduction.
 
 #### Get your files ready
 Download the [402_week13_forStudents.zip](files/week13/402_week13_forStudents.zip) file and upload it into a new folder in RStudio Server. 
+
+#### Remind yourself of how to access and work with the RStudio Server.
+
+* Sign in to the [**RStudio Server**](http://psy-rstudio.lancaster.ac.uk/), using the login details provided to you via email. Note that when you are not on campus you need to log into the VPN first (look on [**the portal**](https://portal.lancaster.ac.uk/ask/vpn/) if you need more information about that).
+* Create a new folder for this week's work. 
+* Upload the zip-file to the folder you have created on the RStudio server. Note you can either upload a single file or a zip-file, not a folder with multiple files.
+* I highly recommend using R Projects to structure your workflow. You could create an R project for each week of the module. Have a look at section [**8 Workflow: projects**](https://r4ds.had.co.nz/workflow-projects.html) of **R for Data Science** by Hadley Wickam and Gareth Grolemund for an introduction.
 
 ## Lab activities
 In this lab, you’ll gain understanding of and practice with:
@@ -252,7 +254,7 @@ When you have completed all of the lab content, you may want to check your answe
 
 The answers to the questions and the script containing the code will be available after the lab session has taken place.
 
-You can download the R-script that includes the relevant code here: [402_wk13_labAct1_withAnswers.R](files/week13/402_wk13_labAct1_withAnswers.R).
+<!-- You can download the R-script that includes the relevant code here: [402_wk13_labAct1_withAnswers.R](files/week13/402_wk13_labAct1_withAnswers.R).
 
 1. Do you notice anything about the name of one of the variables and the name of the data table? **Both the data table and one of the variables are called 'beauty'. Not a problem, as such as long as you don't get confused.**
 
@@ -276,4 +278,4 @@ You can download the R-script that includes the relevant code here: [402_wk13_la
 
 11. Do any of the predictors show evidence of multi-collinearity? **No**
 
-12. Can you write up the results of the regression analysis following APA guidelines? **The results of the regression indicated that the model significantly predicted teaching evaluation scores (*F*(3, 459) = 9.316, *p* < .001, adjusted *R^2* = 0.05), accounting for 5% of the variance. A professor's beauty score was a significant positive predictor of teaching evaluation score ($\beta$ = 0.12, *p* < .001). This effect was moderated by a significant positive interaction between beauty score and age ($\beta$ = 0.08, *p* < .001), suggesting that when age and beauty score both increased, teaching evaluation score also increased.**
+12. Can you write up the results of the regression analysis following APA guidelines? **The results of the regression indicated that the model significantly predicted teaching evaluation scores (*F*(3, 459) = 9.316, *p* < .001, adjusted *R^2* = 0.05), accounting for 5% of the variance. A professor's beauty score was a significant positive predictor of teaching evaluation score ($\beta$ = 0.12, *p* < .001). This effect was moderated by a significant positive interaction between beauty score and age ($\beta$ = 0.08, *p* < .001), suggesting that when age and beauty score both increased, teaching evaluation score also increased.** -->
