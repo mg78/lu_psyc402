@@ -79,14 +79,14 @@ ggplot(beauty_z, aes(x = age_z, y = eval)) +
   theme_bw()
 
 # Code scatterplot matrix, with comments 
-beauty_matrix <- beauty_z %>%     # use 'beauty' and assigne outcome to new object 'beauty_matrix'
+beauty_matrix <- beauty_z %>%     # use 'beauty' and assign outcome to new object 'beauty_matrix'
   select(age_z, beauty_z, eval) %>%     # only keep the variables age, beauty and eval
   as.data.frame() # make sure to tell R that it is a data frame
 
 pairs(beauty_matrix) # create a matrix of scatterplots
 
 # correlation matrix:
-intercor_results <- correlate(x = beauty_matrix, # our data
+intercor_results <- lsr::correlate(x = beauty_matrix, # our data
                               test = TRUE, # compute p-values
                               corr.method = "pearson", # run a pearson test 
                               p.adjust.method = "bonferroni") # use the bonferroni correction
