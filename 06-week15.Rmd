@@ -52,15 +52,15 @@ ggplot(data = lambda2, mapping = aes(x = lambda2)) +
 **QUESTION**: What do you notice about the Poisson distribution if you choose a high value for lambda?
 
 ### Pre-lab activity 2: Getting ready
+#### Get your files ready
+Download the [402_week15_forStudents.zip](files/week15/402_week15_forStudents.zip) file and upload it into a new folder in RStudio Server.
+
 #### Remind yourself of how to access and work with the RStudio Server.
 
-* [**Video on how to access the RStudio Server by Padraic**](https://dtu-panopto.lancs.ac.uk/Panopto/Pages/Viewer.aspx?id=f4f414ff-dd5b-4301-9214-adbf009d10da)
+* Sign in to the [**RStudio Server**](http://psy-rstudio.lancaster.ac.uk/), using the login details provided to you via email. Note that when you are not on campus you need to log into the VPN first (look on [**the portal**](https://portal.lancaster.ac.uk/ask/vpn/) if you need more information about that).
+* Create a new folder for this week's work. 
+* Upload the zip-file to the folder you have created on the RStudio server. Note you can either upload a single file or a zip-file, not a folder with multiple files.
 * I highly recommend using R Projects to structure your workflow. You could create an R project for each week of the module. Have a look at section [**8 Workflow: projects**](https://r4ds.had.co.nz/workflow-projects.html) of **R for Data Science** by Hadley Wickam and Gareth Grolemund for an introduction.
-
-#### Get your files ready
-Files needed for the lab activity will be posted early next week. 
-
-Download the [402_week15_forStudents.zip](files/week15/402_week15_forStudents.zip) file and upload it into a new folder in RStudio Server.
 
 ## Lab activities
 In this lab, you’ll gain understanding of and practice with:
