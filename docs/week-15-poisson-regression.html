@@ -4,31 +4,33 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1 Week 15: Poisson regression | 06-week15.knit</title>
-  <meta name="description" content="" />
+  <title>6 Week 15: Poisson regression | Analysing and Interpreting Psychological Data II - PSYC402</title>
+  <meta name="description" content="Course content for PSYC402 at Lancaster University" />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1 Week 15: Poisson regression | 06-week15.knit" />
+  <meta property="og:title" content="6 Week 15: Poisson regression | Analysing and Interpreting Psychological Data II - PSYC402" />
   <meta property="og:type" content="book" />
   
-  
-  
+  <meta property="og:description" content="Course content for PSYC402 at Lancaster University" />
+  <meta name="github-repo" content="mg78/lu_psyc402" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1 Week 15: Poisson regression | 06-week15.knit" />
+  <meta name="twitter:title" content="6 Week 15: Poisson regression | Analysing and Interpreting Psychological Data II - PSYC402" />
   
-  
+  <meta name="twitter:description" content="Course content for PSYC402 at Lancaster University" />
   
 
+<meta name="author" content="Margriet Groen and Rob Davies" />
 
 
+<meta name="date" content="2023-02-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="week-14-logistic-regression.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -134,23 +136,109 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">PSYC122 - Statistics for Psychologists I</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path=""><a href="#week-15-poisson-regression"><i class="fa fa-check"></i><b>1</b> Week 15: Poisson regression</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Intro</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path=""><a href="#lectures"><i class="fa fa-check"></i><b>1.1</b> Lectures</a></li>
-<li class="chapter" data-level="1.2" data-path=""><a href="#reading"><i class="fa fa-check"></i><b>1.2</b> Reading</a>
-<ul>
-<li class="chapter" data-level="1.2.1" data-path=""><a href="#winter-2020"><i class="fa fa-check"></i><b>1.2.1</b> Winter (2020)</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#analysis-labs-and-pre-lab-work"><i class="fa fa-check"></i><b>1.1</b> Analysis labs and ‘pre-lab work’</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path=""><a href="#pre-lab-activities"><i class="fa fa-check"></i><b>1.3</b> Pre-lab activities</a>
+<li class="chapter" data-level="2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><i class="fa fa-check"></i><b>2</b> Week 11: Recap of the linear model and practising data-wrangling in R</a>
 <ul>
-<li class="chapter" data-level="1.3.1" data-path=""><a href="#pre-lab-activity-1-getting-a-feel-for-poisson-data"><i class="fa fa-check"></i><b>1.3.1</b> Pre-lab activity 1: Getting a feel for Poisson data</a></li>
-<li class="chapter" data-level="1.3.2" data-path=""><a href="#pre-lab-activity-2-getting-ready"><i class="fa fa-check"></i><b>1.3.2</b> Pre-lab activity 2: Getting ready</a></li>
-</ul></li>
-<li class="chapter" data-level="1.4" data-path=""><a href="#lab-activities"><i class="fa fa-check"></i><b>1.4</b> Lab activities</a>
+<li class="chapter" data-level="2.1" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lectures"><i class="fa fa-check"></i><b>2.1</b> Lectures</a></li>
+<li class="chapter" data-level="2.2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#reading"><i class="fa fa-check"></i><b>2.2</b> Reading</a>
 <ul>
-<li class="chapter" data-level="1.4.1" data-path=""><a href="#lab-activity-1-visual-dominance"><i class="fa fa-check"></i><b>1.4.1</b> Lab activity 1: Visual dominance</a></li>
+<li class="chapter" data-level="2.2.1" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#miller-haden-2013"><i class="fa fa-check"></i><b>2.2.1</b> Miller &amp; Haden (2013)</a></li>
+<li class="chapter" data-level="2.2.2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#winter-2020"><i class="fa fa-check"></i><b>2.2.2</b> Winter (2020)</a></li>
 </ul></li>
-<li class="chapter" data-level="1.5" data-path=""><a href="#answers"><i class="fa fa-check"></i><b>1.5</b> Answers</a></li>
+<li class="chapter" data-level="2.3" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#pre-lab-activities"><i class="fa fa-check"></i><b>2.3</b> Pre-lab activities</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#pre-lab-activity-1-visualising-the-regression-line"><i class="fa fa-check"></i><b>2.3.1</b> Pre-lab activity 1: Visualising the regression line</a></li>
+<li class="chapter" data-level="2.3.2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#pre-lab-activity-2-data-wrangling-in-r"><i class="fa fa-check"></i><b>2.3.2</b> Pre-lab activity 2: Data-wrangling in R</a></li>
+<li class="chapter" data-level="2.3.3" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#pre-lab-activity-3-getting-ready-for-the-lab-class"><i class="fa fa-check"></i><b>2.3.3</b> Pre-lab activity 3: Getting ready for the lab class</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activities"><i class="fa fa-check"></i><b>2.4</b> Lab activities</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activity-1-interpreting-and-reporting-results"><i class="fa fa-check"></i><b>2.4.1</b> Lab activity 1: Interpreting and reporting results</a></li>
+<li class="chapter" data-level="2.4.2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activity-2-conducting-simple-and-multiple-regression"><i class="fa fa-check"></i><b>2.4.2</b> Lab activity 2: Conducting simple and multiple regression</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#answers"><i class="fa fa-check"></i><b>2.5</b> Answers</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activity-1-interpreting-and-reporting-results-1"><i class="fa fa-check"></i><b>2.5.1</b> Lab activity 1: Interpreting and reporting results</a></li>
+<li class="chapter" data-level="2.5.2" data-path="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html"><a href="week-11-recap-of-the-linear-model-and-practising-data-wrangling-in-r.html#lab-activity-2-conducting-simple-and-multiple-regression-1"><i class="fa fa-check"></i><b>2.5.2</b> Lab activity 2: Conducting simple and multiple regression</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html"><i class="fa fa-check"></i><b>3</b> Week 12: Categorical predictors</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#lectures-1"><i class="fa fa-check"></i><b>3.1</b> Lectures</a></li>
+<li class="chapter" data-level="3.2" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#reading-1"><i class="fa fa-check"></i><b>3.2</b> Reading</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#blogpost-by-professor-dorothy-bishop"><i class="fa fa-check"></i><b>3.2.1</b> Blogpost by Professor Dorothy Bishop</a></li>
+<li class="chapter" data-level="3.2.2" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#winter-2020-1"><i class="fa fa-check"></i><b>3.2.2</b> Winter (2020)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#pre-lab-activities-1"><i class="fa fa-check"></i><b>3.3</b> Pre-lab activities</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#pre-lab-activity-1-data-wrangling-in-r"><i class="fa fa-check"></i><b>3.3.1</b> Pre-lab activity 1: Data-wrangling in R</a></li>
+<li class="chapter" data-level="3.3.2" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#pre-lab-activity-2-getting-ready-for-the-lab-class"><i class="fa fa-check"></i><b>3.3.2</b> Pre-lab activity 2: Getting ready for the lab class</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#lab-activities-1"><i class="fa fa-check"></i><b>3.4</b> Lab activities</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#lab-activity-1-combining-a-continuous-and-a-categorical-predictor-in-a-resssion-model"><i class="fa fa-check"></i><b>3.4.1</b> Lab activity 1: Combining a continuous and a categorical predictor in a resssion model</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#answers-1"><i class="fa fa-check"></i><b>3.5</b> Answers</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="week-12-categorical-predictors.html"><a href="week-12-categorical-predictors.html#lab-activity-1-combining-a-continuous-and-a-categorical-predictor-in-a-resssion-model-1"><i class="fa fa-check"></i><b>3.5.1</b> Lab activity 1: Combining a continuous and a categorical predictor in a resssion model</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html"><i class="fa fa-check"></i><b>4</b> Week 13: More on interactions</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html#lectures-2"><i class="fa fa-check"></i><b>4.1</b> Lectures</a></li>
+<li class="chapter" data-level="4.2" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html#reading-2"><i class="fa fa-check"></i><b>4.2</b> Reading</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html#winter-2020-2"><i class="fa fa-check"></i><b>4.2.1</b> Winter (2020)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html#pre-lab-activities-2"><i class="fa fa-check"></i><b>4.3</b> Pre-lab activities</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html#pre-lab-activity-1-data-wrangling-in-r-1"><i class="fa fa-check"></i><b>4.3.1</b> Pre-lab activity 1: Data-wrangling in R</a></li>
+<li class="chapter" data-level="4.3.2" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html#pre-lab-activity-2-getting-ready-for-the-lab-class-1"><i class="fa fa-check"></i><b>4.3.2</b> Pre-lab activity 2: Getting ready for the lab class</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html#lab-activities-2"><i class="fa fa-check"></i><b>4.4</b> Lab activities</a></li>
+<li class="chapter" data-level="4.5" data-path="week-13-more-on-interactions.html"><a href="week-13-more-on-interactions.html#answers-2"><i class="fa fa-check"></i><b>4.5</b> Answers</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html"><i class="fa fa-check"></i><b>5</b> Week 14: Logistic regression</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#lectures-3"><i class="fa fa-check"></i><b>5.1</b> Lectures</a></li>
+<li class="chapter" data-level="5.2" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#reading-3"><i class="fa fa-check"></i><b>5.2</b> Reading</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#barr-2020"><i class="fa fa-check"></i><b>5.2.1</b> Barr (2020)</a></li>
+<li class="chapter" data-level="5.2.2" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#winter-2020-3"><i class="fa fa-check"></i><b>5.2.2</b> Winter (2020)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#pre-lab-activities-3"><i class="fa fa-check"></i><b>5.3</b> Pre-lab activities</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#pre-lab-activity-1-getting-ready"><i class="fa fa-check"></i><b>5.3.1</b> Pre-lab activity 1: Getting ready</a></li>
+<li class="chapter" data-level="5.3.2" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#pre-lab-activity-2-rainy-days"><i class="fa fa-check"></i><b>5.3.2</b> Pre-lab activity 2: Rainy days</a></li>
+<li class="chapter" data-level="5.3.3" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#pre-lab-activity-3gesture-perception"><i class="fa fa-check"></i><b>5.3.3</b> Pre-lab activity 3:Gesture perception</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#lab-activities-3"><i class="fa fa-check"></i><b>5.4</b> Lab activities</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#lab-activity-1-more-work-on-gesture-perception"><i class="fa fa-check"></i><b>5.4.1</b> Lab activity 1: More work on gesture perception</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="week-14-logistic-regression.html"><a href="week-14-logistic-regression.html#answers-3"><i class="fa fa-check"></i><b>5.5</b> Answers</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="week-15-poisson-regression.html"><a href="week-15-poisson-regression.html"><i class="fa fa-check"></i><b>6</b> Week 15: Poisson regression</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="week-15-poisson-regression.html"><a href="week-15-poisson-regression.html#lectures-4"><i class="fa fa-check"></i><b>6.1</b> Lectures</a></li>
+<li class="chapter" data-level="6.2" data-path="week-15-poisson-regression.html"><a href="week-15-poisson-regression.html#reading-4"><i class="fa fa-check"></i><b>6.2</b> Reading</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="week-15-poisson-regression.html"><a href="week-15-poisson-regression.html#winter-2020-4"><i class="fa fa-check"></i><b>6.2.1</b> Winter (2020)</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="week-15-poisson-regression.html"><a href="week-15-poisson-regression.html#pre-lab-activities-4"><i class="fa fa-check"></i><b>6.3</b> Pre-lab activities</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="week-15-poisson-regression.html"><a href="week-15-poisson-regression.html#pre-lab-activity-1-getting-a-feel-for-poisson-data"><i class="fa fa-check"></i><b>6.3.1</b> Pre-lab activity 1: Getting a feel for Poisson data</a></li>
+<li class="chapter" data-level="6.3.2" data-path="week-15-poisson-regression.html"><a href="week-15-poisson-regression.html#pre-lab-activity-2-getting-ready"><i class="fa fa-check"></i><b>6.3.2</b> Pre-lab activity 2: Getting ready</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="week-15-poisson-regression.html"><a href="week-15-poisson-regression.html#lab-activities-4"><i class="fa fa-check"></i><b>6.4</b> Lab activities</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="week-15-poisson-regression.html"><a href="week-15-poisson-regression.html#lab-activity-1-visual-dominance"><i class="fa fa-check"></i><b>6.4.1</b> Lab activity 1: Visual dominance</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="week-15-poisson-regression.html"><a href="week-15-poisson-regression.html#answers-4"><i class="fa fa-check"></i><b>6.5</b> Answers</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -164,7 +252,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Analysing and Interpreting Psychological Data II - PSYC402</a>
           </h1>
         </div>
 
@@ -172,34 +260,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<!--bookdown:title:end-->
-<!--bookdown:title:start-->
-<div id="week-15-poisson-regression" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">1</span> Week 15: Poisson regression<a href="#week-15-poisson-regression" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="week-15-poisson-regression" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> Week 15: Poisson regression<a href="week-15-poisson-regression.html#week-15-poisson-regression" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <blockquote>
 <p>Written by Margriet Groen (partly adapted from Winter (2020))</p>
 </blockquote>
 <p>Previously, we looked at logistic regression in the context of a binomial outcome variable, that is, a two-level variable such as correct vs. incorrect, or looking to the left vs. the right. Poisson regression is another type of generalized linear model that is particularly useful for count data.</p>
-<div id="lectures" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Lectures<a href="#lectures" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="lectures-4" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Lectures<a href="week-15-poisson-regression.html#lectures-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The lecture material for this week follows the recommended chapters in Winter (2020) – see under ‘Reading’ below – and is presented below:</p>
 <ul>
 <li><a href="https://estream.lancaster.ac.uk/View.aspx?id=61614~5f~xjxCbKDjGH"><strong>Poisson regression (~28 min)</strong></a></li>
 </ul>
 </div>
-<div id="reading" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Reading<a href="#reading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="winter-2020" class="section level3 hasAnchor" number="1.2.1">
-<h3><span class="header-section-number">1.2.1</span> Winter (2020)<a href="#winter-2020" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="reading-4" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Reading<a href="week-15-poisson-regression.html#reading-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="winter-2020-4" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Winter (2020)<a href="week-15-poisson-regression.html#winter-2020-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><a href="https://eu.alma.exlibrisgroup.com/leganto/public/44LAN_INST/citation/83408786230001221?auth=SAML"><strong>Link</strong></a></p>
 <p><strong>Chapter 13</strong> provides a clear introduction to Poisson regression and its implementation in R.</p>
 </div>
 </div>
-<div id="pre-lab-activities" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Pre-lab activities<a href="#pre-lab-activities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="pre-lab-activities-4" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Pre-lab activities<a href="week-15-poisson-regression.html#pre-lab-activities-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>After having watched the lectures and read the textbook chapters you’ll be in a good position to try these activities. Completing them before you attend your lab session will help you to consolidate your learning and help move through the lab activities more smoothly.</p>
-<div id="pre-lab-activity-1-getting-a-feel-for-poisson-data" class="section level3 hasAnchor" number="1.3.1">
-<h3><span class="header-section-number">1.3.1</span> Pre-lab activity 1: Getting a feel for Poisson data<a href="#pre-lab-activity-1-getting-a-feel-for-poisson-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="pre-lab-activity-1-getting-a-feel-for-poisson-data" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Pre-lab activity 1: Getting a feel for Poisson data<a href="week-15-poisson-regression.html#pre-lab-activity-1-getting-a-feel-for-poisson-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To get a feel for Poisson data, we’ll use the <code>rpois()</code> function to generate random data that is Poisson-distributed. <code>rpois()</code> needs two bits of information: lambda, and how many numbers you want to generate.</p>
 <p>As usual, before we get stuck in we need to set up a few things.</p>
 <blockquote>
@@ -213,22 +299,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <blockquote>
 <p><strong>TASK</strong>: Copy the code below to your script and run it. Then change the value of <code>lambda</code> in the <code>rpois()</code> function and see how the distribution changes.</p>
 </blockquote>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>lambda2 <span class="ot">&lt;-</span> <span class="fu">rpois</span>(<span class="at">n =</span> <span class="dv">1000</span>, <span class="at">lambda =</span> <span class="dv">2</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>lambda2 <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(lambda2)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> lambda2, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lambda2)) <span class="sc">+</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="week-15-poisson-regression.html#cb1-1" aria-hidden="true" tabindex="-1"></a>lambda2 <span class="ot">&lt;-</span> <span class="fu">rpois</span>(<span class="at">n =</span> <span class="dv">1000</span>, <span class="at">lambda =</span> <span class="dv">2</span>)</span>
+<span id="cb1-2"><a href="week-15-poisson-regression.html#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="week-15-poisson-regression.html#cb1-3" aria-hidden="true" tabindex="-1"></a>lambda2 <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(lambda2)</span>
+<span id="cb1-4"><a href="week-15-poisson-regression.html#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="week-15-poisson-regression.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> lambda2, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lambda2)) <span class="sc">+</span></span>
+<span id="cb1-6"><a href="week-15-poisson-regression.html#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
 <p><strong>QUESTION</strong>: What do you notice about the Poisson distribution if you choose a high value for lambda?</p>
 </div>
-<div id="pre-lab-activity-2-getting-ready" class="section level3 hasAnchor" number="1.3.2">
-<h3><span class="header-section-number">1.3.2</span> Pre-lab activity 2: Getting ready<a href="#pre-lab-activity-2-getting-ready" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="get-your-files-ready" class="section level4 hasAnchor" number="1.3.2.1">
-<h4><span class="header-section-number">1.3.2.1</span> Get your files ready<a href="#get-your-files-ready" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="pre-lab-activity-2-getting-ready" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Pre-lab activity 2: Getting ready<a href="week-15-poisson-regression.html#pre-lab-activity-2-getting-ready" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="get-your-files-ready-4" class="section level4 hasAnchor" number="6.3.2.1">
+<h4><span class="header-section-number">6.3.2.1</span> Get your files ready<a href="week-15-poisson-regression.html#get-your-files-ready-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Download the <a href="files/week15/402_week15_forStudents.zip">402_week15_forStudents.zip</a> file and upload it into a new folder in RStudio Server.</p>
 </div>
-<div id="remind-yourself-of-how-to-access-and-work-with-the-rstudio-server." class="section level4 hasAnchor" number="1.3.2.2">
-<h4><span class="header-section-number">1.3.2.2</span> Remind yourself of how to access and work with the RStudio Server.<a href="#remind-yourself-of-how-to-access-and-work-with-the-rstudio-server." class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.-4" class="section level4 hasAnchor" number="6.3.2.2">
+<h4><span class="header-section-number">6.3.2.2</span> Remind yourself of how to access and work with the RStudio Server.<a href="week-15-poisson-regression.html#remind-yourself-of-how-to-access-and-work-with-the-rstudio-server.-4" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>Sign in to the <a href="http://psy-rstudio.lancaster.ac.uk/"><strong>RStudio Server</strong></a>, using the login details provided to you via email. Note that when you are not on campus you need to log into the VPN first (look on <a href="https://portal.lancaster.ac.uk/ask/vpn/"><strong>the portal</strong></a> if you need more information about that).</li>
 <li>Create a new folder for this week’s work.</li>
@@ -238,8 +324,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div id="lab-activities" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> Lab activities<a href="#lab-activities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="lab-activities-4" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Lab activities<a href="week-15-poisson-regression.html#lab-activities-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In this lab, you’ll gain understanding of and practice with:</p>
 <ul>
 <li>when and why to apply Poisson regression to answer questions in psychological science</li>
@@ -247,11 +333,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>interpreting the R output of Poisson regression</li>
 <li>reporting results for Poisson regression following APA guidelines</li>
 </ul>
-<div id="lab-activity-1-visual-dominance" class="section level3 hasAnchor" number="1.4.1">
-<h3><span class="header-section-number">1.4.1</span> Lab activity 1: Visual dominance<a href="#lab-activity-1-visual-dominance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="lab-activity-1-visual-dominance" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Lab activity 1: Visual dominance<a href="week-15-poisson-regression.html#lab-activity-1-visual-dominance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><a href="https://www.sciencedirect.com/science/article/abs/pii/S0010027718301288"><strong>Winter et al. (2018)</strong></a> showed that, on average, English words that were rated as strongly associated with the visual modality are more frequent than words more strongly associated with other sensory modalities. In this week’s lab activity we will retrace that analysis focusing on the subset of adjectives (the paper also included verbs and nouns). We’ll use sensory modality ratings as reported by Lynott and Connell (2009; see <a href="https://link.springer.com/article/10.3758/BRM.41.2.558"><strong>here</strong></a> for more info; data file: <code>lynott_connell_2009_modality.csv</code>) and word frequencies as reported by the English Lexicon Project (data file: <code>ELP_full_length_frequency.csv</code>). The <strong>research question</strong> is: Do English speakers use ‘visual’ adjectives more frequently than adjectives more strongly associated with other sensory modalities?</p>
-<div id="step-1-set-up" class="section level4 hasAnchor" number="1.4.1.1">
-<h4><span class="header-section-number">1.4.1.1</span> Step 1: Set up<a href="#step-1-set-up" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="step-1-set-up" class="section level4 hasAnchor" number="6.4.1.1">
+<h4><span class="header-section-number">6.4.1.1</span> Step 1: Set up<a href="week-15-poisson-regression.html#step-1-set-up" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Before we get stuck in we need to set up a few things.</p>
 <blockquote>
 <p><strong>TASK</strong>: Add code to clear the environment. <strong>HINT</strong>: <code>rm(list=ls())</code></p>
@@ -266,15 +352,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </blockquote>
 <p><strong>QUESTION 1</strong>: Which variables do you need to address the research question?</p>
 </div>
-<div id="step-2-a-bit-of-data-wrangling" class="section level4 hasAnchor" number="1.4.1.2">
-<h4><span class="header-section-number">1.4.1.2</span> Step 2: A bit of data wrangling<a href="#step-2-a-bit-of-data-wrangling" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="step-2-a-bit-of-data-wrangling" class="section level4 hasAnchor" number="6.4.1.2">
+<h4><span class="header-section-number">6.4.1.2</span> Step 2: A bit of data wrangling<a href="week-15-poisson-regression.html#step-2-a-bit-of-data-wrangling" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>We need to combine the information in the data files to be able to do any analyses. We can use a ‘join’ to do this. Have a look at the online book by Hadley Wickam and Gareth Grolemund (<a href="https://r4ds.had.co.nz/relational-data.html?q=left_join#mutating-joins"><strong>here</strong></a>) to remind yourself what a ‘join’ is. In particular, have a look at the <code>inner_join()</code> and the <code>left_join()</code>.</p>
 <p><strong>QUESTION 2</strong>: Which ‘join’ is most appropriate, the <code>inner_join()</code> or the <code>left_join()</code>? Also, does it matter which datafile you specify as x and which one as y? If so, why does it matter?</p>
 <blockquote>
 <p><strong>TASK</strong>: Add code to join the two data files and store the resulting table in an object called <code>both</code>. Try out the different joins and use <code>head()</code> to inspect the result. <strong>HINT</strong>: You should end up with a table that has 423 observations of at least 8 variables.</p>
 </blockquote>
 <p>Next, we want to select only the variables we need. We want to use the <code>select()</code> function from <code>dplyr</code>. Because the MASS library is also loaded and that library also contains a <code>select()</code> function, we need to tell R specifically to use the one from <code>dplyr</code>. You can do this by using <code>dpply::</code>, like this:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>both <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">select</span>(Word, DominantModality<span class="sc">:</span>Smell, Log10Freq)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="week-15-poisson-regression.html#cb2-1" aria-hidden="true" tabindex="-1"></a>both <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">select</span>(Word, DominantModality<span class="sc">:</span>Smell, Log10Freq)</span></code></pre></div>
 <blockquote>
 <p><strong>TASK</strong>: Add the code above to your script and run it.</p>
 </blockquote>
@@ -282,27 +368,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <blockquote>
 <p><strong>TASK</strong>: Use the code below to transform the frequency variable to raw values. Don’t forget to add it to your script and run it.</p>
 </blockquote>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>both <span class="ot">&lt;-</span> <span class="fu">mutate</span>(both, <span class="at">Freq =</span> <span class="dv">10</span> <span class="sc">^</span> Log10Freq)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="week-15-poisson-regression.html#cb3-1" aria-hidden="true" tabindex="-1"></a>both <span class="ot">&lt;-</span> <span class="fu">mutate</span>(both, <span class="at">Freq =</span> <span class="dv">10</span> <span class="sc">^</span> Log10Freq)</span></code></pre></div>
 <p><strong>QUESTION 3</strong>: What does this line of code do. Write a comment to summarise its function.</p>
 </div>
-<div id="step-3-visualise-the-data" class="section level4 hasAnchor" number="1.4.1.3">
-<h4><span class="header-section-number">1.4.1.3</span> Step 3: Visualise the data<a href="#step-3-visualise-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="step-3-visualise-the-data" class="section level4 hasAnchor" number="6.4.1.3">
+<h4><span class="header-section-number">6.4.1.3</span> Step 3: Visualise the data<a href="week-15-poisson-regression.html#step-3-visualise-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>To get a better feel for the data, let’s make some scatterplots.</p>
 <blockquote>
 <p><strong>TASK</strong>: Add code to make scatterplots with Freq on the y axis and each of the sensory modality ratings on the respective x axis. To be able to see more easily what is going on, limit the y-axis to values between 0 and 20000. <strong>HINT</strong>: Make 5 different scatterplots using <code>ggplot()</code> with<code>geom_point()</code> and <code>geom_smooth()</code>. You can use <code>ylim()</code> to limit the values on the y-axis.</p>
 </blockquote>
 <p><strong>QUESTION 4</strong>: What do you conclude from the scatterplots?</p>
 </div>
-<div id="step-4-the-regression-model" class="section level4 hasAnchor" number="1.4.1.4">
-<h4><span class="header-section-number">1.4.1.4</span> Step 4: The regression model<a href="#step-4-the-regression-model" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="step-4-the-regression-model" class="section level4 hasAnchor" number="6.4.1.4">
+<h4><span class="header-section-number">6.4.1.4</span> Step 4: The regression model<a href="week-15-poisson-regression.html#step-4-the-regression-model" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>We are going to fit a Poisson regression model with <code>Taste</code>, <code>Smell</code>, <code>Touch</code>, <code>Sight</code> and <code>Sound</code> as predictors (all of these are continuous rating scales).</p>
 <blockquote>
 <p><strong>TASK</strong>: Fit a Poisson regression model for ‘Freq’ as a function of ‘Taste’, ‘Smell’, ‘Touch’, ‘Sight’ and ‘Sound’. <strong>HINT</strong>: Use the <code>glm()</code> function with <code>family = poisson</code>.</p>
 </blockquote>
 <p><strong>QUESTION 5</strong>: How do you interpret the output of the Poisson regression?</p>
 </div>
-<div id="step-5-overdispersion" class="section level4 hasAnchor" number="1.4.1.5">
-<h4><span class="header-section-number">1.4.1.5</span> Step 5: Overdispersion<a href="#step-5-overdispersion" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="step-5-overdispersion" class="section level4 hasAnchor" number="6.4.1.5">
+<h4><span class="header-section-number">6.4.1.5</span> Step 5: Overdispersion<a href="week-15-poisson-regression.html#step-5-overdispersion" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>In the lecture we saw that it is possible that the variance is larger than theoretically expected for a given lambda. If this happens, we are dealing with what’s called ‘overdispersion’. You can compensate for this by using a variant of Poisson regression that is called ‘negative binomial regression’. In negative binomial regression the variance is uncouples from the mean.</p>
 <blockquote>
 <p><strong>TASK</strong>: Fit a negative binomial regression model for ‘Freq’ as a function of ‘Taste’, ‘Smell’, ‘Touch’, ‘Sight’ and ‘Sound’. <strong>HINT</strong>: Use the <code>glm.nb()</code> function.</p>
@@ -316,32 +402,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div id="answers" class="section level2 hasAnchor" number="1.5">
-<h2><span class="header-section-number">1.5</span> Answers<a href="#answers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="answers-4" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Answers<a href="week-15-poisson-regression.html#answers-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week. <strong>Remember</strong>, looking at this script (studying/revising it) does not replace the process of working through the lab activities, trying them out for yourself, getting stuck, asking questions, finding solutions, adding your own comments, etc. <strong>Actively engaging</strong> with the material is the way to learn these analysis skills, not by looking at someone else’s completed code…</p>
-<p>The answers to the questions and the script containing the code will be available after the lab session has taken place.</p>
-<!-- You can download the R-script that includes the relevant code here: [402_wk15_labAct1_withAnswers.R](files/week15/402_wk15_labAct1_withAnswers.R).
+<!-- The answers to the questions and the script containing the code will be available after the lab session has taken place.-->
+<p>You can download the R-script that includes the relevant code here: <a href="files/week15/402_wk15_labAct1_withAnswers.R">402_wk15_labAct1_withAnswers.R</a>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Which variables do you need to address the research question? <strong>Our dependent variable is word frequency, so we need a variable that tells us how frequent words are. This information is contained in the English Lexicon Project data file, variable Log10Freq. The sensory modality ratings as reported in the in the data file supplied by Lynott and Connell (2009) are our predictors. That means we need the variables ‘Sight’, ‘Touch’, ‘Sound’, ‘Taste’, and ‘Smell’. You also need a variable that is common across the two files to help with merging them together (i.e., <code>by  =</code> ), this would be ‘Word’.</strong></p></li>
+<li><p>Which ‘join’ is most appropriate, the <code>inner_join()</code> or the <code>left_join()</code>? Also, does it matter which datafile you specify as x and which one as y? If so, why does it matter? <strong>A <code>left_join()</code> keeps all observations in table x, adding the information from table y for those observations. That means that it does matter which table you specify as x and which one as y. ELP contains word frequencies for many more words than we have sensory modality ratings for (in lyn). When specifying ELP as x, you keep 33075 rows, adding a lot of NAs for words we do not have sensory modality ratings for. Therefore it makes more sense to specify lyn as x, and add the word frequency information for the words we have sensory modality ratings for. An <code>inner_join()</code> matches pairs of observations whenever their keys are equal, and unmatched rows are not included in the result. This means that generally inner joins are not appropriate because it is too easy to lose observations.</strong></p></li>
+<li><p>What does this line of code do. Write a comment to summarise its function.</p></li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="week-15-poisson-regression.html#cb4-1" aria-hidden="true" tabindex="-1"></a>both <span class="ot">&lt;-</span> <span class="fu">mutate</span>(both, <span class="at">Freq =</span> <span class="dv">10</span> <span class="sc">^</span> Log10Freq)</span></code></pre></div>
+<p><strong>Use the <code>mutate()</code> function to add a variable <code>Freq</code> to the table <code>both</code>. <code>Freq</code> is derived from the variable <code>Log10Freq</code> by taking it to the power of 10. We do this because that reverses the log transformation and will therefore give us the raw values, all positive integers that we need for Poisson regression.</strong></p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>What do you conclude from the scatterplots? <strong><em>Sight</em>: moderate positive association - the visual rating is higher for more frequent words. <em>Smell</em>: weak negative association - when word frequency goes up, the smell rating goes down. There are a* lot of low smell ratings for adjectives (lots of dots clode to 0). <em>Sound</em>: weak positive association - when word frequency goes up, so does the sound rating. <em>Touch</em>: weak positive association - when word frequency goes up, so does the touch rating. <em>Taste</em>: no assocation - line is pretty much horizontal; similar to smell, there are a lot of low taste ratings (cluster of rating scores around 0).</strong></p></li>
+<li><p>How do you interpret the output of the Poisson regression? <strong>Estimate for Sight is indeed positive and largest (compared to the other predictors), while the estimate for Smell is negative and the estimate for Taste is very close to 0. All predictors are significant.</strong></p></li>
+<li><p>What do you conclude from the results of the overdispersion test? <strong>The result of the overdispersion test is significant (<em>p</em> &lt; 2.2e-16), indicating that there is significant overdispersion. The negative binomial regression model is therefore more appropriate.</strong></p></li>
+<li><p>How do you interpret the negative binomial regression output? Do English speakers use visual adjectives more frequently? What about smell adjectives in comparison? <strong>The estimates for all predictors have now changed and not all of them are now significant. Also note that the standard errors of the estimates have increased substantially. Sight still shows a significant positive relationship with word frequency and has by far the largest estimate suggesting it contributes most. So, yes, English speakers use visual adjectives more frequently. For smell adjectives the estimate is negative and significant, suggesting that for more frequent words, the Smell ratings are smaller.</strong></p></li>
+</ol>
 
-1. Which variables do you need to address the research question? **Our dependent variable is word frequency, so we need a variable that tells us how frequent words are. This information is contained in the English Lexicon Project data file, variable Log10Freq. The sensory modality ratings as reported in the in the data file supplied by Lynott and Connell (2009) are our predictors. That means we need the variables 'Sight', 'Touch', 'Sound', 'Taste', and 'Smell'. You also need a variable that is common across the two files to help with merging them together (i.e., `by  =` ), this would be 'Word'.**
-
-2. Which 'join' is most appropriate, the `inner_join()` or the `left_join()`? Also, does it matter which datafile you specify as x and which one as y? If so, why does it matter? **A `left_join()` keeps all observations in table x, adding the information from table y for those observations. That means that it does matter which table you specify as x and which one as y. ELP contains word frequencies for many more words than we have sensory modality ratings for (in lyn). When specifying ELP as x, you keep 33075 rows, adding a lot of NAs for words we do not have sensory modality ratings for. Therefore it makes more sense to specify lyn as x, and add the word frequency information for the words we have sensory modality ratings for. An `inner_join()` matches pairs of observations whenever their keys are equal, and unmatched rows are not included in the result. This means that generally inner joins are not appropriate because it is too easy to lose observations.**
-
-3. What does this line of code do. Write a comment to summarise its function.
-
-
-```r
-both <- mutate(both, Freq = 10 ^ Log10Freq)
-```
-
-**Use the `mutate()` function to add a variable `Freq` to the table `both`. `Freq` is derived from the variable `Log10Freq` by taking it to the power of 10. We do this because that reverses the log transformation and will therefore give us the raw values, all positive integers that we need for Poisson regression.**
-
-4. What do you conclude from the scatterplots? ***Sight*: moderate positive association - the visual rating is higher for more frequent words. *Smell*: weak negative association - when word frequency goes up, the smell rating goes down. There are a* lot of low smell ratings for adjectives (lots of dots clode to 0). *Sound*: weak positive association - when word frequency goes up, so does the sound rating. *Touch*: weak positive association - when word frequency goes up, so does the touch rating. *Taste*: no assocation - line is pretty much horizontal; similar to smell, there are a lot of low taste ratings (cluster of rating scores around 0).**
-
-5. How do you interpret the output of the Poisson regression? **Estimate for Sight is indeed positive and largest (compared to the other predictors), while the estimate for Smell is negative and the estimate for Taste is very close to 0. All predictors are significant.**
-
-6. What do you conclude from the results of the overdispersion test? **The result of the overdispersion test is significant (*p* < 2.2e-16), indicating that there is significant overdispersion. The negative binomial regression model is therefore more appropriate.**
-
-7. How do you interpret the negative binomial regression output? Do English speakers use visual adjectives more frequently? What about smell adjectives in comparison? **The estimates for all predictors have now changed and not all of them are now significant. Also note that the standard errors of the estimates have increased substantially. Sight still shows a significant positive relationship with word frequency and has by far the largest estimate suggesting it contributes most. So, yes, English speakers use visual adjectives more frequently. For smell adjectives the estimate is negative and significant, suggesting that for more frequent words, the Smell ratings are smaller.**-->
 </div>
 </div>
             </section>
@@ -349,7 +428,7 @@ both <- mutate(both, Freq = 10 ^ Log10Freq)
           </div>
         </div>
       </div>
-
+<a href="week-14-logistic-regression.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -392,8 +471,11 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
-"search": false,
+"download": ["bookdown-start.pdf", "bookdown-start.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
